@@ -1,6 +1,6 @@
 const BundleTracker = require("webpack-bundle-tracker");
 const debug = !process.env.PEPS_DEBUG || process.env.PEPS_DEBUG === 'True'
-const publicPath = debug ? "http://0.0.0.0:8080/" : "/static/"
+const publicPath = debug ? "http://localhost:8080/" : "/static/"
 
 module.exports = {
   pwa: {
@@ -50,8 +50,8 @@ module.exports = {
       .set('__STATIC__', 'static')
 
     config.devServer
-      .public('http://0.0.0.0:8080')
-      .host('0.0.0.0')
+      .public('http://localhost:8080')
+      .host('localhost')
       .port(8080)
       .hotOnly(true)
       .watchOptions({ poll: 1000 })

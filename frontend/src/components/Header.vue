@@ -5,12 +5,11 @@
       @done="showContributionOverlay = false"
     />
     <div style="position: absolute; width:100%;">
-      <v-app-bar app absolute color="primary" dark>
+      <v-app-bar app absolute white>
         <v-toolbar-title>
           <router-link
             :to="{ name: 'Landing' }"
-            style="color:white; text-decoration:none; font-weight: bold; outline: none;"
-          >Peps</router-link>
+          ><img src="/static/logo-padv.svg" id="logo" alt="logo pour une agriculture du vivant"></router-link>
         </v-toolbar-title>
         <v-spacer></v-spacer>
         <v-badge
@@ -129,3 +128,20 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+
+  v-app-bar {
+    background: white !important;
+    box-shadow: none !important;
+  }
+
+  #logo {
+    /*color:white; 
+    text-decoration:none;
+    font-weight: bold;
+    outline: none;*/
+    width: 50px;
+    margin-top: 8px;
+  }
+</style> 

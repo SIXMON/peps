@@ -11,7 +11,7 @@
         :ctaAction="this.reload"
         :showCloseButton="false"
       />
-      <v-main style="margin-bottom: 20px;">
+      <v-main style="margin-bottom: 20px; background: rgba(108, 170, 200, 0.1) url('static/images/bg-footer-wave.svg') no-repeat left 0 bottom 0; background-size: contain;">
         <transition name="fade" mode="out-in">
           <router-view />
         </transition>
@@ -135,7 +135,8 @@ $cursive: "Caveat", cursive;
 }
 
 body {
-  background: #fff;
+  width: 100%;
+  background:url("/static/images/bg-blog.svg") no-repeat left 0 top 17px, url('/static/images/bg-double-blob.svg') no-repeat right 0 top 25px;;
 }
 
 body .buorg {
