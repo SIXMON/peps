@@ -40,8 +40,7 @@
       style="
         padding-top: 10px;
         padding-bottom: 10px;
-        border: 1px solid rgba(51, 51, 51, 0.11);
-        border-radius: 5px;
+        background:white;        
         margin-top: 10px;
         min-width: 100%;
       "
@@ -490,6 +489,17 @@ export default {
 </script>
 
 <style scoped>
+
+v-container {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid rgba(51, 51, 51, 0.11);
+  border-radius: 5px;
+  margin-top: 10px;
+  min-width: 100%;
+  background: white;
+}
+
 .filter-title {
   font-size: 0.85em;
   font-weight: bold;

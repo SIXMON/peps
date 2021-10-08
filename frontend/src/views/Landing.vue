@@ -13,7 +13,7 @@
             <span
               class="cursive"
               style="font-size: 38px; letter-spacing: 0em;"
-            >entre agriculteurs</span>
+              >entre agriculteurs</span>
           </div>
           <v-card-text
             class="body-1"
@@ -24,7 +24,7 @@
 
       <!-- Newsletter -->
       <div
-        style="background-color: rgb(224, 244, 238); margin: 10px -16px 30px -16px;padding: 16px;border-radius: 5px;"
+        style="background-color: white; margin: 10px -16px 30px -16px;padding: 16px;border-radius: 5px;"
       >
       <p
         class="body-1 pa-0"

@@ -83,11 +83,9 @@ export default {
 
 <style scoped>
 .title-container {
-  background: #008763;
   padding-top: 7px;
   padding-bottom: 3px;
   color: white;
-  box-shadow: inset 0px -11px 10px -15px #333;
 }
 .v-btn {
 	float: left;

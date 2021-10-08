@@ -129,6 +129,11 @@ $cursive: "Caveat", cursive;
     font-weight: bold !important;
   }
 
+  .display-1 {
+    color: #ea5403; 
+    margin-top: 20px;
+  }
+
   .subtitle-2 {
     font-size: 16px !important;
   }
@@ -136,7 +141,7 @@ $cursive: "Caveat", cursive;
 
 body {
   width: 100%;
-  background:url("/static/images/bg-blog.svg") no-repeat left 0 top 17px, url('/static/images/bg-double-blob.svg') no-repeat right 0 top 25px;;
+  background:url("/static/images/bg-blog.svg") no-repeat left 0 top 17px, url("/static/images/bg-double-blob.svg") no-repeat right 0 top 25px;;
 }
 
 body .buorg {
@@ -216,4 +221,16 @@ body .buorg .buorg-buttons {
   font-size: 0.6em;
   letter-spacing: 2px;
 }
+
+// Navbar 
+
+.v-sheet.v-app-bar.v-toolbar:not(.v-sheet--outlined) {
+  box-shadow: none !important;
+  background: white !important;
+}
+
+ul {
+    color: #4B565E !important;
+}
+
 </style>

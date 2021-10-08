@@ -28,7 +28,7 @@
           </v-btn>
         </v-badge>
 
-        <v-btn color="white" outlined @click="onShareXPClick">
+        <v-btn color="primary" outlined @click="onShareXPClick">
           <v-icon color="white" class="d-flex d-sm-none">mdi-beaker-plus-outline</v-icon>
           <span
             style="font-weight:bold;"
@@ -132,8 +132,9 @@ export default {
 <style lang="scss">
 
   v-app-bar {
-    background: white !important;
-    box-shadow: none !important;
+    .v-sheet.v-app-bar.v-toolbar:not(.v-sheet--outlined) {
+     box-shadow: none !important; 
+}
   }
 
   #logo {
@@ -144,4 +145,9 @@ export default {
     width: 50px;
     margin-top: 8px;
   }
+
+  v-btn {
+   
+  }
+
 </style> 
