@@ -2,7 +2,7 @@
   <div v-if="farmersFetched">
     <Title :breadcrumbs="breadcrumbs" />
     <v-container class="constrained">
-      <v-row style="padding: 0 16px 0 16px;">
+      <v-row style="padding: 0 16px 0 16px">
         <v-autocomplete
           style="z-index: 9999;"
           :items="departments"
@@ -194,12 +194,12 @@ export default {
           currentLayer.id = feature.properties.code
           layer.on({
             click: this.onMapDepartmentClick(feature),
-            mouseover: () => currentLayer.setStyle({ fillColor: "#d8f3ec" }),
+            mouseover: () => currentLayer.setStyle({ fillColor: "#FDEEE6" }),
             mouseout: () => {
               const color =
                 this.selectedDepartment &&
                 currentLayer.id === this.selectedDepartment.code
-                  ? "#A6E4D3"
+                  ? "#F29868"
                   : "#FFF"
               currentLayer.setStyle({ fillColor: color })
             },
@@ -288,7 +288,7 @@ export default {
       Object.values(this.$refs.map.mapObject._layers).forEach((x) => {
         if (!x.setStyle) return
         x.id === this.selectedDepartment.code
-          ? x.setStyle({ fillColor: "#A6E4D3" })
+          ? x.setStyle({ fillColor: "FDEEE6" })
           : x.setStyle({ fillColor: "#fff" })
       })
     },

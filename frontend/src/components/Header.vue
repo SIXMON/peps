@@ -146,8 +146,4 @@ export default {
     margin-top: 8px;
   }
 
-  v-btn {
-   
-  }
-
 </style> 

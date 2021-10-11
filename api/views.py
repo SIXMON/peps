@@ -242,6 +242,7 @@ class ListCreateMessageView(ListCreateAPIView):
             headers={}
         )
         email.attach_alternative(html_message, 'text/html')
+        print(html_message)
         email.send()
 
 class MarkAsReadMessageView(APIView):

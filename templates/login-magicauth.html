@@ -4,62 +4,63 @@
 
 <head>
   <title>Peps - S’identifier et partager une expérience et contacter ses pairs</title>
-  <meta description="Une fois identifié, vous pourrez gérer votre compte, modifier vos informations et accéder à plus de fonctionnalités">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta
+    description="Une fois identifié, vous pourrez gérer votre compte, modifier vos informations et accéder à plus de fonctionnalités">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="{% static 'css/dashboard.css' %}" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
   <link rel="icon" href="{% static 'favicon.ico' %}">
   <style type="text/css" media="screen">
+
     header {
       width: 100%;
-      background: #008763;
+      background: white;
       height: 64px;
       padding: 4px 16px;
     }
 
     .header-logo {
-      font-size: 1.35rem;
-      line-height: 1.5;
-      white-space: nowrap;
-      color: white;
-      text-decoration: none;
-      outline: currentcolor none medium;
-      padding-top: 10px;
-      font-weight: bold;
+      width: 50px;
     }
 
     #breadcrumbs {
       width: 100%;
-      background: #008763;
-      box-shadow: inset 0px 14px 10px -15px #333;
-      color: white;
+      color: #8d8d8d;
       font-family: 'Roboto', sans-serif;
       font-size: 14px;
       padding-top: 18px;
       padding-left: 20px;
       height: 58px;
     }
+
+    .card, .card-body {
+      background-color: white;
+    }
+    
   </style>
   <style type="text/css">
-    .js #fouc {display: none;}
+    .js #fouc {
+      display: none;
+    }
   </style>
   <script type="text/javascript">
     document.documentElement.className = 'js'
   </script>
 </head>
 
-<body id="fouc" style="background-color: #f2f2f2;">
+<body id="fouc">
   <header>
     <div class="header-logo">
-      Peps</div>
+      <img src="/static/logo-padv.svg" id="logo" alt="logo pour une agriculture du vivant" alt="logo padv">
+    </div>
   </header>
-  <div id="breadcrumbs">
-    <a style="color: white;" href="/">Accueil</a> <span style="padding-left: 10px; padding-right: 10px;">></span> <span
-      style="opacity: 0.5;">S'identifier</span>
-  </div>
   <div class="page" style="display: block; min-height: auto;">
     <div class="main-page">
       <div class="container">
+        <div id="breadcrumbs">
+          <a style="color: #8d8d8d;" href="/">Accueil</a> <span style="padding-left: 10px; padding-right: 10px;">></span>
+          <span style="opacity: 0.5;">S'identifier</span>
+        </div>
         <div class="my-3 my-md-5">
           <div class="row row-cards" style="margin-top: 0px;">
             <div class="col col-login col-12 mx-auto">
@@ -94,7 +95,7 @@
                     {% endfor %}
                   </div>
                   <div class="form-footer">
-                    <button type="submit" style="background-color: #008763;color: white;"
+                    <button type="submit" style="background-color: #ea5403;color: white;"
                       class="btn btn-block">Valider</button>
                   </div>
                 </div>
@@ -107,9 +108,8 @@
                 <label class="text-uppercase form-label" style="text-align: center; padding-top: 20px;">Pas encore de
                   compte ?</label>
                 <div class="card-body" style="padding-top: 5px; font-weight: normal;font-family: 'Roboto', sans-serif;">
-                    <button style="background-color: white;color: #008763; border: solid 1px;"
-                      class="btn btn-block"
-                      onclick="window.location.href='/register'">Créer mon compte</button>
+                  <button style="background-color: white;color: #ea5403; border: solid 1px;" class="btn btn-block"
+                    onclick="window.location.href='/register'">Créer mon compte</button>
                 </div>
               </div>
             </div>
@@ -120,7 +120,7 @@
   </div>
 
   <script type="text/javascript">
-  document.getElementById('fouc').style.display = 'block'
+    document.getElementById('fouc').style.display = 'block'
   </script>
 </body>
 

@@ -12,26 +12,18 @@
     <style type="text/css" media="screen">
         header {
             width: 100%;
-            background: #008763;
             height: 64px;
             padding: 4px 16px;
+            background-color: white;
         }
 
         .header-logo {
-            font-size: 1.35rem;
-            line-height: 1.5;
-            white-space: nowrap;
-            color: white;
-            text-decoration: none;
-            outline: currentcolor none medium;
-            padding-top: 10px;
+            margin-bottom: 8px;
         }
 
         #breadcrumbs {
             width: 100%;
-            background: #008763;
-            box-shadow: inset 0px 14px 10px -15px #333;
-            color: white;
+            color: #8d8d8d;
             font-family: 'Roboto', sans-serif;
             font-size: 14px;
             padding-top: 18px;
@@ -87,14 +79,16 @@
 <body id="fouc" style="background-color: #f2f2f2;">
     <header>
         <div class="header-logo">
-            Peps</div>
+            <img src="/static/logo-padv.svg" id="logo" alt="logo pour une agriculture du vivant" alt="logo padv">
+        </div>
     </header>
-    <div id="breadcrumbs">
-        <a style="color: white;" href="/">Accueil</a> <span style="padding-left: 10px; padding-right: 10px;">></span>
-        <span style="opacity: 0.5;">Créer mon compte</span>
-    </div>
+   
     <div class="page" style="display: block; min-height: auto;">
         <div class="main-page">
+            <div id="breadcrumbs">
+                <a style="color:#8d8d8d;;" href="/">Accueil</a> <span style="padding-left: 10px; padding-right: 10px;">></span>
+                <span style="opacity: 0.5;">Créer mon compte</span>
+            </div>
             <div class="container">
                 <div class="my-3 my-md-5">
                     <div class="row row-cards" style="margin-top: 0px;">
@@ -153,7 +147,7 @@
                                         <p class="error-message">{{ error }}</p>
                                         {% endfor %}
 
-                                        <button type="submit" style="background-color: #008763;color: white;"
+                                        <button type="submit" style="background-color: #ea5403;color: white;"
                                             class="btn btn-block">Valider</button>
                                     </div>
                                 </div>
@@ -168,7 +162,7 @@
                                     déjà un compte</label>
                                 <div class="card-body"
                                     style="padding-top: 5px; font-weight: normal;font-family: 'Roboto', sans-serif;">
-                                    <button style="background-color: white;color: #008763; border: solid 1px;"
+                                    <button style="background-color: white;color: #ea5403; border: solid 1px;"
                                         class="btn btn-block"
                                         onclick="window.location.href='/login'">M'identifier</button>
                                 </div>

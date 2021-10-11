@@ -56,7 +56,7 @@
 
       <!-- Stats -->
       <div
-        style="background-color: rgb(224, 244, 238); margin: 30px -16px 0 -16px;padding: 16px;border-radius: 5px;"
+        style="background: #A7CCDE url('/static/images/bg-score-blob.svg') no-repeat left top -35px; background-size:cover; margin: 30px -16px 0 -16px;padding: 16px;border-radius: 5px;"
       >
         <h2
           class="title pa-0"

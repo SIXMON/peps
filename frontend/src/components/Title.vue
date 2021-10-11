@@ -77,7 +77,7 @@ export default {
 
 <style>
 .v-breadcrumbs a.v-breadcrumbs__item {
-  color: white;
+  color: #4B565E;
 }
 </style>
 
@@ -85,8 +85,9 @@ export default {
 .title-container {
   padding-top: 7px;
   padding-bottom: 3px;
-  color: white;
+  color: #4B565E;
 }
+
 .v-btn {
 	float: left;
 	margin-right: 10px;

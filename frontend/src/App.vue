@@ -141,12 +141,12 @@ $cursive: "Caveat", cursive;
 
 body {
   width: 100%;
-  background:url("/static/images/bg-blog.svg") no-repeat left 0 top 17px, url("/static/images/bg-double-blob.svg") no-repeat right 0 top 25px;;
+  background:url("/static/images/bg-blob.svg") no-repeat left 0 top 13px, url("/static/images/bg-double-blob.svg") no-repeat right 0 top 25px;
 }
 
 body .buorg {
-  border-bottom: 1px solid #008763;
-  background-color: #008763;
+  border-bottom: 1px solid #ea5403;
+  background-color: #ea5403;
   font-family: "Roboto", sans-serif;
   color: white;
 }
@@ -229,8 +229,9 @@ body .buorg .buorg-buttons {
   background: white !important;
 }
 
-ul {
-    color: #4B565E !important;
+.theme--light.v-chip:not(.v-chip--active) {
+    background: #A7CCDE !important;
 }
+
 
 </style>
