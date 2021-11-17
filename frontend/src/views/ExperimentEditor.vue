@@ -83,54 +83,117 @@
           ></v-text-field>
         </div>
 
-        <!-- XP_TYPE -->
+        <!-- RESULTS -->
         <div class="field">
           <div class="field-title title">
-            De quel type d'expérience s'agit-il ?
+            Votre expérience est : 
+            <span class="mandatory">- obligatoire</span>
+          </div>
+          <v-radio-group
+            :rules="[validators.notEmpty]"
+            @change="hasChanged = true"
+            v-model="dummyExperiment.results"
+            :mandatory="false"
+          >
+            <v-radio
+              label="Maîtrisée & intégrée en routine à l'exploitation"
+              value="Maîtrisée & intégrée en routine à l'exploitation"
+            ></v-radio>
+            <v-radio
+              label="Prometteuse & en cours d'amélioration pour être maîtrisée"
+              value="Prometteuse & en cours d'amélioration pour être maîtrisée"
+            ></v-radio>
+            <v-radio
+              label="Un premier essai, à renouveler pour mieux juger de son potentiel"
+              value="Un premier essai, à renouveler pour mieux juger de son potentiel"
+            ></v-radio>
+            <v-radio
+              label="Abandonnée car non satisfaisante"
+              value="Abandonnée car non satisfaisante"
+            ></v-radio>
+          </v-radio-group>
+        </div>
+
+        <!-- WORKSHOP -->
+        <div class="field">
+          <div class="field-title title">
+            Quel atelier de production est concerné par cette expérience ? 
             <span class="mandatory">- obligatoire</span>
           </div>
           <v-radio-group
             @change="hasChanged = true"
-            v-model="dummyExperiment.xp_type"
+            v-model="dummyExperiment.workshop"
             :mandatory="false"
             :rules="[validators.notEmpty]"
           >
             <v-radio
-              label="Changement important de l'exploitation"
-              value="Changement important de l'exploitation"
+              label="Grandes cultures"
+              value="Grandes cultures"
             ></v-radio>
-            <v-radio label="Amélioration de l'existant" value="Amélioration de l'existant"></v-radio>
+            <v-radio 
+              label="Cultures d'industrie" 
+              value="Cultures d'industrie"
+            ></v-radio>
+            <v-radio
+              label="Productions légumières de plein champ"
+              value="Productions légumières de plein champ"
+            ></v-radio>
+            <v-radio 
+              label="Elevage ruminant" 
+              value="Elevage ruminant"
+            ></v-radio>
+            <v-radio 
+              label="Elevage monogastrique" 
+              value="Elevage monogastrique"
+            ></v-radio>
+            <v-radio 
+              label="Arboriculture" 
+              value="Arboriculture"
+            ></v-radio>
+            <v-radio 
+              label="Viticulture" 
+              value="Viticulture"
+            ></v-radio>
+            <v-radio 
+              label="Maraîchage diversifié" 
+              value="Maraîchage diversifié"
+            ></v-radio>
+            <v-radio 
+              label="PPAM" 
+              value="PPAM"
+            ></v-radio>
+            <v-radio 
+              label="Cultures spécialisées" 
+              value="Cultures spécialisées"
+            ></v-radio>
           </v-radio-group>
         </div>
 
-        <!-- OBJECTIVES -->
+        <!-- CULTURES -->
         <div class="field">
-          <div class="field-title title">
-            Dans quels objectifs plus global de l'exploitation cela s'inscrit ?
-            <span
-              class="mandatory"
-            >- obligatoire</span>
-          </div>
+          <div class="field-title title">Quelles sont les principales cultures/races concernées par l'expérience ?</div>
           <div
             class="field-helper"
-          >Diversifier les sources de revenus, réduire l'utilisation d'herbicides, améliorer le structure du sol...</div>
-          <v-textarea
-            hide-details="auto"
-            :rules="[validators.notEmpty]"
-            rows="4"
+          >Elles permettent de catégoriser par cultures les retours d'expérience</div>
+          <v-autocomplete
             @input="hasChanged = true"
-            auto-grow
+            v-model="dummyExperiment.cultures"
+            :items="cultures"
             outlined
+            chips
+            multiple
+            deletable-chips
+            small-chips
+            hide-details="auto"
             dense
-            v-model="dummyExperiment.objectives"
-          ></v-textarea>
+          ></v-autocomplete>
         </div>
 
         <!-- TAGS -->
         <div class="field">
           <div
             class="field-title title"
-          >Sélectionnez jusqu'a 3 étiquettes qui vous semblent les plus pertinents</div>
+          >A quelles thématiques cette expérience est-elle rattachée ? (sélectionnez 3 thématiques maximum)</div>
           <div
             class="field-helper"
           >Elles permettent de catégoriser par thèmes les retours d'expérience</div>
@@ -212,6 +275,14 @@
             hide-details
             :rules="[validators.maxSelected(3)]"
           ></v-checkbox>
+          <v-checkbox 
+            @click.native="hasChanged = true"
+            v-model="dummyExperiment.tags"
+            label="Équipement et outils"
+            value="Équipement et outils"
+            hide-details
+            :rules="[validators.maxSelected(3)]"
+          ></v-checkbox>
           <v-checkbox
             @click.native="hasChanged = true"
             v-model="dummyExperiment.tags"
@@ -222,85 +293,17 @@
           ></v-checkbox>
         </div>
 
-        <!-- ONGOING -->
-        <div class="field">
-          <div class="field-title title">L'expérience est-elle en cours aujourd'hui ?</div>
-          <div
-            class="field-helper"
-          >Si l'expérience a été intégrée à l'exploitation et est améliorée à la marge, dites Non</div>
-          <v-radio-group
-            @change="hasChanged = true"
-            v-model="dummyExperiment.ongoing"
-            :mandatory="false"
-          >
-            <v-radio label="Oui" :value="true"></v-radio>
-            <v-radio label="Non" :value="false"></v-radio>
-          </v-radio-group>
-        </div>
-
-        <!-- INVESTMENT -->
-        <div class="field">
-          <div
-            class="field-title title"
-          >Quels investissements ont été nécessaires pour cette expérience ?</div>
-          <div class="field-helper">En temps, en argent, en machines...</div>
-          <v-textarea
-            hide-details="auto"
-            rows="1"
-            @input="hasChanged = true"
-            auto-grow
-            outlined
-            dense
-            v-model="dummyExperiment.investment"
-          ></v-textarea>
-        </div>
-
-        <!-- CULTURES -->
-        <div class="field">
-          <div class="field-title title">Quelles cultures sont impliquées dans cette exprérience ?</div>
-          <div
-            class="field-helper"
-          >Elles permettent de catégoriser par cultures les retours d'expérience</div>
-          <v-autocomplete
-            @input="hasChanged = true"
-            v-model="dummyExperiment.cultures"
-            :items="cultures"
-            outlined
-            chips
-            multiple
-            deletable-chips
-            small-chips
-            hide-details="auto"
-            dense
-          ></v-autocomplete>
-        </div>
-
-        <!-- EQUIPMENT -->
-        <div class="field">
-          <div
-            class="field-title title"
-          >Quel matériel avez-vous utilisé pour mener cette expérience ?</div>
-          <div class="field-helper">Vous pouvez ici être assez spécifique</div>
-          <v-textarea
-            hide-details="auto"
-            rows="1"
-            @input="hasChanged = true"
-            auto-grow
-            outlined
-            dense
-            v-model="dummyExperiment.equipment"
-          ></v-textarea>
-        </div>
-
-        <!-- DESCRIPTION -->
+        <!-- OBJECTIVES -->
         <div class="field">
           <div class="field-title title">
-            Pouvez-vous décrire l'expérience ?
-            <span class="mandatory">- obligatoire</span>
+            A quelle(s) problématique(s) spécifique(s) cette expérience répond-elle ? (par exemple : mieux gérer le vulpin sur des parcelles de blé) 
+            <span
+              class="mandatory"
+            >- obligatoire</span>
           </div>
           <div
             class="field-helper"
-          >Dites comment cela s'est déroulé, ce que vous avez observé, les choses que vous avez apprises...</div>
+          >Diversifier les sources de revenus, réduire l'utilisation d'herbicides, améliorer le structure du sol...</div>
           <v-textarea
             hide-details="auto"
             :rules="[validators.notEmpty]"
@@ -309,14 +312,14 @@
             auto-grow
             outlined
             dense
-            v-model="dummyExperiment.description"
+            v-model="dummyExperiment.objectives"
           ></v-textarea>
         </div>
 
         <!-- SURFACE TYPE -->
         <div class="field">
           <div class="field-title title">
-            Sur quelle surface portait l'expérience ?
+            Sur quelle surface porte l'expérience ?
             <span class="mandatory">- obligatoire</span>
           </div>
           <div
@@ -325,8 +328,8 @@
           <v-checkbox
             @click.native="hasChanged = true"
             v-model="dummyExperiment.surface_type"
-            label="Toutes les surfaces"
-            value="Toutes les surfaces"
+            label="Toute la surface potentiellement adaptée à la mise en place de la pratique"
+            value="Toute la surface potentiellement adaptée à la mise en place de la pratique"
             hide-details
             :rules="[hasSurfaceType]"
           ></v-checkbox>
@@ -349,96 +352,120 @@
           <v-checkbox
             @click.native="hasChanged = true"
             v-model="dummyExperiment.surface_type"
-            label="Des bandes"
-            value="Des bandes"
+            label="Une bande"
+            value="Une bande"
             hide-details
             :rules="[hasSurfaceType]"
           ></v-checkbox>
           <v-checkbox
             @click.native="hasChanged = true"
             v-model="dummyExperiment.surface_type"
-            label="Des carrés"
-            value="Des carrés"
+            label="Des micro-parcelles"
+            value="Des micro-parcelles"
             :rules="[hasSurfaceType]"
           ></v-checkbox>
         </div>
 
         <!-- SURFACE -->
         <div class="field">
-          <div class="field-title title">Combien d'ha cela représente ?</div>
+          <div class="field-title title">Combien d’hectares cela représente au total ? </div>
+          <div>
+            <v-text-field
+              hide-details="auto"
+              @change="hasChanged = true"
+              rows="1"
+              auto-grow
+              outlined
+              dense
+              v-model="dummyExperiment.surface"
+              suffix="hectare(s)"
+            ></v-text-field>
+          </div>
+        </div>
+
+        <!-- EQUIPMENT -->
+        <div class="field">
+          <div
+            class="field-title title"
+          >Quel matériel utilisez-vous pour mener cette expérience ?</div>
+          <div class="field-helper">ex : type d’outil, équipements spécifiques, type de dents, réglages spécifiques, etc...</div>
           <v-textarea
             hide-details="auto"
-            @change="hasChanged = true"
             rows="1"
+            @input="hasChanged = true"
             auto-grow
             outlined
             dense
-            v-model="dummyExperiment.surface"
+            v-model="dummyExperiment.equipment"
           ></v-textarea>
         </div>
 
-        <!-- CONTROL PRESENCE -->
+        <!-- INVESTMENT -->
         <div class="field">
-          <div class="field-title title">
-            Avez-vous mis en place un témoin ?
-            <span class="mandatory">- obligatoire</span>
-          </div>
-          <div class="field-helper">
-            C'est à dire une surface similaire qui permet de valider les résultats obtenus.
-            Si ce n'est pas pertinent, dites Non
-          </div>
-          <v-radio-group
-            :rules="[validators.notEmpty]"
-            @change="hasChanged = true"
-            v-model="dummyExperiment.control_presence"
-            :mandatory="false"
-          >
-            <v-radio label="Oui" :value="true"></v-radio>
-            <v-radio label="Non" :value="false"></v-radio>
-          </v-radio-group>
+          <div
+            class="field-title title"
+          >Quels investissements l'expérience a requis ? </div>
+          <!-- <div class="field-helper">En temps, en argent, en machines...</div> -->
+          <v-textarea
+            hide-details="auto"
+            rows="1"
+            @input="hasChanged = true"
+            auto-grow
+            outlined
+            dense
+            v-model="dummyExperiment.investment"
+          ></v-textarea>
         </div>
 
-        <!-- RESULTS -->
+        <!-- DESCRIPTION -->
         <div class="field">
           <div class="field-title title">
-            Quel est le statut de cette expérience ?
+            Description de l'expérience
             <span class="mandatory">- obligatoire</span>
           </div>
-          <v-radio-group
-            :rules="[validators.notEmpty]"
-            @change="hasChanged = true"
-            v-model="dummyExperiment.results"
-            :mandatory="false"
+          <div
+            class="field-helper"
           >
-            <v-radio
-              label="Fonctionne, elle est intégrée à l'exploitation"
-              value="XP qui fonctionne, elle est intégrée à l'exploitation"
-            ></v-radio>
-            <v-radio
-              label="Prometteuse, en cours d'amélioration"
-              value="XP prometteuse, en cours d'amélioration"
-            ></v-radio>
-            <v-radio
-              label="Abandonnée, les résultats ne sont pas satisfaisants"
-              value="XP abandonnée, les résultats ne sont pas satisfaisants"
-            ></v-radio>
-            <v-radio
-              label="En suspens, les conditions ne sont plus réunies"
-              value="XP en suspens, les conditions ne sont plus réunies"
-            ></v-radio>
-            <v-radio
-              label="Commence, les premiers résultats sont à venir"
-              value="XP qui commence, les premiers résultats sont à venir"
-            ></v-radio>
-          </v-radio-group>
+            Veuillez décrire ci-dessous votre expérience de manière à faire ressortir les points clés (techniques, socio-économiques) et la manière dont elle s'intègre dans votre démarche. <br />
+            <br />
+            Ci-dessous, quelques exemples d'informations recherchées : <br />
+            <ul>
+              <li>Contexte spécifique et le niveau d'avancement dans la transition agroécologique</li>
+              <li>Dates, densités et conditions de semis</li>
+              <li>Type de travail du sol</li>
+              <li>Observations sur : structure du sol (compact, souple, porosités, galeries, etc...), le type de sol, les conditions de sol (sec, humide, etc...), le développement des plantes,...</li>
+              <li>Mise en place de témoin (si oui, veuillez indiquer les différences observées entre les témoins)</li>
+              <li>Conseils clés</li>
+            </ul>
+          </div>
+          <v-textarea
+            hide-details="auto"
+            :rules="[validators.notEmpty]"
+            rows="4"
+            @input="hasChanged = true"
+            auto-grow
+            outlined
+            dense
+            v-model="dummyExperiment.description"
+          ></v-textarea>
         </div>
 
         <!-- RESULTS DETAILS -->
         <div class="field">
-          <div class="field-title title">Pouvez-vous détailler les résultats ?</div>
+          <div class="field-title title">Commentaires des résultats au regard des objectifs ciblés </div>
           <div
             class="field-helper"
-          >Vous pouvez ici donner des chiffres, détailler l'impact ressenti de cette expérience...</div>
+          >Avec du recul, veuillez commenter les résultats de l'expérience au regard de vos objectifs. <br />
+            <br />
+            Ci-dessous, quelques exemples d'informations recherchées : 
+            <ul>
+              <li>Facteurs de réussite/d’échec liés aux conditions de mise en œuvre de l'expérience</li>
+              <li>Commentaires face aux rendements obtenus</li>
+              <li>Ressenti</li>
+              <li>Difficultés rencontrées et pistes d'amélioration</li>
+              <li>Perspectives : poursuite/arrêt de l’expérience</li>
+            </ul>
+          </div>
           <v-textarea
             hide-details="auto"
             rows="4"
@@ -448,6 +475,18 @@
             dense
             v-model="dummyExperiment.results_details"
           ></v-textarea>
+        </div>
+
+        <!-- PADV_PROJECT -->
+        <div class="field">
+          <div class="field-title title">Avez-vous mis en place cette expérience dans le cadre d'un projet PADV (CISV, Pachamama,...) ou dans le cadre individuel ? </div>
+          <v-select
+            :items="padv_projects"
+            outlined
+            dense
+            v-model="dummyExperiment.padv_projects"
+          >
+          </v-select>
         </div>
 
         <!-- LINKS -->
@@ -568,11 +607,34 @@ export default {
         images: [],
         videos: [],
         state: "Brouillon",
+        padv_projects: []
       },
       toolbarOnTop: false,
       initialToolbarTop: 0,
       hasChanged: false,
       formIsValid: true,
+      padv_projects: [
+        {
+          text: "Individuel",
+          value: "Individuel",
+        },
+        {
+          text: "Pachamama",
+          value: "Pachamama",
+        },
+        {
+          text: "Cultures d'Industries sur Sols Vivants (CISV)",
+          value: "Cultures d'Industries sur Sols Vivants (CISV)",
+        },
+        {
+          text: "Sol et autonomie en élevage laitier",
+          value: "Sol et autonomie en élevage laitier",
+        },
+        {
+          text: "Agrohoublon",
+          value: "Agrohoublon",
+        },
+      ],
       cultures: [
         {
           header: "Cultures",

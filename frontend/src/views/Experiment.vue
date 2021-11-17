@@ -98,10 +98,10 @@
               </div>
             </div>
 
-            <div v-if="experiment.xp_type" class="body-2 info-item">
+            <!-- <div v-if="experiment.xp_type" class="body-2 info-item">
               <v-icon small left>mdi-shape-outline</v-icon>
               <div>{{experiment.xp_type}}</div>
-            </div>
+            </div> -->
 
             <div v-if="experiment.investment" class="body-2 info-item">
               <v-icon small left>mdi-cash-multiple</v-icon>
@@ -125,15 +125,15 @@
               </div>
             </div>
 
-            <div v-if="experiment.ongoing" class="body-2 info-item">
+            <!-- <div v-if="experiment.ongoing" class="body-2 info-item">
               <v-icon small left>mdi-playlist-edit</v-icon>
               <div>Expérience en cours</div>
-            </div>
+            </div> -->
 
-            <div v-else class="body-2 info-item">
+            <!-- <div v-else class="body-2 info-item">
               <v-icon small left>mdi-playlist-check</v-icon>
               <div>Expérience finie</div>
-            </div>
+            </div> -->
 
             <div v-if="experiment.control_presence" class="body-2 info-item">
               <v-icon small left>mdi-eye-outline</v-icon>

@@ -13,9 +13,17 @@ from data.forms import ChoiceArrayField
 from api.utils import AsanaUtils
 
 # (Stored in db, seen in drop-down)
-XP_TYPE = (
-    ('Changement important de l\'exploitation', 'Changement important de l\'exploitation'),
-    ('Amélioration de l\'existant', 'Amélioration de l\'existant'),
+WORKSHOP = (
+    ('Grandes cultures', 'Grandes cultures'),
+    ('Cultures d\'industrie', 'Cultures d\'industrie'),
+    ('Productions légumières de plein champ', 'Productions légumières de plein champ'),
+    ('Elevage ruminant', 'Elevage ruminant'),
+    ('Elevage monogastrique', 'Elevage monogastrique'),
+    ('Arboriculture', 'Arboriculture'),
+    ('Viticulture', 'Viticulture'),
+    ('Maraîchage diversifié', 'Maraîchage diversifié'),
+    ('PPAM', 'PPAM'),
+    ('Cultures spécialisées', 'Cultures spécialisées'),
 )
 
 TAGS = (
@@ -29,23 +37,31 @@ TAGS = (
     ("Organisation du travail", "Organisation du travail"),
     ("Réduction des charges", "Réduction des charges"),
     ("Sol et fertilisation", "Sol et fertilisation"),
+    ("Équipement et outils", "Équipement et outils"),
     ("Autre", "Autre"),
 )
 
 RESULTS = (
-    ("XP qui fonctionne, elle est intégrée à l'exploitation", "XP qui fonctionne, elle est intégrée à l'exploitation"),
-    ("XP prometteuse, en cours d'amélioration", "XP prometteuse, en cours d'amélioration"),
-    ("XP abandonnée, les résultats ne sont pas satisfaisants", "XP abandonnée, les résultats ne sont pas satisfaisants"),
-    ("XP en suspens, les conditions ne sont plus réunies", "XP en suspens, les conditions ne sont plus réunies"),
-    ("XP qui commence, les premiers résultats sont à venir", "XP qui commence, les premiers résultats sont à venir"),
+    ('Maîtrisée & intégrée en routine à l\'exploitation', 'Maîtrisée & intégrée en routine à l\'exploitation'),
+    ('Prometteuse & en cours d\'amélioration pour être maîtrisée', 'Prometteuse & en cours d\'amélioration pour être maîtrisée'),
+    ('Un premier essai, à renouveler pour mieux juger de son potentiel', 'Un premier essai, à renouveler pour mieux juger de son potentiel'),
+    ('Abandonnée car non satisfaisante', 'Abandonnée car non satisfaisante'),
 )
 
 SURFACE_TYPE = (
     ("Toutes les surfaces", "Toutes les surfaces"),
     ("Plusieurs parcelles", "Plusieurs parcelles"),
     ("Une parcelle", "Une parcelle"),
-    ("Des bandes", "Des bandes"),
-    ("Des carrés", "Des carrés"),
+    ("Une bande", "Une bande"),
+    ("Des micro-parcelles", "Des micro-parcelles"),
+)
+
+PADV_PROJECTS = (
+    ("Individuel", "Individuel"),
+    ("Pachamama","Pachamama"),
+    ("Cultures d'Industries sur Sols Vivants (CISV)","Cultures d'Industries sur Sols Vivants (CISV)"),
+    ("Sol et autonomie en élevage laitier","Sol et autonomie en élevage laitier"),
+    ("Agrohoublon","Agrohoublon"),
 )
 
 STATES = (
@@ -87,7 +103,9 @@ class Experiment(models.Model):
     links = ArrayField(models.TextField(), default=list, blank=True, null=True)
     description = models.TextField(null=True, blank=True)
     investment = models.TextField(null=True, blank=True)
-    xp_type = models.TextField(null=True, blank=True, choices=XP_TYPE)
+    workshop = models.TextField(null=True, blank=True, choices=WORKSHOP)
+    padv_projects = models.TextField(null=True, blank=True, choices=PADV_PROJECTS)
+    ir_done = models.BooleanField(null=True, blank=True)
 
     surface = models.TextField(null=True, blank=True)
     surface_type = ChoiceArrayField(models.TextField(choices=SURFACE_TYPE), default=list, blank=True, null=True)

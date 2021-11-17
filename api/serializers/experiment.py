@@ -73,7 +73,6 @@ class ExperimentFastSerializer(serializers.Serializer):
     objectives = serializers.CharField()
     equipment = serializers.CharField()
     control_presence = serializers.BooleanField()
-    ongoing = serializers.BooleanField()
     results = serializers.CharField()
     results_details = serializers.CharField()
     links = serializers.ListField()
@@ -82,7 +81,9 @@ class ExperimentFastSerializer(serializers.Serializer):
     investment = serializers.CharField()
     surface = serializers.CharField()
     surface_type = serializers.ListField()
-    xp_type = serializers.CharField()
+    workshop = serializers.CharField()
+    padv_projects = serializers.CharField()
+    ir_done = serializers.BooleanField()
 
     cultures = serializers.ListField()
     creation_date = serializers.DateTimeField()
@@ -112,7 +113,6 @@ class ExperimentSerializer(serializers.ModelSerializer):
             'objectives',
             'equipment',
             'control_presence',
-            'ongoing',
             'results',
             'results_details',
             'links',
@@ -120,7 +120,9 @@ class ExperimentSerializer(serializers.ModelSerializer):
             'investment',
             'surface',
             'surface_type',
-            'xp_type',
+            'workshop',
+            'padv_projects',
+            'ir_done',
             'images',
             'videos',
             'cultures',

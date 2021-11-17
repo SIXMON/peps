@@ -137,7 +137,7 @@ class ThemeInline(admin.TabularInline):
 
 @admin.register(Experiment)
 class ExperimentAdmin(admin.ModelAdmin, DynamicArrayMixin):
-    list_display = ('name', 'author', 'xp_type', 'results', 'icon_state')
+    list_display = ('name', 'author', 'results', 'icon_state')
     list_filter = (StateFilter, AuthorFilter)
     search_fields = ('name', )
     readonly_fields = ('html_link', )
@@ -150,10 +150,8 @@ class ExperimentAdmin(admin.ModelAdmin, DynamicArrayMixin):
                 'farmer',
                 'name',
                 'short_name',
-                'xp_type',
                 'objectives',
                 'tags',
-                'ongoing',
                 'investment',
                 'equipment',
                 'description',
@@ -163,6 +161,9 @@ class ExperimentAdmin(admin.ModelAdmin, DynamicArrayMixin):
                 'results',
                 'results_details',
                 'links',
+                'workshop',
+                'padv_projects',
+                'ir_done'
             )
         }),
         ('Cultures', {
