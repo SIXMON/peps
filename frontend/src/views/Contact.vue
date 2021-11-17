@@ -40,19 +40,6 @@
         target="_blank"
         dark
       >J'envoie un email</v-btn>
-
-      <v-divider />
-      <div class="title">Pour nous suivre sur les réseaux sociaux</div>
-      <div class="body-2" style="margin-bottom: 10px;">
-        <a href="https://twitter.com/pepsagriculture" target="_blank">
-          <v-icon size="24px" style="margin-right: 10px;">mdi-twitter</v-icon>@pepsagriculture
-        </a>
-      </div>
-      <div class="body-2">
-        <a href="https://www.facebook.com/pepsagriculture/" target="_blank">
-          <v-icon size="24px" style="margin-right: 10px;">mdi-facebook</v-icon>@pepsagriculture
-        </a>
-      </div>
     </v-container>
   </div>
 </template>
@@ -68,7 +55,7 @@ export default {
   components: { Title, Loader, OverlayMessage },
   metaInfo() {
     return {
-      title: "Peps - Questions ou suggestions, contactez nous",
+      title: "Pour une Agriculture du Vivant - Questions ou suggestions, contactez nous",
       meta: [{ description: 'Si vous souhaitez en savoir plus sur la démarche ou le produit, laissez nous vos coordonnées, nous vous contacterons dans les plus bref délais' }]
     }
   },

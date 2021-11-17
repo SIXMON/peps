@@ -210,7 +210,7 @@
             />
 
             <div class="body-1" style="margin-top: 30px;">
-              Pour plus d'informations sur cette expérience :
+              <p>Pour plus d'informations sur cette expérience :</p> 
               <v-btn
                 class="text-none d-block pa-2"
                 @click="onContactClick"

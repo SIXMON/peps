@@ -3,7 +3,7 @@
     <v-col v-for="item in items" :key="item.title" cols="12" sm="6" md="4">
       <v-card elevation="0" class="secondary--text">
         <v-img height="180px" contain :src="item.imageSource" />
-        <v-card-title>{{item.title}}</v-card-title>
+        <v-card-title class="title">{{item.title}}</v-card-title>
         <v-card-subtitle>{{item.text}}</v-card-subtitle>
         <v-card-actions>
           <v-btn
@@ -28,27 +28,24 @@ export default {
       items: [
         {
           imageSource: "/static/images/aidants.jpg",
-          title: "Un service public",
+          title: "Un service pour la transition agroécologique",
           text:
-            "Gratuit et pour tous ! Ce projet s'inscrit dans le plan Ecophyto, financé par le Ministère de l'Agriculture et de l'Alimentation et le Ministère de la Transition Ecologique",
-          ctaText: "En savoir plus",
-          ctaTo: null,
-          ctaLink: "https://beta.gouv.fr/startups/peps.html",
+            "C’est un service gratuit qui s'adresse à tous pour accélérer la transition agroécologique des fermes par le partage d’expériences entre agriculteurs. Ce projet est soutenu par le Ministère de l'Agriculture et de l'Alimentation et le Ministère de la Transition Ecologique dans le cadre du plan Ecophyto",
         },
         {
           imageSource: "/static/images/agriculteurs_tracteur.jpg",
           title: "Sur le terrain !",
           text:
-            "Ce service est construit à partir des retours des utilisateurs et au contact du terrain. Vous pouvez participer !",
+            "Des retours d'expérience ciblés pour répondre à des problématiques techniques et vous permettre de progresser dans votre démarche agroécologique",
           ctaText: "Nous contacter",
           ctaTo: { name: "Contact" },
           ctaLink: null,
         },
         {
           imageSource: "/static/images/agriculteurs_echange.jpg",
-          title: "Une équipe autonome",
+          title: "Pour une Agriculture du Vivant",
           text:
-            "Spécialistes du numérique et de l'agronomie pour développer le meilleur service possible",
+            "Devenez acteur de la transition agroécologique et connectez-vous avec les acteurs de la transition en rejoignant le mouvement",
           ctaText: "Qui sommes nous ?",
           ctaTo: { name: "QuiSommesNous" },
           ctaLink: null,
@@ -58,3 +55,10 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+ 
+ .title {
+   margin-bottom: 20px;
+ }
+</style>

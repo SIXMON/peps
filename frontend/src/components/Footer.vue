@@ -72,7 +72,7 @@
       <div
         class="caption ma-2"
         style="color: #777; text-align: center; padding-bottom: 20px;"
-      >{{ new Date().getFullYear() }} — Peps</div>
+      >{{ new Date().getFullYear() }} — Pour une Agriculture du Vivant</div>
     </div>
   </div>
 </template>

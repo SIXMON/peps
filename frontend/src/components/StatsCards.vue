@@ -39,7 +39,7 @@ export default {
       if (backendStats && backendStats.approvedFarmerCount) {
         stats.push({
           value: backendStats.approvedFarmerCount,
-          label: "Profils d'exploitations",
+          label: "Fermes",
         })
       }
       if (backendStats && backendStats.contactCount) {

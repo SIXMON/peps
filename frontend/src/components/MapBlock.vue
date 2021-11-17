@@ -2,7 +2,7 @@
   <div>
     <div class="d-flex" style="margin-top: 30px; margin-bottom: 30px;">
       <router-link :to="{ name: 'Map' }">
-        <v-img contain src="/static/images/france-regions.jpg" max-width="300"></v-img>
+        <v-img contain src="/static/images/france-regions.svg" max-width="300"></v-img>
       </router-link>
 
       <v-card

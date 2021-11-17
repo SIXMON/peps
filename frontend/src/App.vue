@@ -233,5 +233,13 @@ body .buorg .buorg-buttons {
     background: #A7CCDE !important;
 }
 
+// Breadcrumbs
+.theme--dark.v-icon {
+    color: #4B565E !important ;
+}
+
+.theme--dark.v-breadcrumbs .v-breadcrumbs__divider, .theme--dark.v-breadcrumbs .v-breadcrumbs__item--disabled {
+  color: rgba(75, 86, 94, 0.5) !important;
+}
 
 </style>

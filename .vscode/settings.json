@@ -31,22 +31,6 @@
     "peacock.elementAdjustments": {
         "activityBar": "darken"
     },
-    "workbench.colorCustomizations": {
-        "activityBar.background": "#013f34",
-        "activityBar.activeBackground": "#013f34",
-        "activityBar.activeBorder": "#b503dc",
-        "activityBar.foreground": "#e7e7e7",
-        "activityBar.inactiveForeground": "#e7e7e799",
-        "activityBarBadge.background": "#b503dc",
-        "activityBarBadge.foreground": "#e7e7e7",
-        "titleBar.activeBackground": "#02715e",
-        "titleBar.inactiveBackground": "#02715e99",
-        "titleBar.activeForeground": "#e7e7e7",
-        "titleBar.inactiveForeground": "#e7e7e799",
-        "statusBar.background": "#02715e",
-        "statusBarItem.hoverBackground": "#03a388",
-        "statusBar.foreground": "#e7e7e7"
-    },
     "peacock.color": "#02715e",
     "python.analysis.extraPaths": [
         "${workspaceRoot}/venv/lib/",

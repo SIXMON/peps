@@ -9,7 +9,7 @@
       <v-row>
         <v-col cols="12">
           <div class="display-1">
-            Le savoir partagé
+            REX Agri : le savoir partagé
             <span
               class="cursive"
               style="font-size: 38px; letter-spacing: 0em;"
@@ -18,21 +18,9 @@
           <v-card-text
             class="body-1"
             style="padding: 16px 16px 0px 0;"
-          >Un service public qui soutient une agriculture plus durable, pour ceux et celles qui produisent ainsi que pour l'environnement</v-card-text>
+          >Découvrez les essais et les pratiques innovantes mises en place par des agriculteurs près de chez vous. Partagez les votres et faites avancez la transition.</v-card-text>
         </v-col>
       </v-row>
-
-      <!-- Newsletter -->
-      <div
-        style="background-color: white; margin: 10px -16px 30px -16px;padding: 16px;border-radius: 5px;"
-      >
-      <p
-        class="body-1 pa-0"
-        style="margin: 5px 0px;"
-      >Les retours d'expérience de ceux et celles qui font l'agriculture de demain, directement dans votre boite email.</p>
-      <MailChimpForm />
-      </div>
-
 
       <!-- Experiment filters -->
       <h2
@@ -42,42 +30,36 @@
       >Explorez les retours d'expérience</h2>
       <ExperimentFilter v-if="experimentsFetched" />
 
+      
+      <!-- Newsletter -->
+      <div
+        style="background-color: white; margin: 10px -16px 30px -16px;padding: 16px;border-radius: 5px;"
+      >
+      <p
+        class="body-1 pa-0"
+        style="margin: 5px 0px;"
+      >Pour recevoir les nouveaux retours d'expérience, abonnez-nous : </p>
+      <MailChimpForm />
+      </div>
+
       <!-- Experiments by location -->
       <h2
         class="title pa-0"
         style="margin: 16px 0px 5px 0px;"
         id="location"
-      >Des exploitations sur tout le territoire</h2>
-      <p
-        class="body-1 pa-0"
-        style="margin: 5px 0px;"
-      >Ces exploitantes et exploitants partagent leurs retours d'expériences sur des pratiques agricoles et leurs évolutions</p>
+      >Découvrez les fermes sur tout le territoire</h2>
       <MapBlock />
 
       <!-- Stats -->
       <div
-        style="background: #A7CCDE url('/static/images/bg-score-blob.svg') no-repeat left top -35px; background-size:cover; margin: 30px -16px 0 -16px;padding: 16px;border-radius: 5px;"
+        style="margin: 30px -16px 0 -16px;padding: 16px;border-radius: 5px;"
       >
         <h2
           class="title pa-0"
           style="margin: 0px 0px 5px 0px;"
           id="stats"
-        >Le service Peps en chiffres</h2>
-        <p
-          class="body-1 pa-0"
-          style="margin: 5px 0px;"
-        >De la transparence sur les données de la communauté d'agriculteurs qui font confiance à Peps</p>
+        >Quelques chiffres...</h2>
         <StatsCards />
-      </div>
-
-      <!-- Reviews cards -->
-      <div>
-        <h2 class="title pa-0" id="reviews" style="margin: 16px 0px 5px 0px;">Paroles de convaincus</h2>
-        <p
-          class="body-1 pa-0"
-          style="margin: 5px 0px;"
-        >Ces agriculteurs ont trouvé des réponses à leurs questions, pourquoi pas vous ?</p>
-        <ReviewsBlock />
       </div>
 
       <!-- About us cards -->
@@ -85,11 +67,7 @@
         class="title pa-0"
         style="margin: 20px 0px 5px 0px;"
         id="about"
-      >Le projet Peps, qu'est-ce que c'est ?</h2>
-      <p
-        class="body-1 pa-0"
-        style="margin: 5px 0px;"
-      >Une philosophie, des personnes et une envie de travailler pour vous</p>
+      >REX Agri, qu'est-ce que c'est ?</h2>
       <AboutUsCards />
 
       <!-- Contribution proposal -->
@@ -115,7 +93,6 @@ import ContributionOverlay from "@/components/ContributionOverlay.vue"
 import AboutUsCards from "@/components/AboutUsCards.vue"
 import StatsCards from "@/components/StatsCards.vue"
 import MapBlock from "@/components/MapBlock.vue"
-import ReviewsBlock from "@/components/ReviewsBlock.vue"
 import MailChimpForm from "@/components/MailChimpForm.vue"
 
 export default {
@@ -138,7 +115,6 @@ export default {
     AboutUsCards,
     StatsCards,
     MapBlock,
-    ReviewsBlock,
     MailChimpForm
   },
   data() {
