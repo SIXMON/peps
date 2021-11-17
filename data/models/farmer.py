@@ -44,6 +44,7 @@ TYPE_AGRICULTURE = (
     ('Techniques Culturales Simplifiées', 'Techniques Culturales Simplifiées'),
     ('Labour occasionnel', 'Labour occasionnel'),
     ('Agroforesterie', 'Agroforesterie'),
+    ('Arboriculture', 'Arboriculture'),
     ('Conventionnel', 'Conventionnel'),
     ('Cahier des charges industriel', 'Cahier des charges industriel'),
     ('Label qualité', 'Label qualité'),
