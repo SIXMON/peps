@@ -47,6 +47,28 @@
             name="EMAIL"
             id="mce-EMAIL"
           ></v-text-field>
+          <v-text-field
+            type="text"
+            label="Votre prénom"
+            outlined
+            validate-on-blur
+            hide-details="auto"
+            dense
+            value=""
+            name="FNAME"
+            id="mce-FNAME"
+          ></v-text-field>
+          <v-text-field
+            type="text"
+            label="Votre nom"
+            outlined
+            validate-on-blur
+            hide-details="auto"
+            dense
+            value=""
+            name="LNAME"
+            id="mce-LNAME"
+          ></v-text-field>
         </v-col>
         <v-col cols="auto">
           <v-btn type="submit" height="40px" color="primary" class="text-none" form="mailchimpform">
