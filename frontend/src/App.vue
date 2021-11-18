@@ -11,7 +11,7 @@
         :ctaAction="this.reload"
         :showCloseButton="false"
       />
-      <v-main style="margin-bottom: 20px; background: rgba(108, 170, 200, 0.1) url('static/images/bg-footer-wave.svg') no-repeat left 0 bottom 0; background-size: contain;">
+      <v-main style="background: rgba(108, 170, 200, 0.1) url('static/images/bg-footer-wave.svg') no-repeat left 0 bottom 0; background-size: contain;">
         <transition name="fade" mode="out-in">
           <router-view />
         </transition>
