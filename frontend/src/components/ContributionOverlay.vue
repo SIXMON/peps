@@ -52,7 +52,7 @@
                       Je continue sans compte
                     </div>
                     <div class="caption">
-                      L'équipe Peps vous facilite la tâche pour que cela vous prenne le moins de
+                      L'équipe Pour une Agriculture du Vivant vous facilite la tâche pour que cela vous prenne le moins de
                       temps possible : après un court entretien téléphonique nous vous proposons
                       un brouillon que vous validez avant publication
                     </div>

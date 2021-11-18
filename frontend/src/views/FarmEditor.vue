@@ -574,7 +574,7 @@ export default {
   components: { Title, Loader, ImagesField },
   metaInfo() {
     return {
-      title: "Peps - Mettez à jour les données de votre exploitation",
+      title: "Pour une Agriculture du Vivant - Mettez à jour les données de votre exploitation",
       meta: [
         {
           description:

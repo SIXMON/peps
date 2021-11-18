@@ -223,7 +223,7 @@
             <v-hover>
               <v-card
                 outlined
-                color="#E0F4EE"
+                color="#FFF"
                 class="fill-height d-flex"
                 @click="createXP"
                 slot-scope="{ hover }"
@@ -291,7 +291,7 @@
                     style="margin-top: 3px; margin-left: 5px;"
                   >mdi-chevron-right</v-icon>
                 </v-card-title>
-                <v-card-subtitle>Vous trouverez tous les articles d'aide, les ressources et les conseils sur le site Peps</v-card-subtitle>
+                <v-card-subtitle>Vous trouverez tous les articles d'aide, les ressources et les conseils sur le site Pour une Agriculture du Vivant</v-card-subtitle>
               </v-card>
             </v-hover>
           </v-col>
@@ -318,7 +318,7 @@ export default {
   components: { Title, Loader },
   metaInfo() {
     return {
-      title: "Peps - Profil utilisateur",
+      title: "Pour une Agriculture du Vivant - Profil utilisateur",
       meta: [
         {
           description:

@@ -36,7 +36,7 @@ class RegisterView(FormView):
         try:
             AsanaUtils.send_task(
                 settings.ASANA_PROJECT,
-                'Création de compte Peps ({0})'.format(form.data['name']),
+                'Création de compte Pour une Agriculture du Vivant ({0})'.format(form.data['name']),
                 '{0} a crée son compte sur /register'.format(form.data['name']),
                 None)
         except Exception as _:

@@ -1,5 +1,5 @@
 
-Merci d’avoir créé votre compte sur Peps, il va vous permettre d'accéde à plus de fonctionnalités sur le site. On vous explique :
+Merci d’avoir créé votre compte sur Pour une Agriculture du Vivant, il va vous permettre d'accéde à plus de fonctionnalités sur le site. On vous explique :
 
 * Créer votre profil d’exploitation
 
@@ -16,13 +16,13 @@ Une fois connecté, vous pouvez ajouter un retour d’expérience depuis votre p
 
 Laissez vous guider par le questionnaire, vous pouvez sauvegarder le brouillon pendant que vous rédigez.
 
-Une fois la rédaction terminée, cliquez sur “Valider”. L’équipe Peps va alors lire votre témoignage avant de le publier.
+Une fois la rédaction terminée, cliquez sur “Valider”. L’équipe Pour une Agriculture du Vivant va alors lire votre témoignage avant de le publier.
 
 Pour plus d’information sur le sujet, vous pouvez consulter notre article d’aide sur le sujet : https://aide.peps.beta.gouv.fr/creer-ou-modifier-un-retour-dexperience
 
 * Entrer en contact avec d’autres agriculteurs
 
-Vous pouvez échanger avec n’importe quel agriculteur ayant publié un retour d’expérience sur Peps. Pour commencer la discussion, cliquez sur "Discuter avec …" depuis la page de témoignage ou sur le profil de son exploitation.
+Vous pouvez échanger avec n’importe quel agriculteur ayant publié un retour d’expérience sur Pour une Agriculture du Vivant. Pour commencer la discussion, cliquez sur "Discuter avec …" depuis la page de témoignage ou sur le profil de son exploitation.
  
 La discussion s’affiche, vous pouvez rédiger et envoyer votre message. Pour retrouver les messages envoyés, cliquez depuis n’importe quelle page du site sur "Mes messages"
 
@@ -30,14 +30,14 @@ Pour plus d’information sur le sujet, vous pouvez consulter notre article d’
 
 ----------
 
-L'équipe Peps est à votre écoute, pour nous contacter envoyez un message à peps@beta.gouv.fr ou répondez à cet email.
+L'équipe Pour une Agriculture du Vivant est à votre écoute, pour nous contacter envoyez un message à support@agricultureduvivant.org ou répondez à cet email.
     
 Bonne journée,
-L'équipe de Peps
+L'équipe de Pour une Agriculture du Vivant
 
 
 ----------
 
-Vous recevez ce message car vous avez un compte Peps et vous avez donné votre accord pour recevoir des notifications par email.
+Vous recevez ce message car vous avez un compte Pour une Agriculture du Vivant et vous avez donné votre accord pour recevoir des notifications par email.
 
 Pour régler vos paramètres de contact, c'est par ici : https://{{ site.domain }}/editeur-profil

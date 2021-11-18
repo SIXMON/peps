@@ -269,7 +269,7 @@ export default {
   components: { Title, Loader },
   metaInfo() {
     return {
-      title: "Peps - Mettez à jour vos données personnelles",
+      title: "Pour une Agriculture du Vivant - Mettez à jour vos données personnelles",
       meta: [
         {
           description:

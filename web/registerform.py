@@ -85,7 +85,7 @@ class RegisterForm(forms.ModelForm):
 
     def send_onboarding_email(self, current_site):
         user_email = self.cleaned_data["email"]
-        email_subject = 'Bienvenue sur Peps 🌱'
+        email_subject = 'Bienvenue sur Pour une Agriculture du Vivant 🌱'
         html_template = 'email-onboarding.html'
         text_template = 'email-onboarding.txt'
         from_email = settings.MAGICAUTH_FROM_EMAIL

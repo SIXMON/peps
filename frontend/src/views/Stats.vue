@@ -21,8 +21,8 @@ export default {
   components: { Title },
   metaInfo() {
     return {
-      title: "Peps - Statistiques",
-      meta: [{ description: 'Les statistiques de Peps' }]
+      title: "Pour une Agriculture du Vivant - Statistiques",
+      meta: [{ description: 'Les statistiques de Pour une Agriculture du Vivant' }]
     }
   },
   data() {
