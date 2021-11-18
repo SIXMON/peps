@@ -11,7 +11,13 @@
         :ctaAction="this.reload"
         :showCloseButton="false"
       />
-      <v-main style="margin-bottom: 20px; background: rgba(108, 170, 200, 0.1) url('static/images/bg-footer-wave.svg') no-repeat left 0 bottom 0; background-size: contain;">
+      <v-main
+        style="
+          background: rgba(108, 170, 200, 0.1)
+            url('static/images/bg-footer-wave.svg') no-repeat left 0 bottom 0;
+          background-size: contain;
+        "
+      >
         <transition name="fade" mode="out-in">
           <router-view />
         </transition>
@@ -22,11 +28,11 @@
 </template>
 
 <script>
-import Header from "@/components/Header.vue"
-import Footer from "@/components/Footer.vue"
-import Constants from "@/constants"
-import OverlayMessage from "@/components/OverlayMessage.vue"
-import Loader from "@/components/Loader.vue"
+import Header from "@/components/Header.vue";
+import Footer from "@/components/Footer.vue";
+import Constants from "@/constants";
+import OverlayMessage from "@/components/OverlayMessage.vue";
+import Loader from "@/components/Loader.vue";
 
 export default {
   name: "App",
@@ -34,68 +40,67 @@ export default {
     Header,
     Footer,
     OverlayMessage,
-    Loader
+    Loader,
   },
   data() {
     return {
-      messageRequestInterval: null
-    }
+      messageRequestInterval: null,
+    };
   },
   mounted() {
-    this.$store.dispatch("resetLoaders")
-    this.$store.dispatch("fetchLoggedUser")
-    this.$store.dispatch("fetchMessages")
-    this.$store.dispatch("fetchStats")
+    this.$store.dispatch("resetLoaders");
+    this.$store.dispatch("fetchLoggedUser");
+    this.$store.dispatch("fetchMessages");
+    this.$store.dispatch("fetchStats");
 
-    if (!this.$store.state.geojson)
-      this.$store.dispatch("fetchGeojson")
+    if (!this.$store.state.geojson) this.$store.dispatch("fetchGeojson");
   },
   computed: {
     showErrorMessage() {
-      const error = Constants.LoadingStatus.ERROR
-      return (
-        this.$store.state.farmersLoadingStatus === error
-      )
+      const error = Constants.LoadingStatus.ERROR;
+      return this.$store.state.farmersLoadingStatus === error;
     },
     initialCallsLoading() {
-      const loading = Constants.LoadingStatus.LOADING
+      const loading = Constants.LoadingStatus.LOADING;
       return (
         this.$store.state.loggedUserLoadingStatus === loading ||
         this.$store.state.farmersLoadingStatus === loading
-      )
+      );
     },
     removeFooter() {
-      return this.$route.name === "Messages"
+      return this.$route.name === "Messages";
     },
     loggedUser() {
-      return this.$store.state.loggedUser
-    }
+      return this.$store.state.loggedUser;
+    },
   },
   methods: {
     reload() {
-      location.reload()
+      location.reload();
     },
     createMessageInterval() {
-      this.clearMessageInterval()
-      this.messageRequestInterval = setInterval(() => this.$store.dispatch('fetchNewMessages'), 30000)
+      this.clearMessageInterval();
+      this.messageRequestInterval = setInterval(
+        () => this.$store.dispatch("fetchNewMessages"),
+        30000
+      );
     },
     clearMessageInterval() {
-      if (!this.messageRequestInterval)
-        return
-      clearInterval(this.messageRequestInterval)
-      this.messageRequestInterval = null
+      if (!this.messageRequestInterval) return;
+      clearInterval(this.messageRequestInterval);
+      this.messageRequestInterval = null;
     },
   },
   watch: {
     loggedUser(value) {
       if (value && value.farmer_id) {
-        this.createMessageInterval()
+        this.createMessageInterval();
       } else {
-        this.clearMessageInterval()
+        this.clearMessageInterval();
       }
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style lang="scss">
@@ -130,7 +135,7 @@ $cursive: "Caveat", cursive;
   }
 
   .display-1 {
-    color: #ea5403; 
+    color: #ea5403;
     margin-top: 20px;
   }
 
@@ -141,7 +146,8 @@ $cursive: "Caveat", cursive;
 
 body {
   width: 100%;
-  background:url("/static/images/bg-blob.svg") no-repeat left 0 top 13px, url("/static/images/bg-double-blob.svg") no-repeat right 0 top 25px;
+  background: url("/static/images/bg-blob.svg") no-repeat left 0 top 13px,
+    url("/static/images/bg-double-blob.svg") no-repeat right 0 top 25px;
 }
 
 body .buorg {
@@ -222,7 +228,7 @@ body .buorg .buorg-buttons {
   letter-spacing: 2px;
 }
 
-// Navbar 
+// Navbar
 
 .v-sheet.v-app-bar.v-toolbar:not(.v-sheet--outlined) {
   box-shadow: none !important;
@@ -230,16 +236,37 @@ body .buorg .buorg-buttons {
 }
 
 .theme--light.v-chip:not(.v-chip--active) {
-    background: #A7CCDE !important;
+  background: #a7ccde !important;
 }
 
 // Breadcrumbs
 .theme--dark.v-icon {
-    color: #4B565E !important ;
+  color: #4b565e !important ;
 }
 
-.theme--dark.v-breadcrumbs .v-breadcrumbs__divider, .theme--dark.v-breadcrumbs .v-breadcrumbs__item--disabled {
+.theme--dark.v-breadcrumbs .v-breadcrumbs__divider,
+.theme--dark.v-breadcrumbs .v-breadcrumbs__item--disabled {
   color: rgba(75, 86, 94, 0.5) !important;
 }
 
+// Button
+
+.v-btn:not(.v-btn--round).v-size--default {
+  line-height: 2;
+  font-weight: 400;
+  white-space: nowrap;
+  text-align: center;
+  box-shadow: 0 3px 8px rgb(234 84 3 / 25%);
+  cursor: pointer;
+  touch-action: manipulation;
+  height: 40px;
+  padding: 4px 15px;
+  font-size: 14px;
+  border-radius: 999px;
+  color: #fff !important;
+  background: #ea5403;
+  border: 1px solid #d9d9d9;
+  text-decoration: none;
+  text-transform: lowercase;
+}
 </style>

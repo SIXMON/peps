@@ -291,11 +291,10 @@ export default {
 
 <style scoped>
 .selected {
-  background: #008763;
+  background: #ea5403;
 }
 .v-list-item.active {
-  border-left: 4px solid #008763;
-  background: #e0f4ee;
+  border-left: 4px solid #ea5403;
 }
 .v-badge--dot {
   margin-top: -30px;

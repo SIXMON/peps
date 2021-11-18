@@ -30,7 +30,7 @@
     </v-col>
 
     <v-col cols="12" sm="6" md="4">
-      <v-card class="fill-height" style="min-height: 270px" color="#E0F4EE">
+      <v-card class="fill-height" style="min-height: 270px" color="#FFF">
         <label
           class="d-flex flex-column align-center justify-center"
           :for="uniqueId + '_video-input'"
