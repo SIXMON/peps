@@ -1,5 +1,11 @@
 <template>
   <div>
+    <!-- EXPLOITATION NAME -->
+    <div v-if="farmer.installation_date" class="body-2 info-item">
+      <v-icon small left>mdi-pencil</v-icon>
+      <div>Nom de l'exploitation : {{farmer.farm_name}}</div>
+    </div>
+
     <!-- INSTALLATION DATE -->
     <div v-if="farmer.installation_date" class="body-2 info-item">
       <v-icon small left>mdi-calendar-blank-outline</v-icon>
@@ -9,7 +15,7 @@
     <!-- PERSONNEL -->
     <div v-if="farmer.personnel" class="body-2 info-item">
       <v-icon small left>mdi-card-account-details-outline</v-icon>
-      <div>Effectif : {{farmer.personnel}} temps plein</div>
+      <div>Main d'œuvre : {{farmer.personnel}} temps plein</div>
     </div>
 
     <!-- LIVESTOCK TYPES -->
@@ -19,7 +25,7 @@
     >
       <v-icon small left>mdi-cow</v-icon>
       <div>
-        Élevage :
+        Cheptel :
         <span v-for="(livestock, index) in farmer.livestock_types" :key="index">{{livestock}},</span>
         <span v-if="farmer.livestock_number">({{ farmer.livestock_number }})</span>
       </div>
@@ -83,7 +89,7 @@
             v-if="farmer.surface_cultures"
           >{{farmer.surface_cultures}} ha en cultures</span>
           <span v-if="farmer.surface_cultures && farmer.surface_meadows">&nbsp;et&nbsp;</span>
-          <span v-if="farmer.surface_meadows">{{farmer.surface_meadows}} ha en prairie</span>
+          <span v-if="farmer.surface_meadows">{{farmer.surface_meadows}} ha en prairie permanente</span>
         </span>
       </div>
     </div>

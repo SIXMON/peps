@@ -55,7 +55,7 @@
         <!-- PRODUCTIONS -->
         <div class="field">
           <div class="field-title title">
-            Quelles productions sont présentes sur l'exploitation ?
+            Quelles productions sont présentes sur votre exploitation ?
             <span class="mandatory">- obligatoire</span>
           </div>
           <div class="field-helper">Vous pouvez en sélectionner plusieurs</div>
@@ -239,7 +239,7 @@
           <div class="field child-field">
             <div
               class="field-title subtitle-2"
-            >La surface en prairie et cultures fourragères (en ha.)</div>
+            >La surface en prairie permanente (en ha.)</div>
             <v-text-field
               hide-details="auto"
               @input="hasChanged = true"
@@ -295,13 +295,16 @@
 
         <div class="field">
           <div class="field-title title">Si vous avez de l'élevage, combien de bêtes avez-vous ?</div>
-          <v-text-field
+          <div class="field-helper">Indiquer le nombre de tête par élevage, les races et particularités de l'élevage s'il y en a</div>
+          <v-textarea
             hide-details="auto"
+            rows="3"
             @input="hasChanged = true"
+            auto-grow
             outlined
             dense
             v-model="dummyFarmer.livestock_number"
-          ></v-text-field>
+          ></v-textarea>
         </div>
 
         <!-- CULTURES -->
@@ -345,7 +348,7 @@
 
         <!-- OUTPUT -->
 
-        <div class="field">
+        <!-- <div class="field">
           <div
             class="field-title title"
           >Quel est rendement moyen en blé tendre de l'exploitation (en quintaux / ha)</div>
@@ -356,18 +359,18 @@
             dense
             v-model="dummyFarmer.output"
           ></v-text-field>
-        </div>
+        </div> -->
 
         <!-- DESCRIPTION -->
 
         <div class="field">
           <div class="field-title title">
-            Pouvez-vous décrire votre exploitation ?
+            Description de la ferme
             <span class="mandatory">- obligatoire</span>
           </div>
           <div
             class="field-helper"
-          >Son histoire, son fonctionnement, ses particularités, la philosophie et le type d'agriculture pratiquée...</div>
+          >Pouvez-vous décrire votre exploitation ? <br />Son histoire, son fonctionnement, ses particularités, la philosophie et le type d'agriculture pratiquée...</div>
           <v-textarea
             hide-details="auto"
             rows="5"
@@ -441,6 +444,13 @@
             v-model="dummyFarmer.agriculture_types"
             label="Agroforesterie"
             value="Agroforesterie"
+          ></v-checkbox>
+          <v-checkbox
+            hide-details
+            @click.native="hasChanged = true"
+            v-model="dummyFarmer.agriculture_types"
+            label="Arboriculture"
+            value="Arboriculture"
           ></v-checkbox>
           <v-checkbox
             hide-details

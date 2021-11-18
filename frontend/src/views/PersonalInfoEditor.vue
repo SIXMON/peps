@@ -133,7 +133,7 @@
           <v-checkbox
             @click.native="hasChanged = true"
             v-model="dummyFarmer.contact_possible"
-            label="J'accepte d'être contacté par des utilisateurs de Peps qui souhaitent en savoir plus sur mes témoignages"
+            label="J'accepte d'être contacté par des utilisateurs qui souhaitent en savoir plus sur mes témoignages"
           ></v-checkbox>
         </div>
 
@@ -147,7 +147,7 @@
           <v-checkbox
             @click.native="hasChanged = true"
             v-model="dummyFarmer.email_for_messages_allowed"
-            label="J'accepte de revoir un email pour me notifier d'un nouveau message envoyé par un utilisateur sur Peps"
+            label="J'accepte de revoir un email pour me notifier d'un nouveau message envoyé par un utilisateur"
           ></v-checkbox>
         </div>
 
