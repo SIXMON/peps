@@ -196,3 +196,4 @@ class ExperimentBriefsFastSerializer(serializers.Serializer):
     farmer_name = serializers.SlugRelatedField(source="farmer", slug_field='name', read_only=True)
     agriculture_types = serializers.SlugRelatedField(source="farmer", slug_field='agriculture_types', read_only=True)
     objectives = serializers.CharField()
+    workshop = serializers.CharField()

@@ -61,6 +61,7 @@ export default new Vuex.Store({
       departments: [],
       agricultureTypes: [],
       cultures: [],
+      workshops: [],
       livestock: false
     },
 
