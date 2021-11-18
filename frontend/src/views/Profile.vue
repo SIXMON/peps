@@ -27,7 +27,6 @@
                 text
                 class="text-none"
                 color="primary"
-                style="text-decoration: underline;"
                 v-if="farmer.approved"
                 @click="seePublicProfile"
               >Voir le profil public</v-btn>

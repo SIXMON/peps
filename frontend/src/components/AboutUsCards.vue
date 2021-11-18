@@ -7,10 +7,8 @@
         <v-card-subtitle>{{item.text}}</v-card-subtitle>
         <v-card-actions>
           <v-btn
-            color="primary"
             :to="item.ctaTo"
             :href="item.ctaLink"
-            class="primary--text text-decoration-underline text-none"
             :target="item.ctaLink ? '_blank' : undefined"
             text
           >{{item.ctaText}}</v-btn>

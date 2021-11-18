@@ -295,7 +295,6 @@ export default {
 }
 .v-list-item.active {
   border-left: 4px solid #ea5403;
-  background: #e0f4ee;
 }
 .v-badge--dot {
   margin-top: -30px;
