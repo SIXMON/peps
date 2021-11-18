@@ -331,7 +331,7 @@
             label="Toute la surface potentiellement adaptée à la mise en place de la pratique"
             value="Toute la surface potentiellement adaptée à la mise en place de la pratique"
             hide-details
-            :rules="[hasSurfaceType]"
+            :rules="[hasSurfaceType,validators.maxSelected(1)]"
           ></v-checkbox>
           <v-checkbox
             @click.native="hasChanged = true"
@@ -339,7 +339,7 @@
             label="Plusieurs parcelles"
             value="Plusieurs parcelles"
             hide-details
-            :rules="[hasSurfaceType]"
+            :rules="[hasSurfaceType,validators.maxSelected(1)]"
           ></v-checkbox>
           <v-checkbox
             @click.native="hasChanged = true"
@@ -347,7 +347,7 @@
             label="Une parcelle"
             value="Une parcelle"
             hide-details
-            :rules="[hasSurfaceType]"
+            :rules="[hasSurfaceType,validators.maxSelected(1)]"
           ></v-checkbox>
           <v-checkbox
             @click.native="hasChanged = true"
@@ -355,14 +355,14 @@
             label="Une bande"
             value="Une bande"
             hide-details
-            :rules="[hasSurfaceType]"
+            :rules="[hasSurfaceType,validators.maxSelected(1)]"
           ></v-checkbox>
           <v-checkbox
             @click.native="hasChanged = true"
             v-model="dummyExperiment.surface_type"
             label="Des micro-parcelles"
             value="Des micro-parcelles"
-            :rules="[hasSurfaceType]"
+            :rules="[hasSurfaceType,validators.maxSelected(1)]"
           ></v-checkbox>
         </div>
 
