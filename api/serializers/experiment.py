@@ -185,6 +185,7 @@ class ExperimentBriefsFastSerializer(serializers.Serializer):
     sequence_number = serializers.IntegerField(read_only=True)
     tags = serializers.ListField()
     name = serializers.CharField()
+    description = serializers.CharField()
     short_name = serializers.CharField()
     cultures = serializers.ListField()
     creation_date = serializers.DateTimeField()

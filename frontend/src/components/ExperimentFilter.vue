@@ -5,7 +5,7 @@
       @done="showContributionOverlay = false"
     />
     <!-- Recherche -->
-    <!-- <v-row class="align-center" style="padding:12px;">
+    <v-row class="align-center" style="padding:12px;">
       <v-text-field
         prepend-inner-icon="mdi-magnify"
         placeholder="Cherchez des mots clé"
@@ -16,7 +16,7 @@
         clearable
       >
       </v-text-field>
-      <div class="d-none d-sm-flex" style="width: 10px;margin-left: 10px;border-left: solid 1px #c4bfbf;height: 50px;"></div>
+      <!-- <div class="d-none d-sm-flex" style="width: 10px;margin-left: 10px;border-left: solid 1px #c4bfbf;height: 50px;"></div>
       <v-badge
             class="d-none d-sm-flex"
             color="primary"
@@ -32,8 +32,8 @@
             >
               <v-icon>mdi-filter-variant</v-icon>Filtrer
             </v-btn>
-          </v-badge>
-    </v-row> -->
+          </v-badge> -->
+    </v-row>
     
     <v-container
       :class="{'d-none': removeFilterArea}"
@@ -63,6 +63,7 @@
             </v-btn>
           </v-badge>
         </v-col>
+        
 
         <!-- Filter Thématique mobile and tablet -->
         <v-col
@@ -285,7 +286,15 @@ export default {
             weight: 3
           },
           {
+            name: "description",
+            weight: 4
+          },
+          {
             name: "objectives",
+            weight: 1
+          },
+          {
+            name: "tags",
             weight: 1
           }
         ]
