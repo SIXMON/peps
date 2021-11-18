@@ -100,7 +100,7 @@ export default {
   metaInfo() {
     return {
       title:
-        "Peps, les expériences d'agriculteurs - adventices ravageurs maladies",
+        "Pour une Agriculture du Vivant, les expériences d'agriculteurs",
       meta: [
         {
           description:

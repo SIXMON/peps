@@ -86,7 +86,7 @@ export default {
   },
   metaInfo() {
     return {
-      title: "Peps - Messages",
+      title: "Pour une Agriculture du Vivant - Messages",
       meta: [{ description: "" }],
     }
   },

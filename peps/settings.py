@@ -195,14 +195,14 @@ SECURE_SSL_REDIRECT = os.getenv('PEPS_FORCE_HTTPS') == 'True'
 
 LOGIN_URL = '/login'
 MAGICAUTH_FROM_EMAIL = 'contact@peps.beta.gouv.fr'
-MAGICAUTH_EMAIL_SUBJECT = 'Votre lien de connexion Peps'
+MAGICAUTH_EMAIL_SUBJECT = 'Votre lien de connexion Pour une Agriculture du Vivant'
 MAGICAUTH_LOGGED_IN_REDIRECT_URL_NAME = 'app'
 MAGICAUTH_EMAIL_FIELD = 'email'
 MAGICAUTH_EMAIL_HTML_TEMPLATE = 'email.html'
 MAGICAUTH_EMAIL_TEXT_TEMPLATE = 'email.txt'
 MAGICAUTH_LOGIN_VIEW_TEMPLATE = 'login-magicauth.html'
 MAGICAUTH_EMAIL_SENT_VIEW_TEMPLATE = 'email-sent.html'
-MAGICAUTH_EMAIL_UNKNOWN_MESSAGE = 'Nous n\'avons pas trouvé un utilisateur avec cet email. <a href="/contact">Contactez-nous</a> pour faire partie des testeurs Peps !'
+MAGICAUTH_EMAIL_UNKNOWN_MESSAGE = 'Nous n\'avons pas trouvé un utilisateur avec cet email. <a href="/contact">Contactez-nous</a> pour faire partie des testeurs Pour une Agriculture du Vivant!'
 
 MAGICAUTH_TOKEN_DURATION_SECONDS = 60 * 60 * 3
 

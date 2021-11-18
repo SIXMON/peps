@@ -55,7 +55,7 @@
                 <div style="padding-left: 30px;" class="caption">
                   {{farmer.name}} a très envie de discuter avec vous, beaucoup moins
                   avec des robots spammeurs... C'est uniquement pour ça qu'on vous
-                  demande de créer un compte Peps.
+                  demande de créer un compte Pour une Agriculture du Vivant.
                 </div>
               </v-sheet>
             </v-card-text>

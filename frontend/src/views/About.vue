@@ -243,7 +243,7 @@ export default {
         {
           journal: "Écophyto PIC",
           title:
-            "Transition du modèle agricole : Peps facilite les retours d’expérience entre agriculteurs",
+            "Transition du modèle agricole : Pour une Agriculture du Vivant facilite les retours d’expérience entre agriculteurs",
           imageUrl: "https://ecophytopic.fr/sites/default/files/styles/a_la_une_175x140_/public/2020-09/PEPS.jpg",
           contain: true,
           url:

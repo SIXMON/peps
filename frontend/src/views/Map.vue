@@ -82,7 +82,7 @@ export default {
   metaInfo() {
     return {
       title:
-        "Peps, des exploitations sur tout le territoire",
+        "Pour une Agriculture du Vivant, des exploitations sur tout le territoire",
       meta: [
         {
           description:

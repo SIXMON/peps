@@ -19,7 +19,7 @@
 
     <v-container class="constrained">
       <div class="body-1">
-        <p>L'équipe Peps vous accompagne dans la rédaction de votre retour d'expérience
+        <p>L'équipe Pour une Agriculture du Vivant vous accompagne dans la rédaction de votre retour d'expérience
         pour que cela vous prenne le moins de temps possible.</p>
         <p>Remplissez ces quelques informations et nous vous rappellerons dans les
         plus brefs délais.</p>
@@ -115,11 +115,11 @@ export default {
   metaInfo() {
     return {
       title:
-        "Peps - Partager mon expérience rapidement",
+        "Pour une Agriculture du Vivant - Partager mon expérience rapidement",
       meta: [
         {
           description:
-            "Remplissez ces informations et faites vous rappeler par l'équipe Peps"
+            "Remplissez ces informations et faites vous rappeler par l'équipe Pour une Agriculture du vivant"
         }
       ]
     }

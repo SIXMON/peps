@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Accéder à Peps</title>
+    <title>Accéder à Pour une Agriculture du Vivant</title>
     <style>
       /* -------------------------------------
           GLOBAL RESETS
@@ -301,7 +301,7 @@
                     <tr>
                       <td>
                         <p>Bonjour{% if user.farmer %} {{user.farmer.name}}{% endif %},</p>
-                        <p>Pour accéder à Peps, vous avez juste à cliquer sur ce bouton :</p>
+                        <p>Pour accéder à Pour une Agriculture du Vivant, vous avez juste à cliquer sur ce bouton :</p>
                         <table border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
                           <tbody>
                             <tr>
@@ -330,12 +330,12 @@
                           contenu dans ce mail n'est valide que pendant 3 heures.
                         </p>
                         <p>Si ce délai est dépassé,
-                          veuillez recommencer votre identification sur le site de Peps en suivant 
+                          veuillez recommencer votre identification sur le site de Pour une Agriculture du Vivant en suivant 
                           <a href="https://{{ site.domain }}{% url 'magicauth-login' %}?next={{ next_view }}">ce lien</a>
                         </p>
 
                         <p>Bonne journée,</p>
-                        <p>L'équipe de Peps</p>
+                        <p>L'équipe de Pour une Agriculture du Vivant</p>
                       </td>
                     </tr>
                   </table>
