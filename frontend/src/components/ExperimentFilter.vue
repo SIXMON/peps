@@ -158,6 +158,28 @@
           ></v-select>
         </v-col>
 
+        <!-- Filter Workshop  -->
+        <v-col
+          :class="{ filter: true, 'd-none': !showFilterArea }"
+          cols="12"
+          sm="6"
+        >
+          <div class="filter-title">Atelier</div>
+          <v-select
+            hide-details
+            chips
+            deletable-chips
+            small-chips
+            outlined
+            multiple
+            placeholder="Tous les atelier"
+            :items="workshops"
+            class="filter-select"
+            v-model="activeFilters.workshops"
+            @change="(x) => sendFilterChangeEvent('workshops', x)" 
+          ></v-select>
+        </v-col>
+
         <!-- Filter Livestock -->
         <v-col cols="12" sm="6" :class="{ 'd-none': !showFilterArea }">
           <div class="filter-title">Uniquement l'élevage</div>
@@ -223,6 +245,7 @@ export default {
         tags: [],
         agricultureTypes: [],
         cultures: [],
+        workshops: [],
         livestock: false,
       },
       searchTerm: "",
@@ -258,6 +281,10 @@ export default {
             weight: 2
           },
           {
+            name: "workshops",
+            weight: 3
+          },
+          {
             name: "objectives",
             weight: 1
           }
@@ -288,6 +315,11 @@ export default {
           this.activeFilters.cultures.some(
             (y) => !!x.cultures && x.cultures.indexOf(y) > -1
           )
+        const workshopSelected = 
+          this.activeFilters.workshops.length === 0 ||
+          this.activeFilters.workshops.some(
+            (y) => !!x.workshop && x.workshop.indexOf(y) > -1
+          )
         const livestockSelected =
           !this.activeFilters.livestock ||
           (x.livestock_types && x.livestock_types.length > 0)
@@ -297,6 +329,7 @@ export default {
           departmentSelected &&
           agricultureTypeSelected &&
           cultureSelected &&
+          workshopSelected &&
           livestockSelected
         )
       })
@@ -333,6 +366,17 @@ export default {
         ...new Set(
           this.$store.getters.experimentBriefs
             .flatMap((x) => x.cultures)
+            .filter((x) => !!x)
+            .sort()
+        ),
+      ]
+    },
+
+    workshops() {
+      return [
+        ...new Set(
+          this.$store.getters.experimentBriefs
+            .flatMap((x) => x.workshop)
             .filter((x) => !!x)
             .sort()
         ),
@@ -409,6 +453,7 @@ export default {
       if (this.activeFilters.cultures.length > 0) count++
       if (this.activeFilters.agricultureTypes.length > 0) count++
       if (this.activeFilters.livestock) count++
+      if (this.activeFilters.workshops.length > 0) count++
       return count
     },
     removeFilterArea() {
@@ -476,6 +521,9 @@ export default {
       this.$store.dispatch("updateFilters", { filters: this.activeFilters })
     },
     "activeFilters.cultures": function () {
+      this.$store.dispatch("updateFilters", { filters: this.activeFilters })
+    },
+    "activeFilters.workshops": function () {
       this.$store.dispatch("updateFilters", { filters: this.activeFilters })
     },
     "activeFilters.livestock": function () {
