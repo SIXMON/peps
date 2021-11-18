@@ -223,7 +223,7 @@
             <v-hover>
               <v-card
                 outlined
-                color="#E0F4EE"
+                color="#FFF"
                 class="fill-height d-flex"
                 @click="createXP"
                 slot-scope="{ hover }"
