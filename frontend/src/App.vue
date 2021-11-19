@@ -105,7 +105,6 @@ export default {
 
 <style lang="scss">
 $source-sans-pro: "Source Sans Pro", "Roboto", sans-serif;
-$cursive: "Caveat", cursive;
 
 #app.v-application {
   font-family: "Roboto", sans-serif;
@@ -122,10 +121,6 @@ $cursive: "Caveat", cursive;
   .subtitle-2,
   .title {
     font-family: $source-sans-pro !important;
-  }
-
-  .cursive {
-    font-family: $cursive !important;
   }
 
   .display-1,

@@ -38,7 +38,7 @@
 
         <v-btn text elevation="0" v-if="!loggedUser" href="/login">
           <v-icon class="d-flex d-sm-none">mdi-account</v-icon>
-          <span class="caption text-none d-none d-sm-flex">S'identifier</span>
+          <span class="caption text-none d-none d-sm-flex btn-white">S'identifier</span>
         </v-btn>
 
         <v-menu v-if="loggedUser" left bottom>

@@ -36,7 +36,7 @@
         class="text-none"
         style="margin-top: 15px; margin-bottom: 15px;"
         color="primary"
-        href="mailto:support@agricultureduvivant.org"
+        href="mailto:agriculteur@agricultureduvivant.org"
         target="_blank"
         dark
       >J'envoie un email</v-btn>

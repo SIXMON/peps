@@ -300,8 +300,7 @@
         @click="logout"
         style="margin-top: 20px;"
         outlined
-        color="deep-orange darken-4"
-        class="text-none"
+        class="btn-white"
       >Se déconnecter</v-btn>
     </v-container>
   </div>
@@ -505,5 +504,10 @@ export default {
 }
 .v-card__title {
   font-size: 1.1rem;
+}
+
+.btn-white {
+  background: #fff !important;
+  color: #ea5403 !important;
 }
 </style>
