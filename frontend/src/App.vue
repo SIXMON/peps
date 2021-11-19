@@ -267,6 +267,6 @@ body .buorg .buorg-buttons {
   background: #ea5403;
   border: 1px solid #d9d9d9;
   text-decoration: none;
-  text-transform: lowercase;
+  text-transform: unset;
 }
 </style>
