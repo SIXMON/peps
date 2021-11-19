@@ -157,7 +157,6 @@ class ExperimentAdmin(admin.ModelAdmin, DynamicArrayMixin):
                 'description',
                 'surface_type',
                 'surface',
-                'control_presence',
                 'results',
                 'results_details',
                 'links',
