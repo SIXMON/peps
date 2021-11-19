@@ -7,6 +7,7 @@
         <v-card-subtitle>{{item.text}}</v-card-subtitle>
         <v-card-actions>
           <v-btn
+            v-if="item.ctaTo != null || item.ctaLink != null || item.ctaText != null"
             :to="item.ctaTo"
             :href="item.ctaLink"
             :target="item.ctaLink ? '_blank' : undefined"
@@ -29,6 +30,9 @@ export default {
           title: "Un service pour la transition agroécologique",
           text:
             "C’est un service gratuit qui s'adresse à tous pour accélérer la transition agroécologique des fermes par le partage d’expériences entre agriculteurs. Ce projet est soutenu par le Ministère de l'Agriculture et de l'Alimentation et le Ministère de la Transition Ecologique dans le cadre du plan Ecophyto",
+          ctaText: null,
+          ctaLink: null,
+          ctaTo: null
         },
         {
           imageSource: "/static/images/agriculteurs_tracteur.jpg",
@@ -45,8 +49,8 @@ export default {
           text:
             "Devenez acteur de la transition agroécologique et connectez-vous avec les acteurs de la transition en rejoignant le mouvement",
           ctaText: "Qui sommes nous ?",
-          ctaTo: { name: "QuiSommesNous" },
-          ctaLink: null,
+          ctaTo: null,
+          ctaLink: 'https://transition.agricultureduvivant.org/adhesion',
         },
       ],
     }
