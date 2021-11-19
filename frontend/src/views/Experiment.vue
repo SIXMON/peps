@@ -135,7 +135,7 @@
               <div>Expérience finie</div>
             </div> -->
 
-            <div v-if="experiment.control_presence" class="body-2 info-item">
+            <!-- <div v-if="experiment.control_presence" class="body-2 info-item">
               <v-icon small left>mdi-eye-outline</v-icon>
               <div>Mise en place d'un témoin</div>
             </div>
@@ -143,7 +143,7 @@
             <div v-else class="body-2 info-item">
               <v-icon small left>mdi-eye-off-outline</v-icon>
               <div>Pas de témoin mis en place</div>
-            </div>
+            </div> -->
 
             <div v-if="experiment.equipment" class="body-2 info-item">
               <v-icon small left>mdi-hammer-wrench</v-icon>

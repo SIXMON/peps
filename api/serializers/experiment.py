@@ -72,7 +72,6 @@ class ExperimentFastSerializer(serializers.Serializer):
     short_name = serializers.CharField()
     objectives = serializers.CharField()
     equipment = serializers.CharField()
-    control_presence = serializers.BooleanField()
     results = serializers.CharField()
     results_details = serializers.CharField()
     links = serializers.ListField()
@@ -112,7 +111,6 @@ class ExperimentSerializer(serializers.ModelSerializer):
             'short_name',
             'objectives',
             'equipment',
-            'control_presence',
             'results',
             'results_details',
             'links',

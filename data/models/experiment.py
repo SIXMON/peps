@@ -96,8 +96,6 @@ class Experiment(models.Model):
     short_name = models.TextField(max_length=30, null=True, blank=True, help_text='Si ce champ est présent, il sera utilisé pour l\'URL')
     objectives = models.TextField(null=True, blank=True)
     equipment = models.TextField(null=True, blank=True)
-    control_presence = models.BooleanField(null=True, blank=True)
-    ongoing = models.BooleanField(null=True, blank=True)
     results = models.TextField(null=True, blank=True, choices=RESULTS)
     results_details = models.TextField(null=True, blank=True)
     links = ArrayField(models.TextField(), default=list, blank=True, null=True)
