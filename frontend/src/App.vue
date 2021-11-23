@@ -264,4 +264,10 @@ body .buorg .buorg-buttons {
   text-decoration: none;
   text-transform: unset;
 }
+
+.mdi-beaker-plus-outline::before {
+    content: "\F1230";
+    color: white;
+}
+
 </style>

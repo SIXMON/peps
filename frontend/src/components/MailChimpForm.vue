@@ -36,6 +36,7 @@
       <v-row>
         <v-col cols="12" sm="6">
           <v-text-field
+            class="field"
             type="email"
             label="Votre adresse email"
             outlined
@@ -48,6 +49,7 @@
             id="mce-EMAIL"
           ></v-text-field>
           <v-text-field
+            class="field"
             type="text"
             label="Votre prénom"
             outlined
@@ -59,6 +61,7 @@
             id="mce-FNAME"
           ></v-text-field>
           <v-text-field
+            class="field"
             type="text"
             label="Votre nom"
             outlined
@@ -70,7 +73,7 @@
             id="mce-LNAME"
           ></v-text-field>
         </v-col>
-        <v-col cols="auto">
+        <v-col cols="12" sm="6">
           <v-btn type="submit" height="40px" color="primary" class="text-none" form="mailchimpform">
             Recevoir les témoignages
           </v-btn>
@@ -98,3 +101,11 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+
+.field {
+  margin: 10px 0px;
+}
+
+</style>
