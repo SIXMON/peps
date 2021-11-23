@@ -194,7 +194,7 @@ MEDIA_URL = '/media/'
 SECURE_SSL_REDIRECT = os.getenv('PEPS_FORCE_HTTPS') == 'True'
 
 LOGIN_URL = '/login'
-MAGICAUTH_FROM_EMAIL = 'contact@peps.beta.gouv.fr'
+MAGICAUTH_FROM_EMAIL = 'agriculteur@agricultureduvivant.org'
 MAGICAUTH_EMAIL_SUBJECT = 'Votre lien de connexion Pour une Agriculture du Vivant'
 MAGICAUTH_LOGGED_IN_REDIRECT_URL_NAME = 'app'
 MAGICAUTH_EMAIL_FIELD = 'email'
@@ -214,7 +214,9 @@ ANYMAIL = {
     "MAILJET_API_KEY": os.getenv('PEPS_MJ_APIKEY_PUBLIC'),
     "MAILJET_SECRET_KEY": os.getenv('PEPS_MJ_APIKEY_PRIVATE')
 }
-DEFAULT_FROM_EMAIL = "contact@peps.beta.gouv.fr"
-SERVER_EMAIL = "contact@peps.beta.gouv.fr"
+DEFAULT_FROM_EMAIL = "agriculteur@agricultureduvivant.org"
+SERVER_EMAIL = "agriculteur@agricultureduvivant.org"
+
+MAILJET_API_URL = "https://api.mailjet.com/v3/"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
