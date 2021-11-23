@@ -222,7 +222,7 @@ class ListCreateMessageView(ListCreateAPIView):
 
         sender_farmer = self.request.user.farmer
         email_address = recipient_farmer.user.email
-        email_subject = "Nouveau message de {0} sur Peps".format(sender_farmer.name)
+        email_subject = "Nouveau message de {0} sur Pour une Agriculture du Vivant".format(sender_farmer.name)
         html_template = 'email-message.html'
         text_template = 'email-message.txt'
         context = {
@@ -242,7 +242,6 @@ class ListCreateMessageView(ListCreateAPIView):
             headers={}
         )
         email.attach_alternative(html_message, 'text/html')
-        print(html_message)
         email.send()
 
 class MarkAsReadMessageView(APIView):

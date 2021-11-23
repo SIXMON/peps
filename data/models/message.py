@@ -42,7 +42,7 @@ class Message(models.Model):
         protocol = 'https://' if os.getenv('PEPS_SECURE') == 'True' else 'http://'
         domain = protocol + os.getenv('PEPS_HOSTNAME', '')
         email_address = self.recipient.user.email
-        email_subject = "Nouveau message de {0} sur Peps".format(self.sender.name)
+        email_subject = "Nouveau message de {0} sur Pour une Agriculture du Vivant 🌱".format(self.sender.name)
         html_template = 'email-message.html'
         text_template = 'email-message.txt'
         context = {
