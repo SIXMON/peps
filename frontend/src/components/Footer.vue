@@ -58,6 +58,7 @@ export default {
   height: 64px;
   background-color: white;
   padding: 24px 50px;
+  font-size: 14px;
 }
 
 p {

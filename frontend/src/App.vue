@@ -104,10 +104,10 @@ export default {
 </script>
 
 <style lang="scss">
-$source-sans-pro: "Source Sans Pro", "Roboto", sans-serif;
+$source-sans-pro: 'DM Sans', sans-serif;
 
 #app.v-application {
-  font-family: "Roboto", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
@@ -148,7 +148,7 @@ body {
 body .buorg {
   border-bottom: 1px solid #ea5403;
   background-color: #ea5403;
-  font-family: "Roboto", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   color: white;
 }
 
