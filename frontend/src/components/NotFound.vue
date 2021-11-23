@@ -15,12 +15,6 @@
         <span class="text-none">Contact</span>
       </v-btn>
     </div>
-    <div>
-      <v-btn color="primary" outlined elevation="0" style="margin-top: 10px;" :to="{ name: 'QuiSommesNous' }">
-        <v-icon style="margin-right: 5px; padding-top: 2px;" small>mdi-information</v-icon>
-        <span class="text-none">En savoir plus</span>
-      </v-btn>
-    </div>
   </v-container>
 </template>
 
