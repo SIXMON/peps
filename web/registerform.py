@@ -70,10 +70,9 @@ class RegisterForm(forms.ModelForm):
             "site": current_site,
             "next_view": next_view,
         }
-        print("token : " + token)
         text_message = loader.render_to_string(text_template, context)
         html_message = loader.render_to_string(html_template, context)
-        print(html_message)
+        # print(token)
         send_mail(
             subject=email_subject,
             message=text_message,
