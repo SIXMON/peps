@@ -9,11 +9,7 @@
       <v-row>
         <v-col cols="12">
           <div class="display-1">
-            REX Agri : le savoir partagé
-            <span
-              class="cursive"
-              style="font-size: 38px; letter-spacing: 0em;"
-              >entre agriculteurs</span>
+            REX Agri : le savoir partagé entre agriculteurs
           </div>
           <v-card-text
             class="body-1"
