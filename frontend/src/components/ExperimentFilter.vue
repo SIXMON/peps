@@ -165,7 +165,7 @@
           cols="12"
           sm="6"
         >
-          <div class="filter-title">Atelier</div>
+          <div class="filter-title">Ateliers</div>
           <v-select
             hide-details
             chips
@@ -173,7 +173,7 @@
             small-chips
             outlined
             multiple
-            placeholder="Tous les atelier"
+            placeholder="Tous les ateliers"
             :items="workshops"
             class="filter-select"
             v-model="activeFilters.workshops"
