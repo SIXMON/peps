@@ -102,8 +102,8 @@
           <v-checkbox
             @click.native="hasChanged = true"
             v-model="dummyFarmer.production"
-            label="Élevage poule"
-            value="Élevage poule"
+            label="Élevage poule pondeuses"
+            value="Élevage poule pondeuses"
             hide-details
             :rules="[hasProductions]"
           ></v-checkbox>
@@ -136,6 +136,14 @@
             v-model="dummyFarmer.production"
             label="Apiculture"
             value="Apiculture"
+            hide-details
+            :rules="[hasProductions]"
+          ></v-checkbox>
+          <v-checkbox
+            @click.native="hasChanged = true"
+            v-model="dummyFarmer.production"
+            label="Arboriculture"
+            value="Arboriculture"
             hide-details
             :rules="[hasProductions]"
           ></v-checkbox>

@@ -21,6 +21,7 @@ PRODUCTIONS = (
     ('Vigne', 'Vigne'),
     ('Cultures spécialisées', 'Cultures spécialisées'),
     ('Apiculture', 'Apiculture'),
+    ('Arboriculture', 'Arboriculture'),
     ('Autre', 'Autre'),
 )
 
