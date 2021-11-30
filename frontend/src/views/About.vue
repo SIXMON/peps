@@ -270,5 +270,6 @@ export default {
 }
 .body-1 {
   margin-top: 15px;
+  font-family: 'DM Sans', sans-serif;
 }
 </style>
