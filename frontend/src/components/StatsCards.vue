@@ -19,6 +19,7 @@
       @click="goToStats"
       class="text-none"
       id="stats-button"
+      style="margin: 25px 0 10px 0;"
     >Voir les statistiques complètes</v-btn>
   </div>
 </template>

@@ -29,11 +29,11 @@
       
       <!-- Newsletter -->
       <div
-        style="background-color: white; margin: 10px -16px 30px -16px;padding: 16px;border-radius: 5px;"
+        style="background-color: white; margin: 10px -16px 30px -16px;padding: 16px;border-radius: 5px; box-shadow: 0 4px 8px rgb(0 0 0 / 15%);"
       >
       <p
         class="body-1 pa-0"
-        style="margin: 5px 0px;"
+        style="margin: 5px 0px; color:#ea5403; font-weight: bold;"
       >Pour recevoir les nouveaux retours d'expérience, abonnez-nous : </p>
       <MailChimpForm />
       </div>
@@ -48,7 +48,7 @@
 
       <!-- Stats -->
       <div
-        style="margin: 30px -16px 0 -16px;padding: 16px;border-radius: 5px;"
+        style="margin: 30px -16px 0 -16px;padding: 16px;border-radius: 5px; background:white; border-radius: 5px;"
       >
         <h2
           class="title pa-0"

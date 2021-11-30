@@ -34,7 +34,7 @@
         />
       </div>
       <v-row>
-        <v-col cols="12" sm="6">
+        <v-col cols="6" sm="6">
           <v-text-field
             class="field"
             type="email"
@@ -51,18 +51,6 @@
           <v-text-field
             class="field"
             type="text"
-            label="Votre prénom"
-            outlined
-            validate-on-blur
-            hide-details="auto"
-            dense
-            value=""
-            name="FNAME"
-            id="mce-FNAME"
-          ></v-text-field>
-          <v-text-field
-            class="field"
-            type="text"
             label="Votre nom"
             outlined
             validate-on-blur
@@ -73,7 +61,19 @@
             id="mce-LNAME"
           ></v-text-field>
         </v-col>
-        <v-col cols="12" sm="6">
+        <v-col cols="6" sm="6">
+                    <v-text-field
+            class="field"
+            type="text"
+            label="Votre prénom"
+            outlined
+            validate-on-blur
+            hide-details="auto"
+            dense
+            value=""
+            name="FNAME"
+            id="mce-FNAME"
+          ></v-text-field>
           <v-btn type="submit" height="40px" color="primary" class="text-none" form="mailchimpform">
             Recevoir les témoignages
           </v-btn>

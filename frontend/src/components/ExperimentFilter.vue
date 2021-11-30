@@ -5,7 +5,7 @@
       @done="showContributionOverlay = false"
     />
     <!-- Recherche -->
-    <v-row class="align-center" style="padding:12px;">
+    <v-row class="align-center" style="padding:12px; margin-bottom:10px;">
       <v-text-field
         prepend-inner-icon="mdi-magnify"
         placeholder="Recherchez des mots-clés"
@@ -14,6 +14,7 @@
         outlined
         hide-details="auto"
         clearable
+        style="background:white;"
       >
       </v-text-field>
       <!-- <div class="d-none d-sm-flex" style="width: 10px;margin-left: 10px;border-left: solid 1px #c4bfbf;height: 50px;"></div>
@@ -558,7 +559,7 @@ v-container {
 }
 
 .filter-title {
-  font-size: 0.85em;
+  font-size: 0.96em;
   font-weight: bold;
   margin-bottom: 10px;
 }

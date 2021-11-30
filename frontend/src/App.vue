@@ -104,10 +104,10 @@ export default {
 </script>
 
 <style lang="scss">
-$source-sans-pro: 'DM Sans', sans-serif;
+$source-sans-pro: "DM Sans", sans-serif;
 
 #app.v-application {
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
@@ -135,7 +135,7 @@ $source-sans-pro: 'DM Sans', sans-serif;
   }
 
   .subtitle-2 {
-    font-size: 16px !important;
+    font-size: 18px !important;
   }
 }
 
@@ -143,12 +143,13 @@ body {
   width: 100%;
   background: url("/static/images/bg-blob.svg") no-repeat left 0 top 13px,
     url("/static/images/bg-double-blob.svg") no-repeat right 0 top 25px;
+  background-color: 0% 0% / contain rgba(108, 170, 200, 0.1);
 }
 
 body .buorg {
   border-bottom: 1px solid #ea5403;
   background-color: #ea5403;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   color: white;
 }
 
@@ -266,8 +267,7 @@ body .buorg .buorg-buttons {
 }
 
 .mdi-beaker-plus-outline::before {
-    content: "\F1230";
-    color: white;
+  content: "\F1230";
+  color: white;
 }
-
 </style>
