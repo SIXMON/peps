@@ -8,7 +8,7 @@
     <v-row class="align-center" style="padding:12px;">
       <v-text-field
         prepend-inner-icon="mdi-magnify"
-        placeholder="Cherchez des mots clé"
+        placeholder="Recherchez des mots-clés"
         @input="searchTermChanged"
         ref="search"
         outlined

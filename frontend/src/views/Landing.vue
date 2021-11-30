@@ -9,10 +9,10 @@
       <v-row>
         <v-col cols="12">
           <div class="display-1">
-            REX Agri : le savoir partagé entre agriculteurs
+            REX Agri : le partage d'expérience entre agriculteurs
           </div>
           <v-card-text
-            class="body-1"
+            class="subtitle-2"
             style="padding: 16px 16px 0px 0;"
           >Découvrez les essais et les pratiques innovantes mises en place par des agriculteurs près de chez vous. <br> Partagez les vôtres et faites avancer la transition.</v-card-text>
         </v-col>
