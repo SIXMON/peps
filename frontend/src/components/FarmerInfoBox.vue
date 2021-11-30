@@ -54,7 +54,7 @@
     <!-- CULTURES -->
     <div v-if="farmer.cultures" class="body-2 info-item">
       <v-icon small left>mdi-leaf</v-icon>
-      <div>Cultures : {{farmer.cultures}}</div>
+      <div>Cultures : {{farmer.cultures.join(', ')}}</div>
     </div>
 
     <!-- GROUPS -->
