@@ -112,7 +112,7 @@ class FarmerFastSerializer(serializers.Serializer, FieldRetrievers):
     personnel = serializers.CharField()
     livestock_types = serializers.ListField()
     livestock_number = serializers.CharField()
-    cultures = serializers.CharField()
+    cultures = serializers.ListField()
     soil_type = serializers.CharField()
     description = serializers.CharField()
     specificities = serializers.CharField()

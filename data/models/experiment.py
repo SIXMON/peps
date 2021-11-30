@@ -11,20 +11,9 @@ from data.models import Farmer
 from data.utils import optimize_image
 from data.forms import ChoiceArrayField
 from api.utils import AsanaUtils
+from data.models.productions import PRODUCTIONS
 
 # (Stored in db, seen in drop-down)
-WORKSHOP = (
-    ('Grandes cultures', 'Grandes cultures'),
-    ('Cultures d\'industrie', 'Cultures d\'industrie'),
-    ('Productions légumières de plein champ', 'Productions légumières de plein champ'),
-    ('Elevage ruminant', 'Elevage ruminant'),
-    ('Elevage monogastrique', 'Elevage monogastrique'),
-    ('Arboriculture', 'Arboriculture'),
-    ('Viticulture', 'Viticulture'),
-    ('Maraîchage diversifié', 'Maraîchage diversifié'),
-    ('PPAM', 'PPAM'),
-    ('Cultures spécialisées', 'Cultures spécialisées'),
-)
 
 TAGS = (
     ("Maladies", "Maladies"),
@@ -101,7 +90,7 @@ class Experiment(models.Model):
     links = ArrayField(models.TextField(), default=list, blank=True, null=True)
     description = models.TextField(null=True, blank=True)
     investment = models.TextField(null=True, blank=True)
-    workshop = models.TextField(null=True, blank=True, choices=WORKSHOP)
+    workshop = models.TextField(null=True, blank=True, choices=PRODUCTIONS)
     padv_projects = models.TextField(null=True, blank=True, choices=PADV_PROJECTS)
     ir_done = models.BooleanField(null=True, blank=True)
 
