@@ -14,7 +14,7 @@
           <v-card-text
             class="body-1"
             style="padding: 16px 16px 0px 0;"
-          >Découvrez les essais et les pratiques innovantes mises en place par des agriculteurs près de chez vous. Partagez les votres et faites avancez la transition.</v-card-text>
+          >Découvrez les essais et les pratiques innovantes mises en place par des agriculteurs près de chez vous. <br> Partagez les vôtres et faites avancer la transition.</v-card-text>
         </v-col>
       </v-row>
 
