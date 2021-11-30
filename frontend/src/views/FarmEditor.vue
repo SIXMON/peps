@@ -70,72 +70,32 @@
           <v-checkbox
             @click.native="hasChanged = true"
             v-model="dummyFarmer.production"
-            label="Cultures industrielles"
-            value="Cultures industrielles"
+            label="Cultures d'industries" 
+            value="Cultures d'industries"
             hide-details
             :rules="[hasProductions]"
           ></v-checkbox>
           <v-checkbox
             @click.native="hasChanged = true"
             v-model="dummyFarmer.production"
-            label="Élevage allaitant"
-            value="Élevage allaitant"
+            label="Légumières de plein champs"
+            value="Légumières de plein champs"
             hide-details
             :rules="[hasProductions]"
           ></v-checkbox>
           <v-checkbox
             @click.native="hasChanged = true"
             v-model="dummyFarmer.production"
-            label="Élevage laitier"
-            value="Élevage laitier"
+            label="Élevage ruminant"
+            value="Élevage ruminant"
             hide-details
             :rules="[hasProductions]"
           ></v-checkbox>
           <v-checkbox
             @click.native="hasChanged = true"
             v-model="dummyFarmer.production"
-            label="Élevage engraissement"
-            value="Élevage engraissement"
-            hide-details
-            :rules="[hasProductions]"
-          ></v-checkbox>
-          <v-checkbox
-            @click.native="hasChanged = true"
-            v-model="dummyFarmer.production"
-            label="Élevage poule pondeuses"
-            value="Élevage poule pondeuses"
-            hide-details
-            :rules="[hasProductions]"
-          ></v-checkbox>
-          <v-checkbox
-            @click.native="hasChanged = true"
-            v-model="dummyFarmer.production"
-            label="Cultures légumières"
-            value="Cultures légumières"
-            hide-details
-            :rules="[hasProductions]"
-          ></v-checkbox>
-          <v-checkbox
-            @click.native="hasChanged = true"
-            v-model="dummyFarmer.production"
-            label="Vigne"
-            value="Vigne"
-            hide-details
-            :rules="[hasProductions]"
-          ></v-checkbox>
-          <v-checkbox
-            @click.native="hasChanged = true"
-            v-model="dummyFarmer.production"
-            label="Cultures spécialisées"
-            value="Cultures spécialisées"
-            hide-details
-            :rules="[hasProductions]"
-          ></v-checkbox>
-          <v-checkbox
-            @click.native="hasChanged = true"
-            v-model="dummyFarmer.production"
-            label="Apiculture"
-            value="Apiculture"
+            label="Élevage monogastrique"
+            value="Élevage monogastrique"
             hide-details
             :rules="[hasProductions]"
           ></v-checkbox>
@@ -150,8 +110,41 @@
           <v-checkbox
             @click.native="hasChanged = true"
             v-model="dummyFarmer.production"
-            label="Autre"
-            value="Autre"
+            label="Viticulture"
+            value="Viticulture"
+            hide-details
+            :rules="[hasProductions]"
+          ></v-checkbox>
+          <v-checkbox
+            @click.native="hasChanged = true"
+            v-model="dummyFarmer.production"
+            label="Maraîchage diversifié"
+            value="Maraîchage diversifié"
+            hide-details
+            :rules="[hasProductions]"
+          ></v-checkbox>
+          <v-checkbox
+            @click.native="hasChanged = true"
+            v-model="dummyFarmer.production"
+            label="Apiculture"
+            value="Apiculture"
+            hide-details
+            :rules="[hasProductions]"
+          ></v-checkbox>
+          <v-checkbox
+            @click.native="hasChanged = true"
+            v-model="dummyFarmer.production"
+            label="PPAM"
+            value="PPAM"
+            hide-details
+            :rules="[hasProductions]"
+          ></v-checkbox>
+          <v-checkbox
+            @click.native="hasChanged = true"
+            v-model="dummyFarmer.production"
+            label="Cultures spécialisées"
+            value="Cultures spécialisées"
+            hide-details
             :rules="[hasProductions]"
           ></v-checkbox>
         </div>
@@ -264,8 +257,14 @@
           <v-checkbox
             @click.native="hasChanged = true"
             v-model="dummyFarmer.livestock_types"
-            label="Bovin"
-            value="Bovin"
+            label="Bovin lait"
+            value="Bovin lait"
+          ></v-checkbox>
+          <v-checkbox
+            @click.native="hasChanged = true"
+            v-model="dummyFarmer.livestock_types"
+            label="Bovin allaitant"
+            value="Bovin allaitant"
           ></v-checkbox>
           <v-checkbox
             @click.native="hasChanged = true"
@@ -323,7 +322,16 @@
             <span class="mandatory">- obligatoire</span>
           </div>
           <div class="field-helper">Lister les cultures et les espèces fourragères</div>
-          <v-textarea
+          <v-select
+            :items="cultures"
+            outlined
+            @input="hasChanged = true"
+            dense
+            multiple
+            v-model="dummyFarmer.cultures"
+            :rules="[validators.notEmpty]">
+          </v-select>
+          <!--<v-textarea
             hide-details="auto"
             rows="3"
             @input="hasChanged = true"
@@ -332,7 +340,7 @@
             dense
             v-model="dummyFarmer.cultures"
             :rules="[validators.notEmpty]"
-          ></v-textarea>
+          ></v-textarea>-->
         </div>
 
         <!-- SOIL TYPE -->
@@ -606,12 +614,178 @@ export default {
         agriculture_types: [],
         images: [],
         links: [],
+        cultures: [],
       },
       toolbarOnTop: false,
       initialToolbarTop: 0,
       hasChanged: false,
       formIsValid: true,
       showDateModal: false,
+      cultures: [
+        {
+          header: "Grandes cultures / Cultures d'industries / Maraîchage",
+        },
+        {text: "Ail", value: "Ail"},
+        {text: "Artichaut", value: "Artichaut"},
+        {text: "Asperge", value: "Asperge"},
+        {text: "Aubergine", value: "Aubergine"},
+        {text: "Avoine hiver", value: "Avoine hiver"},
+        {text: "Avoine printemps", value: "Avoine printemps"},
+        {text: "Basilic", value: "Basilic"},
+        {text: "Betterave fourragère", value: "Betterave fourragère"},
+        {text: "Betterave rouge", value: "Betterave rouge"},
+        {text: "Betterave sucrière", value: "Betterave sucrière"},
+        {text: "Blé dur", value: "Blé dur"},
+        {text: "Blé tendre hiver", value: "Blé tendre hiver"},
+        {text: "Blé tendre printemps", value: "Blé tendre printemps"},
+        {text: "Blette", value: "Blette"},
+        {text: "Brocoli", value: "Brocoli"},
+        {text: "Brome", value: "Brome"},
+        {text: "Cameline", value: "Cameline"},
+        {text: "Carotte industrielle petite", value: "Carotte industrielle petite"},
+        {text: "Carotte légumière", value: "Carotte légumière"},
+        {text: "Celeri Branche", value: "Celeri Branche"},
+        {text: "Celeri Rave", value: "Celeri Rave"},
+        {text: "Chanvre", value: "Chanvre"},
+        {text: "Chanvre fibre", value: "Chanvre fibre"},
+        {text: "Chicorée", value: "Chicorée"},
+        {text: "Chicorée salade", value: "Chicorée salade"},
+        {text: "Chou blanc", value: "Chou blanc"},
+        {text: "Chou brocoli", value: "Chou brocoli"},
+        {text: "Chou Bruxelles", value: "Chou Bruxelles"},
+        {text: "Chou fleur", value: "Chou fleur"},
+        {text: "Chou fourrager", value: "Chou fourrager"},
+        {text: "Chou pommé", value: "Chou pommé"},
+        {text: "Chou vert", value: "Chou vert"},
+        {text: "Choux-rave", value: "Choux-rave"},
+        {text: "Ciboulette", value: "Ciboulette"},
+        {text: "Colza", value: "Colza"},
+        {text: "Colza associé", value: "Colza associé"},
+        {text: "Colza printemps", value: "Colza printemps"},
+        {text: "Concombre", value: "Concombre"},
+        {text: "Coriandre", value: "Coriandre"},
+        {text: "Courge", value: "Courge"},
+        {text: "Courgette", value: "Courgette"},
+        {text: "Cultures énergétiques", value: "Cultures énergétiques"},
+        {text: "Echalote", value: "Echalote"},
+        {text: "Endive", value: "Endive"},
+        {text: "Epeautre", value: "Epeautre"},
+        {text: "Épinard", value: "Épinard"},
+        {text: "Épinard colorant", value: "Épinard colorant"},
+        {text: "Escourgeon", value: "Escourgeon"},
+        {text: "Fenouil", value: "Fenouil"},
+        {text: "Fétuque", value: "Fétuque"},
+        {text: "Féverole d'hiver", value: "Féverole d'hiver"},
+        {text: "Féverole de printemps", value: "Féverole de printemps"},
+        {text: "Fraise (plein air)", value: "Fraise (plein air)"},
+        {text: "Fraise (sous abri)", value: "Fraise (sous abri)"},
+        {text: "Haricot blanc", value: "Haricot blanc"},
+        {text: "Haricot Flageolet", value: "Haricot Flageolet"},
+        {text: "Haricot rouge", value: "Haricot rouge"},
+        {text: "Haricot vert", value: "Haricot vert"},
+        {text: "Laitue", value: "Laitue"},
+        {text: "Lentille", value: "Lentille"},
+        {text: "Lin fibre", value: "Lin fibre"},
+        {text: "Lin oléagineux", value: "Lin oléagineux"},
+        {text: "Lupin", value: "Lupin"},
+        {text: "Luzerne", value: "Luzerne"},
+        {text: "Maïs doux", value: "Maïs doux"},
+        {text: "Maïs ensilage", value: "Maïs ensilage"},
+        {text: "Maïs grain", value: "Maïs grain"},
+        {text: "Maïs Pop-corn", value: "Maïs Pop-corn"},
+        {text: "Maïs semence", value: "Maïs semence"},
+        {text: "Melon (plein air)", value: "Melon (plein air)"},
+        {text: "Melon (sous abri)", value: "Melon (sous abri)"},
+        {text: "Menthe", value: "Menthe"},
+        {text: "Méteil dominante céréales", value: "Méteil dominante céréales"},
+        {text: "Méteil dominante légumineuses", value: "Méteil dominante légumineuses"},
+        {text: "Millet", value: "Millet"},
+        {text: "Miscanthus", value: "Miscanthus"},
+        {text: "Moha", value: "Moha"},
+        {text: "Moutarde", value: "Moutarde"},
+        {text: "Moutarde brune graine", value: "Moutarde brune graine"},
+        {text: "Navet", value: "Navet"},
+        {text: "Oeillette", value: "Oeillette"},
+        {text: "Oignon", value: "Oignon"},
+        {text: "Orge hiver", value: "Orge hiver"},
+        {text: "Orge printemps", value: "Orge printemps"},
+        {text: "Panais", value: "Panais"},
+        {text: "Pastèque", value: "Pastèque"},
+        {text: "Persil", value: "Persil"},
+        {text: "Piment", value: "Piment"},
+        {text: "Poireau", value: "Poireau"},
+        {text: "Pois carré", value: "Pois carré"},
+        {text: "Pois chiche", value: "Pois chiche"},
+        {text: "Pois de conserve", value: "Pois de conserve"},
+        {text: "Pois fourrager", value: "Pois fourrager"},
+        {text: "Pois protéagineux", value: "Pois protéagineux"},
+        {text: "Poivron", value: "Poivron"},
+        {text: "Pomme de terre conso", value: "Pomme de terre conso"},
+        {text: "Pomme de terre fécule", value: "Pomme de terre fécule"},
+        {text: "Pomme de terre plant", value: "Pomme de terre plant"},
+        {text: "Prairie temporaire (graminées)", value: "Prairie temporaire (graminées)"},
+        {text: "Prairie temporaire (légumineuses et graminées)", value: "Prairie temporaire (légumineuses et graminées)"},
+        {text: "Prairie temporaire (légumineuses)", value: "Prairie temporaire (légumineuses)"},
+        {text: "Quinoa", value: "Quinoa"},
+        {text: "Radis", value: "Radis"},
+        {text: "Ray grass d'Italie", value: "Ray grass d'Italie"},
+        {text: "Ray-grass anglais", value: "Ray-grass anglais"},
+        {text: "Roquette", value: "Roquette"},
+        {text: "Salade (plein air)", value: "Salade (plein air)"},
+        {text: "Salade (sous abri)", value: "Salade (sous abri)"},
+        {text: "Salsifi", value: "Salsifi"},
+        {text: "Sarrasin", value: "Sarrasin"},
+        {text: "Scorsconère", value: "Scorsconère"},
+        {text: "Seigle", value: "Seigle"},
+        {text: "Soja", value: "Soja"},
+        {text: "Sorgho fourrager", value: "Sorgho fourrager"},
+        {text: "Sorgho grain", value: "Sorgho grain"},
+        {text: "Tabac", value: "Tabac"},
+        {text: "Tomate (plein air)", value: "Tomate (plein air)"},
+        {text: "Tomate (sous abri)", value: "Tomate (sous abri)"},
+        {text: "Topinambour", value: "Topinambour"},
+        {text: "Tournesol", value: "Tournesol"},
+        {text: "Triticale", value: "Triticale"},
+        {text: "Vesce", value: "Vesce"},
+        {
+          header: "Arboriculture"
+        },
+        {text: "Abricot", value: "Abricot"},
+        {text: "Amande", value: "Amande"},
+        {text: "Cassis", value: "Cassis"},
+        {text: "Cerise", value: "Cerise"},
+        {text: "Citron", value: "Citron"},
+        {text: "Clémentine", value: "Clémentine"},
+        {text: "Coing", value: "Coing"},
+        {text: "Figue", value: "Figue"},
+        {text: "Framboise", value: "Framboise"},
+        {text: "Groseille", value: "Groseille"},
+        {text: "Kiwi", value: "Kiwi"},
+        {text: "Mandarine", value: "Mandarine"},
+        {text: "Mûre", value: "Mûre"},
+        {text: "Myrtille", value: "Myrtille"},
+        {text: "Nèfle", value: "Nèfle"},
+        {text: "Noisette", value: "Noisette"},
+        {text: "Noix", value: "Noix"},
+        {text: "Olive", value: "Olive"},
+        {text: "Orange", value: "Orange"},
+        {text: "Pamplemousse", value: "Pamplemousse"},
+        {text: "Pêche", value: "Pêche"},
+        {text: "Poire", value: "Poire"},
+        {text: "Pomme", value: "Pomme"},
+        {text: "Prune", value: "Prune"},
+        {text: "Quetsche ", value: "Quetsche"},
+        {
+          header: "Viticulture"
+        },
+        {text: "Raisin de table", value: "Raisin de table"},
+        {text: "Vigne (vignification)", value: "Vigne (vignification)"},
+        {
+          header: "Autre",
+        },
+        {text: "Pas de culture",value: "Pas de culture",},
+        {text: "Toutes les cultures",value: "Toutes les cultures",},
+      ],
     }
   },
   computed: {
