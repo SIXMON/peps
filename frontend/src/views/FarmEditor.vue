@@ -78,8 +78,8 @@
           <v-checkbox
             @click.native="hasChanged = true"
             v-model="dummyFarmer.production"
-            label="Légumières de plein champs"
-            value="Légumières de plein champs"
+            label="Légumes de plein champs"
+            value="Légumes de plein champs"
             hide-details
             :rules="[hasProductions]"
           ></v-checkbox>

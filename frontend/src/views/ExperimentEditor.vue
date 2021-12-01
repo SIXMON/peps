@@ -135,8 +135,8 @@
               value="Cultures d'industries"
             ></v-radio>
             <v-radio
-              label="Légumières de plein champs"
-              value="Légumières de plein champs"
+              label="Légumes de plein champs"
+              value="Légumes de plein champs"
             ></v-radio>
             <v-radio 
               label="Élevage ruminant" 
