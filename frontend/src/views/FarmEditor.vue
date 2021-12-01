@@ -52,6 +52,62 @@
           ></v-text-field>
         </div>
 
+        <!-- INSTALLATION DATE -->
+
+        <div class="field">
+          <div class="field-title title">
+            Quand vous êtes-vous installé sur l'exploitation ?
+            <span class="mandatory">- obligatoire</span>
+          </div>
+          <div class="field-helper">Renseignez l'année (par exemple, 2001)</div>
+
+          <v-text-field
+            hide-details="auto"
+            @input="onInstallationYearChange"
+            :rules="[validators.isYear, validators.notEmpty]"
+            outlined
+            dense
+            :value="installationYear"
+          ></v-text-field>
+        </div>
+
+        <!-- POSTAL CODE -->
+
+        <div class="field">
+          <div class="field-title title">
+            Le code postal de votre exploitation
+            <span class="mandatory">- obligatoire</span>
+          </div>
+          <v-text-field
+            hide-details="auto"
+            :rules="[validators.notEmpty]"
+            @input="hasChanged = true"
+            outlined
+            dense
+            v-model="dummyFarmer.postal_code"
+          ></v-text-field>
+        </div>
+
+        <!-- PERSONNEL -->
+
+        <div class="field">
+          <div class="field-title title">
+            Combien de personnes travaillent sur l'exploitation à temps plein ?
+            <span
+              class="mandatory"
+            >- obligatoire</span>
+          </div>
+          <div class="field-helper">Comptez-vous et vos associés, salariés et alternants</div>
+          <v-text-field
+            hide-details="auto"
+            :rules="[validators.notEmpty]"
+            @input="hasChanged = true"
+            outlined
+            dense
+            v-model="dummyFarmer.personnel"
+          ></v-text-field>
+        </div>
+
         <!-- PRODUCTIONS -->
         <div class="field">
           <div class="field-title title">
@@ -147,62 +203,6 @@
             hide-details
             :rules="[hasProductions]"
           ></v-checkbox>
-        </div>
-
-        <!-- INSTALLATION DATE -->
-
-        <div class="field">
-          <div class="field-title title">
-            Quand vous êtes-vous installé sur l'exploitation ?
-            <span class="mandatory">- obligatoire</span>
-          </div>
-          <div class="field-helper">Renseignez l'année (par exemple, 2001)</div>
-
-          <v-text-field
-            hide-details="auto"
-            @input="onInstallationYearChange"
-            :rules="[validators.isYear, validators.notEmpty]"
-            outlined
-            dense
-            :value="installationYear"
-          ></v-text-field>
-        </div>
-
-        <!-- POSTAL CODE -->
-
-        <div class="field">
-          <div class="field-title title">
-            Le code postal de votre exploitation
-            <span class="mandatory">- obligatoire</span>
-          </div>
-          <v-text-field
-            hide-details="auto"
-            :rules="[validators.notEmpty]"
-            @input="hasChanged = true"
-            outlined
-            dense
-            v-model="dummyFarmer.postal_code"
-          ></v-text-field>
-        </div>
-
-        <!-- PERSONNEL -->
-
-        <div class="field">
-          <div class="field-title title">
-            Combien de personnes travaillent sur l'exploitation à temps plein ?
-            <span
-              class="mandatory"
-            >- obligatoire</span>
-          </div>
-          <div class="field-helper">Comptez-vous et vos associés, salariés et alternants</div>
-          <v-text-field
-            hide-details="auto"
-            :rules="[validators.notEmpty]"
-            @input="hasChanged = true"
-            outlined
-            dense
-            v-model="dummyFarmer.personnel"
-          ></v-text-field>
         </div>
 
         <!-- SURFACE -->
