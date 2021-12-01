@@ -290,7 +290,7 @@
                     style="margin-top: 3px; margin-left: 5px;"
                   >mdi-chevron-right</v-icon>
                 </v-card-title>
-                <v-card-subtitle>Vous trouverez tous les articles d'aide, les ressources et les conseils sur le site Pour une Agriculture du Vivant</v-card-subtitle>
+                <v-card-subtitle>Vous trouverez tous les articles d'aide, les ressources et les conseils dans le centre d'aide de REX Agri</v-card-subtitle>
               </v-card>
             </v-hover>
           </v-col>
