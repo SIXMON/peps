@@ -386,7 +386,7 @@
           </div>
           <div
             class="field-helper"
-          >Pouvez-vous décrire votre exploitation ? <br />Son histoire, son fonctionnement, ses particularités, la philosophie et le type d'agriculture pratiquée...</div>
+          >Pouvez-vous décrire l'histoire et le fonctionnement de votre exploitation ainsi que votre démarche et le type d'agriculture pratiquée</div>
           <v-textarea
             hide-details="auto"
             rows="5"
