@@ -11,6 +11,7 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
+        migrations.RunSQL("update data_farmer set cultures = '{}'"),
         migrations.AlterField(
             model_name='farmer',
             name='cultures',
