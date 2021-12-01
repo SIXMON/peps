@@ -222,6 +222,26 @@
             ></v-text-field>
           </div>
 
+          <!-- SOIL TYPE -->
+
+          <div class="field">
+            <div class="field-title title">
+              Quels types de sols sont présents sur l'exploitation ?
+              <span class="mandatory">- obligatoire</span>
+            </div>
+            <v-textarea
+              hide-details="auto"
+              rows="3"
+              @input="hasChanged = true"
+              auto-grow
+              outlined
+              dense
+              :rules="[validators.notEmpty]"
+              v-model="dummyFarmer.soil_type"
+            ></v-textarea>
+          </div>
+
+
           <!-- SURFACE CULTURES -->
 
           <div class="field child-field">
@@ -340,25 +360,6 @@
             v-model="dummyFarmer.cultures"
             :rules="[validators.notEmpty]"
           ></v-textarea>-->
-        </div>
-
-        <!-- SOIL TYPE -->
-
-        <div class="field">
-          <div class="field-title title">
-            Quels types de sols sont présents sur l'exploitation ?
-            <span class="mandatory">- obligatoire</span>
-          </div>
-          <v-textarea
-            hide-details="auto"
-            rows="3"
-            @input="hasChanged = true"
-            auto-grow
-            outlined
-            dense
-            :rules="[validators.notEmpty]"
-            v-model="dummyFarmer.soil_type"
-          ></v-textarea>
         </div>
 
         <!-- OUTPUT -->
