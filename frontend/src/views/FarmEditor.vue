@@ -301,8 +301,7 @@
         <!-- LIVESTOCK NUMBER -->
 
         <div class="field">
-          <div class="field-title title">Si vous avez de l'élevage, combien de bêtes avez-vous ?</div>
-          <div class="field-helper">Indiquer le nombre de tête par élevage, les races et particularités de l'élevage s'il y en a</div>
+          <div class="field-title title">Si vous avez de l'élevage, indiquez le nombre d'animaux, les races et les particularités s'il y en a</div>
           <v-textarea
             hide-details="auto"
             rows="3"
