@@ -300,15 +300,14 @@
         <!-- OBJECTIVES -->
         <div class="field">
           <div class="field-title title">
-            A quelle(s) problématique(s) spécifique(s) cette expérience répond-elle ? 
+            À quelle(s) problématique(s) spécifique(s) cette expérience répond-elle ? 
             <span
               class="mandatory"
             >- obligatoire</span>
           </div>
           <div
             class="field-helper"
-          >Diversifier les sources de revenus, réduire l'utilisation d'herbicides, améliorer le structure du sol...
-          <br />Par exemple : Améliorer la gestion du vulpin sur des parcelles de blé, augmenter la production fourragère utile, diversifier les sources de revenus.</div>
+          >Par exemple : Améliorer la gestion du vulpin sur des parcelles de blé, augmenter la production fourragère utile, diversifier les sources de revenus.</div>
           <v-textarea
             hide-details="auto"
             :rules="[validators.notEmpty]"
