@@ -327,14 +327,11 @@
             Sur quelle surface porte l'expérience ?
             <span class="mandatory">- obligatoire</span>
           </div>
-          <div
-            class="field-helper"
-          >"Toutes les surfaces" correspond à toutes les surfaces de l'exploitation</div>
           <v-checkbox
             @click.native="hasChanged = true"
             v-model="dummyExperiment.surface_type"
-            label="Toute la surface potentiellement adaptée à la mise en place de la pratique"
-            value="Toute la surface potentiellement adaptée à la mise en place de la pratique"
+            label="Toutes les surfaces potentiellement adaptées à la mise en place de la pratique"
+            value="Toutes les surfaces potentiellement adaptées à la mise en place de la pratique"
             hide-details
             :rules="[hasSurfaceType,validators.maxSelected(1)]"
           ></v-checkbox>

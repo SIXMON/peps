@@ -38,7 +38,7 @@ RESULTS = (
 )
 
 SURFACE_TYPE = (
-    ("Toute la surface potentiellement adaptée à la mise en place de la pratique", "Toute la surface potentiellement adaptée à la mise en place de la pratique"),
+    ("Toutes les surfaces potentiellement adaptées à la mise en place de la pratique", "Toutes les surfaces potentiellement adaptées à la mise en place de la pratique"),
     ("Plusieurs parcelles", "Plusieurs parcelles"),
     ("Une parcelle", "Une parcelle"),
     ("Une bande", "Une bande"),
