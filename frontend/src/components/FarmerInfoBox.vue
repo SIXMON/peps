@@ -38,8 +38,8 @@
     >
       <v-icon small left>mdi-tractor</v-icon>
       <div>
-        Types d'agriculture :
-        <span
+        Types d'agriculture : {{farmer.agriculture_types.join(", ")}}
+        <!--<span
           v-for="(agricultureType, index) in farmer.agriculture_types"
           :key="index"
         >
@@ -47,25 +47,25 @@
           <span
             v-if="farmer.agriculture_types.length > 1 && index < farmer.agriculture_types.length - 1"
           >,</span>
-        </span>
+        </span>-->
       </div>
     </div>
 
     <!-- CULTURES -->
     <div v-if="farmer.cultures" class="body-2 info-item">
       <v-icon small left>mdi-leaf</v-icon>
-      <div>Cultures : {{farmer.cultures.join(', ')}}</div>
+      <div>Cultures : {{farmer.cultures.join(", ")}}</div>
     </div>
 
     <!-- GROUPS -->
     <div v-if="farmer.groups && farmer.groups.length > 0" class="body-2 info-item">
       <v-icon small left>mdi-account-group</v-icon>
       <div>
-        Groupes :
-        <span v-for="(group, index) in farmer.groups" :key="index">
+        Groupes : {{farmer.groups.join(", ")}}
+        <!--<span v-for="(group, index) in farmer.groups" :key="index">
           {{group}}
           <span v-if="farmer.groups.length > 1 && index < farmer.groups.length - 1">,</span>
-        </span>
+        </span>-->
       </div>
     </div>
 
