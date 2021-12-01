@@ -27,15 +27,13 @@ GROUPS = (
 
 TYPE_AGRICULTURE = (
     ('Agriculture Biologique', 'Agriculture Biologique'),
-    ('Agriculture de Conservation des Sols', 'Agriculture de Conservation des Sols'),
-    ('Techniques Culturales Simplifiées', 'Techniques Culturales Simplifiées'),
-    ('Labour occasionnel', 'Labour occasionnel'),
+    ('Agriculture de Conservation des sols (couvert végétaux généralisés, semis direct ou très simplifié, travail du sol réduit, etc.)', 'Agriculture de Conservation des sols (couvert végétaux généralisés, semis direct ou très simplifié, travail du sol réduit, etc.)'),
+    ('Techniques Culturales Simplifiées (couverts végétaux occasionnels, semis simplifié, labour occasionnel, etc.)', 'Techniques Culturales Simplifiées (couverts végétaux occasionnels, semis simplifié, labour occasionnel, etc.)'),
     ('Agroforesterie', 'Agroforesterie'),
-    ('Arboriculture', 'Arboriculture'),
     ('Conventionnel', 'Conventionnel'),
     ('Cahier des charges industriel', 'Cahier des charges industriel'),
-    ('Label qualité', 'Label qualité'),
-    ('Label environnemental (HVE)', 'Label environnemental (HVE)'),
+    ('Label qualité (Label Rouge, AOP, IGP, etc...)', 'Label qualité (Label Rouge, AOP, IGP, etc...)'),
+    ('Certification environnementale (HVE, etc...)', 'Certification environnementale (HVE, etc...)'),
     ('Autre', 'Autre'),
 )
 

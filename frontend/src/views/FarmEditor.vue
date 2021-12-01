@@ -437,22 +437,15 @@
             hide-details
             @click.native="hasChanged = true"
             v-model="dummyFarmer.agriculture_types"
-            label="Agriculture de Conservation des Sols"
-            value="Agriculture de Conservation des Sols"
+            label="Agriculture de Conservation des sols (couvert végétaux généralisés, semis direct ou très simplifié, travail du sol réduit, etc.)"
+            value="Agriculture de Conservation des sols (couvert végétaux généralisés, semis direct ou très simplifié, travail du sol réduit, etc.)"
           ></v-checkbox>
           <v-checkbox
             hide-details
             @click.native="hasChanged = true"
             v-model="dummyFarmer.agriculture_types"
-            label="Techniques Culturales Simplifiées"
-            value="Techniques Culturales Simplifiées"
-          ></v-checkbox>
-          <v-checkbox
-            hide-details
-            @click.native="hasChanged = true"
-            v-model="dummyFarmer.agriculture_types"
-            label="Labour occasionnel"
-            value="Labour occasionnel"
+            label="Techniques Culturales Simplifiées (couverts végétaux occasionnels, semis simplifié, labour occasionnel, etc.)"
+            value="Techniques Culturales Simplifiées (couverts végétaux occasionnels, semis simplifié, labour occasionnel, etc.)"
           ></v-checkbox>
           <v-checkbox
             hide-details
@@ -460,13 +453,6 @@
             v-model="dummyFarmer.agriculture_types"
             label="Agroforesterie"
             value="Agroforesterie"
-          ></v-checkbox>
-          <v-checkbox
-            hide-details
-            @click.native="hasChanged = true"
-            v-model="dummyFarmer.agriculture_types"
-            label="Arboriculture"
-            value="Arboriculture"
           ></v-checkbox>
           <v-checkbox
             hide-details
@@ -486,15 +472,15 @@
             hide-details
             @click.native="hasChanged = true"
             v-model="dummyFarmer.agriculture_types"
-            label="Label qualité"
-            value="Label qualité"
+            label="Label qualité (Label Rouge, AOP, IGP, etc...)"
+            value="Label qualité (Label Rouge, AOP, IGP, etc...)"
           ></v-checkbox>
           <v-checkbox
             hide-details
             @click.native="hasChanged = true"
             v-model="dummyFarmer.agriculture_types"
-            label="Label environnemental (HVE)"
-            value="Label environnemental (HVE)"
+            label="Certification environnementale (HVE, etc...)"
+            value="Certification environnementale (HVE, etc...)"
           ></v-checkbox>
           <v-checkbox
             hide-details
