@@ -183,17 +183,19 @@
         </v-col>
 
         <!-- Filter Livestock -->
-        <v-col cols="12" sm="6" :class="{ 'd-none': !showFilterArea }">
+        <v-col cols="12" sm="6" :class="{ filter: true, 'd-none': !showFilterArea }">
           <div class="filter-title">Uniquement l'élevage</div>
-          <v-checkbox
+          <v-select
             hide-details
-            label="Oui"
-            style="margin-top: 3px"
+            outlined
+            class="filter-select"
+            :items="livesto"
+            clearable
             v-model="activeFilters.livestock"
             @change="
               sendFilterChangeEvent('livestock', [`${activeFilters.livestock}`])
             "
-          ></v-checkbox>
+          ></v-select>
         </v-col>
       </v-row>
     </v-container>
@@ -252,7 +254,8 @@ export default {
       },
       searchTerm: "",
       searchDebounceTimer: null,
-      searchDebounceMs: 300
+      searchDebounceMs: 300,
+      livesto: [{text: "Oui", value: true},{text: "Non", value: false}]
     }
   },
   computed: {
