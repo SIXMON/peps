@@ -257,7 +257,7 @@ class FarmerForm(forms.ModelForm):
             'farm_name': forms.Textarea(attrs={'cols': 35, 'rows': 1}),
             'personnel': forms.Textarea(attrs={'cols': 35, 'rows': 1}),
             'livestock_number': forms.Textarea(attrs={'cols': 35, 'rows': 1}),
-            'cultures': forms.Textarea(attrs={'cols': 55, 'rows': 3}),
+            'cultures': forms.CheckboxSelectMultiple(choices=CULTURES),
             'soil_type': forms.Textarea(attrs={'cols': 35, 'rows': 1}),
             'description': forms.Textarea(attrs={'cols': 55, 'rows': 10}),
             'specificities': forms.Textarea(attrs={'cols': 55, 'rows': 5}),
