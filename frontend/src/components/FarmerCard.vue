@@ -83,7 +83,7 @@
       style="padding-bottom: 10px; padding-top: 0;"
       class="body-2 flex-shrink-item"
     >
-      <div>{{farmer.cultures}}</div>
+      <div>{{farmer.cultures.join(', ')}}</div>
     </v-card-text>
 
     <v-card-text

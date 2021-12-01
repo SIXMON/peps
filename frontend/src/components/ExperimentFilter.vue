@@ -183,17 +183,20 @@
         </v-col>
 
         <!-- Filter Livestock -->
-        <v-col cols="12" sm="6" :class="{ 'd-none': !showFilterArea }">
-          <div class="filter-title">Uniquement l'élevage</div>
-          <v-checkbox
+        <v-col cols="12" sm="6" :class="{ filter: true, 'd-none': !showFilterArea }">
+          <div class="filter-title">Élevage</div>
+          <v-select
             hide-details
-            label="Oui"
-            style="margin-top: 3px"
+            outlined
+            class="filter-select"
+            placeholder="Indifférent"
+            :items="livesto"
+            clearable
             v-model="activeFilters.livestock"
             @change="
               sendFilterChangeEvent('livestock', [`${activeFilters.livestock}`])
             "
-          ></v-checkbox>
+          ></v-select>
         </v-col>
       </v-row>
     </v-container>
@@ -248,11 +251,20 @@ export default {
         agricultureTypes: [],
         cultures: [],
         workshops: [],
-        livestock: false,
+        livestock: null,
       },
       searchTerm: "",
       searchDebounceTimer: null,
-      searchDebounceMs: 300
+      searchDebounceMs: 300,
+      livesto: [
+        {
+          text: "Uniquement les exploitations avec de l'élevage", 
+          value: true
+        }, {
+          text: "Exclure les exploitations avec de l'élevage", 
+          value: false
+        }
+      ]
     }
   },
   computed: {
@@ -330,9 +342,11 @@ export default {
           this.activeFilters.workshops.some(
             (y) => !!x.workshop && x.workshop.indexOf(y) > -1
           )
-        const livestockSelected =
-          !this.activeFilters.livestock ||
-          (x.livestock_types && x.livestock_types.length > 0)
+        const livestockUnSelected = 
+          this.activeFilters.livestock == null;
+
+        const livestockSelected = 
+          (x.livestock_types && x.livestock_types.length > 0 == this.activeFilters.livestock)
 
         return (
           tagSelected &&
@@ -340,7 +354,7 @@ export default {
           agricultureTypeSelected &&
           cultureSelected &&
           workshopSelected &&
-          livestockSelected
+          (livestockUnSelected ^ livestockSelected)
         )
       })
     },

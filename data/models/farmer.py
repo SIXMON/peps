@@ -8,22 +8,8 @@ from django.utils.html import mark_safe
 from django_better_admin_arrayfield.models.fields import ArrayField
 from data.utils import optimize_image
 from data.forms import ChoiceArrayField
-
-
-PRODUCTIONS = (
-    ('Grandes cultures', 'Grandes cultures'),
-    ('Cultures industrielles', 'Cultures industrielles'),
-    ('Élevage allaitant', 'Élevage allaitant'),
-    ('Élevage laitier', 'Élevage laitier'),
-    ('Élevage engraissement', 'Élevage engraissement'),
-    ('Élevage poule pondeuses', 'Élevage poule pondeuses'),
-    ('Cultures légumières', 'Cultures légumières'),
-    ('Vigne', 'Vigne'),
-    ('Cultures spécialisées', 'Cultures spécialisées'),
-    ('Apiculture', 'Apiculture'),
-    ('Arboriculture', 'Arboriculture'),
-    ('Autre', 'Autre'),
-)
+from data.models.cultures import CULTURES
+from data.models.productions import PRODUCTIONS
 
 GROUPS = (
     ('DEPHY', 'DEPHY'),
@@ -41,20 +27,19 @@ GROUPS = (
 
 TYPE_AGRICULTURE = (
     ('Agriculture Biologique', 'Agriculture Biologique'),
-    ('Agriculture de Conservation des Sols', 'Agriculture de Conservation des Sols'),
-    ('Techniques Culturales Simplifiées', 'Techniques Culturales Simplifiées'),
-    ('Labour occasionnel', 'Labour occasionnel'),
+    ('Agriculture de Conservation des sols (couvert végétaux généralisés, semis direct ou très simplifié, travail du sol réduit, etc.)', 'Agriculture de Conservation des sols (couvert végétaux généralisés, semis direct ou très simplifié, travail du sol réduit, etc.)'),
+    ('Techniques Culturales Simplifiées (couverts végétaux occasionnels, semis simplifié, labour occasionnel, etc.)', 'Techniques Culturales Simplifiées (couverts végétaux occasionnels, semis simplifié, labour occasionnel, etc.)'),
     ('Agroforesterie', 'Agroforesterie'),
-    ('Arboriculture', 'Arboriculture'),
     ('Conventionnel', 'Conventionnel'),
     ('Cahier des charges industriel', 'Cahier des charges industriel'),
-    ('Label qualité', 'Label qualité'),
-    ('Label environnemental (HVE)', 'Label environnemental (HVE)'),
+    ('Label qualité (Label Rouge, AOP, IGP, etc...)', 'Label qualité (Label Rouge, AOP, IGP, etc...)'),
+    ('Certification environnementale (HVE, etc...)', 'Certification environnementale (HVE, etc...)'),
     ('Autre', 'Autre'),
 )
 
 TYPE_LIVESTOCK = (
-    ('Bovin', 'Bovin'),
+    ('Bovin lait', 'Bovin lait'),
+    ('Bovin allaitant', 'Bovin allaitant'),
     ('Ovin', 'Ovin'),
     ('Caprin', 'Caprin'),
     ('Avicole', 'Avicole'),
@@ -101,7 +86,7 @@ class Farmer(models.Model):
     installation_date = models.DateField(null=True, blank=True)
     description = models.TextField(null=True, blank=True)
 
-    cultures = models.TextField(null=True, blank=True)
+    cultures = ChoiceArrayField(models.CharField(max_length=200, choices=CULTURES), default=list, null=True, blank=True)
 
     lat = models.DecimalField(null=True, blank=True, max_digits=9, decimal_places=6)
     lon = models.DecimalField(null=True, blank=True, max_digits=9, decimal_places=6)

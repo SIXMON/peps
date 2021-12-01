@@ -131,20 +131,20 @@
               value="Grandes cultures"
             ></v-radio>
             <v-radio 
-              label="Cultures d'industrie" 
-              value="Cultures d'industrie"
+              label="Cultures d'industries" 
+              value="Cultures d'industries"
             ></v-radio>
             <v-radio
-              label="Productions légumières de plein champ"
-              value="Productions légumières de plein champ"
+              label="Légumes de plein champs"
+              value="Légumes de plein champs"
             ></v-radio>
             <v-radio 
-              label="Elevage ruminant" 
-              value="Elevage ruminant"
+              label="Élevage ruminant" 
+              value="Élevage ruminant"
             ></v-radio>
             <v-radio 
-              label="Elevage monogastrique" 
-              value="Elevage monogastrique"
+              label="Élevage monogastrique" 
+              value="Élevage monogastrique"
             ></v-radio>
             <v-radio 
               label="Arboriculture" 
@@ -159,6 +159,10 @@
               value="Maraîchage diversifié"
             ></v-radio>
             <v-radio 
+              label="Apiculture" 
+              value="Apiculture"
+            ></v-radio>
+            <v-radio 
               label="PPAM" 
               value="PPAM"
             ></v-radio>
@@ -171,7 +175,7 @@
 
         <!-- CULTURES -->
         <div class="field">
-          <div class="field-title title">Quelles sont les principales cultures/races concernées par l'expérience ?</div>
+          <div class="field-title title">Quelles sont les principales cultures concernées par l'expérience ?</div>
           <div
             class="field-helper"
           >Elles permettent de catégoriser par cultures les retours d'expérience</div>
@@ -296,14 +300,14 @@
         <!-- OBJECTIVES -->
         <div class="field">
           <div class="field-title title">
-            A quelle(s) problématique(s) spécifique(s) cette expérience répond-elle ? (par exemple : mieux gérer le vulpin sur des parcelles de blé) 
+            À quelle(s) problématique(s) spécifique(s) cette expérience répond-elle ? 
             <span
               class="mandatory"
             >- obligatoire</span>
           </div>
           <div
             class="field-helper"
-          >Diversifier les sources de revenus, réduire l'utilisation d'herbicides, améliorer le structure du sol...</div>
+          >Par exemple : Améliorer la gestion du vulpin sur des parcelles de blé, augmenter la production fourragère utile, diversifier les sources de revenus.</div>
           <v-textarea
             hide-details="auto"
             :rules="[validators.notEmpty]"
@@ -322,14 +326,11 @@
             Sur quelle surface porte l'expérience ?
             <span class="mandatory">- obligatoire</span>
           </div>
-          <div
-            class="field-helper"
-          >"Toutes les surfaces" correspond à toutes les surfaces de l'exploitation</div>
           <v-checkbox
             @click.native="hasChanged = true"
             v-model="dummyExperiment.surface_type"
-            label="Toute la surface potentiellement adaptée à la mise en place de la pratique"
-            value="Toute la surface potentiellement adaptée à la mise en place de la pratique"
+            label="Toutes les surfaces potentiellement adaptées à la mise en place de la pratique"
+            value="Toutes les surfaces potentiellement adaptées à la mise en place de la pratique"
             hide-details
             :rules="[hasSurfaceType,validators.maxSelected(1)]"
           ></v-checkbox>
