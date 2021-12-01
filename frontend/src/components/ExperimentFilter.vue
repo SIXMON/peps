@@ -184,11 +184,12 @@
 
         <!-- Filter Livestock -->
         <v-col cols="12" sm="6" :class="{ filter: true, 'd-none': !showFilterArea }">
-          <div class="filter-title">Uniquement l'élevage</div>
+          <div class="filter-title">Élevage</div>
           <v-select
             hide-details
             outlined
             class="filter-select"
+            placeholder="Indifférent"
             :items="livesto"
             clearable
             v-model="activeFilters.livestock"
@@ -250,12 +251,20 @@ export default {
         agricultureTypes: [],
         cultures: [],
         workshops: [],
-        livestock: false,
+        livestock: null,
       },
       searchTerm: "",
       searchDebounceTimer: null,
       searchDebounceMs: 300,
-      livesto: [{text: "Oui", value: true},{text: "Non", value: false}]
+      livesto: [
+        {
+          text: "Uniquement les exploitations avec de l'élevage", 
+          value: true
+        }, {
+          text: "Exclure les exploitations avec de l'élevage", 
+          value: false
+        }
+      ]
     }
   },
   computed: {
@@ -333,9 +342,11 @@ export default {
           this.activeFilters.workshops.some(
             (y) => !!x.workshop && x.workshop.indexOf(y) > -1
           )
-        const livestockSelected =
-          !this.activeFilters.livestock ||
-          (x.livestock_types && x.livestock_types.length > 0)
+        const livestockUnSelected = 
+          this.activeFilters.livestock == null;
+
+        const livestockSelected = 
+          (x.livestock_types && x.livestock_types.length > 0 == this.activeFilters.livestock)
 
         return (
           tagSelected &&
@@ -343,7 +354,7 @@ export default {
           agricultureTypeSelected &&
           cultureSelected &&
           workshopSelected &&
-          livestockSelected
+          (livestockUnSelected ^ livestockSelected)
         )
       })
     },
