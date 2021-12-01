@@ -78,7 +78,7 @@
                 </v-card-title>
                 <v-card-subtitle
                   class="flex-grow-1"
-                >Mettez à jour le descriptif de votre exploitation et sa philosophie</v-card-subtitle>
+                >Mettez à jour votre exploitation et votre démarche</v-card-subtitle>
                 <v-card-text v-if="!farmer.approved">
                   <v-chip small outlined color="amber darken-2">
                     <v-icon small style="margin-right: 5px;">mdi-clock-outline</v-icon>En attente de validation
