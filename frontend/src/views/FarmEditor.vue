@@ -222,26 +222,6 @@
             ></v-text-field>
           </div>
 
-          <!-- SOIL TYPE -->
-
-          <div class="field">
-            <div class="field-title title">
-              Quels types de sols sont présents sur l'exploitation ?
-              <span class="mandatory">- obligatoire</span>
-            </div>
-            <v-textarea
-              hide-details="auto"
-              rows="3"
-              @input="hasChanged = true"
-              auto-grow
-              outlined
-              dense
-              :rules="[validators.notEmpty]"
-              v-model="dummyFarmer.soil_type"
-            ></v-textarea>
-          </div>
-
-
           <!-- SURFACE CULTURES -->
 
           <div class="field child-field">
@@ -270,6 +250,27 @@
             ></v-text-field>
           </div>
         </div>
+
+        <!-- SOIL TYPE -->
+
+          <div class="field">
+            <div class="field-title title">
+              Quels types de sols sont présents sur l'exploitation ?
+              <span class="mandatory">- obligatoire</span>
+            </div>
+            <v-textarea
+              hide-details="auto"
+              rows="3"
+              @input="hasChanged = true"
+              auto-grow
+              outlined
+              dense
+              :rules="[validators.notEmpty]"
+              v-model="dummyFarmer.soil_type"
+            ></v-textarea>
+          </div>
+
+
         <!-- LIVESTOCK TYPES -->
 
         <div class="field">
@@ -446,13 +447,6 @@
             v-model="dummyFarmer.agriculture_types"
             label="Techniques Culturales Simplifiées (couverts végétaux occasionnels, semis simplifié, labour occasionnel, etc.)"
             value="Techniques Culturales Simplifiées (couverts végétaux occasionnels, semis simplifié, labour occasionnel, etc.)"
-          ></v-checkbox>
-          <v-checkbox
-            hide-details
-            @click.native="hasChanged = true"
-            v-model="dummyFarmer.agriculture_types"
-            label="Agroforesterie"
-            value="Agroforesterie"
           ></v-checkbox>
           <v-checkbox
             hide-details

@@ -29,7 +29,6 @@ TYPE_AGRICULTURE = (
     ('Agriculture Biologique', 'Agriculture Biologique'),
     ('Agriculture de Conservation des sols (couvert végétaux généralisés, semis direct ou très simplifié, travail du sol réduit, etc.)', 'Agriculture de Conservation des sols (couvert végétaux généralisés, semis direct ou très simplifié, travail du sol réduit, etc.)'),
     ('Techniques Culturales Simplifiées (couverts végétaux occasionnels, semis simplifié, labour occasionnel, etc.)', 'Techniques Culturales Simplifiées (couverts végétaux occasionnels, semis simplifié, labour occasionnel, etc.)'),
-    ('Agroforesterie', 'Agroforesterie'),
     ('Conventionnel', 'Conventionnel'),
     ('Cahier des charges industriel', 'Cahier des charges industriel'),
     ('Label qualité (Label Rouge, AOP, IGP, etc...)', 'Label qualité (Label Rouge, AOP, IGP, etc...)'),
