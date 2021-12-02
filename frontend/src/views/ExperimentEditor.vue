@@ -197,10 +197,11 @@
         <div class="field">
           <div
             class="field-title title"
-          >A quelles thématiques cette expérience est-elle rattachée ? (sélectionnez 3 thématiques maximum)</div>
+          >A quelles thématiques cette expérience est-elle rattachée ?</div>
           <div
             class="field-helper"
-          >Elles permettent de catégoriser par thèmes les retours d'expérience</div>
+          >Sélectionnez 3 thématiques maximum
+          <br />Elles permettent de catégoriser par thèmes les retours d'expérience</div>
           <v-radio-group
             v-model="dummyExperiment.tags"
             :rules="[validators.maxSelected(3)]"
