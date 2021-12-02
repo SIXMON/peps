@@ -131,7 +131,7 @@ $source-sans-pro: "DM Sans", sans-serif;
 
   .display-1 {
     color: #ea5403;
-    margin-top: 20px;
+    margin: 20px 0 !important;
   }
 
   .subtitle-2 {

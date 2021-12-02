@@ -3,14 +3,14 @@
     <Title :title="title" :breadcrumbs="breadcrumbs" />
     <v-container class="constrained">
       <v-card-text style="color: #333;">
-        <div class="display-1">Conditions générales d'utilisation de Peps</div>
+        <div class="display-1">Conditions générales d'utilisation du Service de Retours d'expérience entre agriculteurs</div>
         <div class="body-2">
-          <p>Les présentes conditions d’utilisation (CGU) sont mise en œuvre conformément à l’article L. 112-9 du code des relations entre le public et l’administration. Elles s’imposent aux usagers.</p>
+          <p>Pour une Agriculture du Vivant <br> Mise à jour le 02/11/2021</p>
         </div>
         <div class="subtitle-2">1 - Présentation</div>
         <div class="body-2">
-          <p>Peps (ci-après dénommé « le Service ») est mis en œuvre par le ministère de l’agriculture qui s’appuie sur l’expertise de la Direction interministérielle du numérique dans le cadre d’une délégation de gestion.</p>
-          <p>Le Service est destiné à faciliter la transition vers un modèle agricole plus durable grâce au partage d'expériences entre agriculteurs ou personnes du monde agricole (gestionnaire de lycée agricole, agronome, autres). A ce titre elle ne présentera pas des retours d’expériences encourageant l’utilisation de produits phytosanitaires.</p>
+          <p>Service de Retours d’expérience entre agriculteurs (ci-après dénommé « le Service ») a été initialement mis en œuvre par Pour une Agriculture du Vivant en s’appuyant sur l’expertise de la Direction interministérielle du numérique dans le cadre d’une délégation de gestion. Le développement de ce Service a été transféré à l’Association Pour une Agriculture du Vivant le 1er septembre 2021.</p>
+          <p>Le Service est destiné à faciliter l’adoption des pratiques agroécologiques en favorisant la mise en place d’expérimentations par les agriculteurs grâce au partage d'expériences entre agriculteurs ou personnes du monde agricole (conseiller technique, gestionnaire de lycée agricole, agronome, autres), pour réduire leur dépendance aux intrants phytosanitaires et accélérer la transition agroécologique. A ce titre, ce Service ne présentera pas des retours d’expériences encourageant l’utilisation de produits phytosanitaires.</p>
         </div>
         <div class="subtitle-2">2 - Parcours usagers</div>
         <p>Le Service est une plateforme numérique de partage d’expériences avec deux parcours usagers.</p>
@@ -21,9 +21,18 @@
 
         <div class="subtitle-2">3 - Mentions légales</div>
 
-        <p>Editeur : Ministère de l’Agriculture et de l’Alimentation.</p>
-        <p>Directeur de la publication : Ministère de l’Agriculture et de l’Alimentation.</p>
-        <p>Prestataire d'hébergement : Clevercloud, 3 rue de l'Allier, 44000 Nantes, France.</p>
+        <div class="subtitle-3">Editeur</div>
+
+        <p>Association Pour une Agriculture du Vivant - Association loi 1901 enregistrée au Journal officiel des associations et fondations d’entreprise (JOAFE) le 10 mars 2018 sous le numéro RNA W751243378 </p>
+        <p>Siège social : 18-26 rue Goubet 75019 Paris</p>
+        <p>Adresse courrier électronique : <a href="mailto:support@agricultureduvivant.org">support@agricultureduvivant.org</a></p>
+        <p>Directeur de la publication : Association Pour une Agriculture du Vivant</a></p>
+
+        <div class="subtitle-3">Prestataire d'hébergement</div>
+
+        <p>Nom de l’hébergeur : OVH</p>
+        <p>Raison sociale : SAS Lille Métropole 424 761 419 00045</p>
+        <p>Adresse : 2 rue Kellermann – 59100 Roubaix – France</p>
 
         <div class="subtitle-2">4 – Modalités d’utilisation du Service</div>
 
@@ -40,10 +49,10 @@
           <li>les données facultatives : l’ensemble des champs composant le profil et les expériences y compris les photos sont des champs libres. L’équipe chargée du Service se réserve néanmoins le droit de supprimer ou de proposer une modification lorsque le contenu proposé ne répond à des critères minimaux de qualité, en particulier la complétude et la véracité scientifique. L’équipe chargée du Service et les usagers sont destinataires de ces données.</li>
         </ul>
         <p>Les données sont conservées jusqu’à la fin de fonctionnement du Service.</p>
-        <p>Le ministère de l’agriculture s'engage à prendre toutes précautions utiles pour préserver la sécurité des données collectées auprès de l'usager, et notamment empêcher qu'elles soient déformées et endommagées ou que des tiers non autorisés y aient accès.</p>
-        <p>Le ministère de l’agriculture garantit aux usagers du Service les droits d'accès, de rectification et d'opposition prévus par la loi n° 78-17 du 6 janvier 1978 relative à l'informatique aux fichiers et aux libertés.</p>
-        <p>Ces droits s’exercent auprès de l’équipe du Service. (peps@beta.gouv.fr)</p>
-        <p>Le ministère de l’agriculture s'engage à n'opérer aucune commercialisation des informations et documents transmis par l'usager au moyen du Service, et à ne pas les communiquer à des tiers, en dehors des cas prévus par la loi.</p>
+        <p>Pour une Agriculture du Vivant s'engage à prendre toutes précautions utiles pour préserver la sécurité des données collectées auprès de l'usager, et notamment empêcher qu'elles soient déformées et endommagées ou que des tiers non autorisés y aient accès.</p>
+        <p>Pour une Agriculture du Vivant garantit aux usagers du Service les droits d'accès, de rectification et d'opposition prévus par la loi n° 78-17 du 6 janvier 1978 relative à l'informatique aux fichiers et aux libertés.</p>
+        <p>Ces droits s’exercent auprès de l’équipe du Service. (<a href="mailto:dpo@agricultureduvivant.org">dpo@agricultureduvivant.org</a>).</p>
+        <p>Pour une Agriculture du Vivant s'engage à n'opérer aucune commercialisation des informations et documents transmis par l'usager au moyen du Service, et à ne pas les communiquer à des tiers, en dehors de nos partenaires commerciaux aux seules fins d’amélioration du Service de l’Editeur Voir la liste des partenaires.</p>
         <p>Les informations transmises par l'usager/utilisateur restent sous son contrôle. Il peut à tout moment les modifier ou les supprimer. Il peut choisir de supprimer toutes les informations de son compte en supprimant son compte. Seules sont conservées les informations permettant de répondre à d'éventuelles contestations et aux besoins statistiques du service.</p>
 
         <div class="subtitle-2">6 - Engagements et responsabilité</div>
@@ -53,26 +62,26 @@
           <a href="https://github.com/betagouv/peps/">https://github.com/betagouv/peps/</a>
         </p>
         <p>Le Service est mis à disposition sans autres garanties expresses ou tacites que celles qui sont prévues par les présentes.</p>
-        <p>Le service est développé conformément à l’état de l’art. Toutefois, il n’est pas garanti qu’il soit exempt d’anomalies ou erreurs. Le service est donc mis à disposition sans garantie sur sa disponibilité et ses performances. A ce titre, le ministère de l’agriculture ne peut être tenu responsable des pertes et/ou préjudices, de quelque nature qu’ils soient, qui pourraient être causés à la suite d’un dysfonctionnement ou une indisponibilité du service. De telles situations n'ouvriront droit à aucune compensation financière.</p>
+        <p>Sauf exception décidée explicitement par l'association Pour une Agriculture du Vivant, tous les contenus des Retours d’expérience seront diffusés sous la licence 'domaine public' CC 0v1 et ultérieur (<a href="https://creativecommons.org/publicdomain/zero/1.0/deed.fr">https://creativecommons.org/publicdomain/zero/1.0/deed.fr</a>).</p>
+        <p>Le service est développé conformément à l’état de l’art. Toutefois, il n’est pas garanti qu’il soit exempt d’anomalies ou erreurs. Le service est donc mis à disposition sans garantie sur sa disponibilité et ses performances. A ce titre, Pour une Agriculture du Vivant ne peut être tenu responsable des pertes et/ou préjudices, de quelque nature qu’ils soient, qui pourraient être causés à la suite d’un dysfonctionnement ou une indisponibilité du service. De telles situations n'ouvriront droit à aucune compensation financière.</p>
         <p>L’utilisateur s’engage à respecter les présentes CGU et la législation en vigueur. Il s’engage notamment à ne fournir, dans le cadre de l'utilisation du Service, que des informations exactes, à jour et complètes.</p>
-        <p>Dans l'hypothèse où l'usager ne s'acquitterait pas de ses engagements, le ministère de l’agriculture se réserve le droit de suspendre ou résilier le service pour cet usager, sans préjudice des éventuelles actions en responsabilité pénale et civile qui pourraient être engagées à son encontre.</p>
+        <p>Dans l'hypothèse où l'usager ne s'acquitterait pas de ses engagements, Pour une Agriculture du Vivant se réserve le droit de suspendre ou résilier le service pour cet usager, sans préjudice des éventuelles actions en responsabilité pénale et civile qui pourraient être engagées à son encontre.</p>
         <p>Il est rappelé que toute personne procédant à une fausse déclaration pour elle-même ou pour autrui s'expose, notamment, aux sanctions prévues à l'article 441-1 du Code Pénal, prévoyant des peines pouvant aller jusqu'à trois ans d'emprisonnement et 45 000 euros d'amende.</p>
 
         <div class="subtitle-2">7 - Modification et évolution du Service</div>
-        <p>Le ministère de l’agriculture se réserve la liberté de faire évoluer, de modifier ou de suspendre, sans préavis, le Service pour des raisons de maintenance ou pour tout autre motif jugé nécessaire. Une page d'information est alors affichée à l'usager lui mentionnant cette indisponibilité.</p>
+        <p>Pour une Agriculture du Vivant se réserve la liberté de faire évoluer, de modifier ou de suspendre, sans préavis, le Service pour des raisons de maintenance ou pour tout autre motif jugé nécessaire. Une page d'information est alors affichée à l'usager lui mentionnant cette indisponibilité.</p>
         <p>Les termes des présentes conditions d’utilisation peuvent être modifiés ou complétés à tout moment, sans préavis, en fonction des modifications apportées au Service, de l’évolution de la législation ou pour tout autre motif jugé nécessaire. Ces modifications et mises à jour s’imposent à l’utilisateur qui doit, en conséquence, se référer régulièrement à cette rubrique pour vérifier les conditions générales en vigueur.</p>
 
         <div class="subtitle-2">8 - Nous contacter</div>
-        <p>Difficultés techniques : peps@beta.gouv.fr</p>
-        <p>Problèmes liés à la procédure : peps@beta.gouv.fr</p>
-        <p>Droit d’accès CNIL : peps@beta.gouv.fr</p>
+        <p>Difficultés techniques : <a href="mailto:support@agricultureduvivant.org">support@agricultureduvivant.org</a></p>
+        <p>Droit d’accès CNIL : <a href="mailto:dpo@agricultureduvivant.org">dpo@agricultureduvivant.org</a></p>
       </v-card-text>
     </v-container>
   </div>
 </template>
 
 <script>
-import Title from "@/components/Title.vue"
+import Title from "@/components/Title.vue";
 
 export default {
   name: "CGU",
@@ -83,10 +92,10 @@ export default {
       meta: [
         {
           description:
-            "Voici la politique de confidentialité, les conditions générales d’utilisation et la politique des données & cookies"
-        }
-      ]
-    }
+            "Voici la politique de confidentialité, les conditions générales d’utilisation et la politique des données & cookies",
+        },
+      ],
+    };
   },
   data() {
     return {
@@ -95,14 +104,14 @@ export default {
         {
           text: "Accueil",
           disabled: false,
-          to: { name: "Landing" }
+          to: { name: "Landing" },
         },
         {
           text: "Politique de confidentialité",
-          disabled: true
-        }
-      ]
-    }
-  }
-}
+          disabled: true,
+        },
+      ],
+    };
+  },
+};
 </script>
