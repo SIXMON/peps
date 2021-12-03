@@ -301,7 +301,7 @@
         <!-- OBJECTIVES -->
         <div class="field">
           <div class="field-title title">
-            À quelle(s) problématique(s) spécifique(s) cette expérience répond-elle ? 
+            Quels sont les objectifs spécifiques de l’essai/de la pratique ? 
             <span
               class="mandatory"
             >- obligatoire</span>
