@@ -342,7 +342,7 @@
             <span class="mandatory">- obligatoire</span>
           </div>
           <div class="field-helper">Lister les cultures et les espèces fourragères</div>
-          <v-select
+          <v-autocomplete
             :items="cultures"
             v-model="dummyFarmer.cultures"
             @input="hasChanged = true"
@@ -355,7 +355,7 @@
             hide-details="auto"
             dense
           >
-          </v-select>
+          </v-autocomplete>
           <!--<v-textarea
             hide-details="auto"
             rows="3"
