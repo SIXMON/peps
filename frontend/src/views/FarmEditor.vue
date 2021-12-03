@@ -344,12 +344,17 @@
           <div class="field-helper">Lister les cultures et les espèces fourragères</div>
           <v-select
             :items="cultures"
-            outlined
-            @input="hasChanged = true"
-            dense
-            multiple
             v-model="dummyFarmer.cultures"
-            :rules="[validators.notEmpty]">
+            @input="hasChanged = true"
+            :rules="[validators.notEmpty]"
+            outlined
+            chips
+            multiple
+            deletable-chips
+            small-chips
+            hide-details="auto"
+            dense
+          >
           </v-select>
           <!--<v-textarea
             hide-details="auto"
