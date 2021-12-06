@@ -248,16 +248,16 @@ body .buorg .buorg-buttons {
 // Button
 
 .v-btn:not(.v-btn--round).v-size--default {
-  line-height: 2;
   font-weight: 400;
   white-space: nowrap;
   text-align: center;
-  box-shadow: 0 3px 8px rgb(234 84 3 / 25%);
+  letter-spacing: 0;
+  box-shadow: 0 3px 8px rgb(234 84 3 / 50%);
   cursor: pointer;
   touch-action: manipulation;
   height: 40px;
   padding: 4px 15px;
-  font-size: 14px;
+  font-size: 15px;
   border-radius: 999px;
   color: #fff !important;
   background: #ea5403;

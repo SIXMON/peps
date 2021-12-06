@@ -224,7 +224,7 @@
         <v-icon color="primary" small style="margin-right: 5px"
           >mdi-beaker-plus-outline</v-icon
         >
-        <span style="font-weight: bold" class="caption text-none"
+        <span class="caption text-none"
           >Proposer une expérience</span
         >
       </v-btn>

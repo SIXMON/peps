@@ -31,7 +31,6 @@
         <v-btn color="primary" outlined @click="onShareXPClick">
           <v-icon color="white" class="d-flex d-sm-none">mdi-beaker-plus-outline</v-icon>
           <span
-            style="font-weight:bold;"
             class="caption text-none d-none d-sm-flex"
           >Partager une expérience</span>
         </v-btn>
