@@ -26,7 +26,7 @@
         <p>Association Pour une Agriculture du Vivant - Association loi 1901 enregistrée au Journal officiel des associations et fondations d’entreprise (JOAFE) le 10 mars 2018 sous le numéro RNA W751243378 </p>
         <p>Siège social : 18-26 rue Goubet 75019 Paris</p>
         <p>Adresse courrier électronique : <a href="mailto:support@agricultureduvivant.org">support@agricultureduvivant.org</a></p>
-        <p>Directeur de la publication : Association Pour une Agriculture du Vivant</a></p>
+        <p>Directeur de la publication : Association Pour une Agriculture du Vivant</p>
 
         <div class="subtitle-3">Prestataire d'hébergement</div>
 

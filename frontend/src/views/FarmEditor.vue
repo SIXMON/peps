@@ -342,15 +342,20 @@
             <span class="mandatory">- obligatoire</span>
           </div>
           <div class="field-helper">Lister les cultures et les espèces fourragères</div>
-          <v-select
+          <v-autocomplete
             :items="cultures"
-            outlined
-            @input="hasChanged = true"
-            dense
-            multiple
             v-model="dummyFarmer.cultures"
-            :rules="[validators.notEmpty]">
-          </v-select>
+            @input="hasChanged = true"
+            :rules="[validators.notEmpty]"
+            outlined
+            chips
+            multiple
+            deletable-chips
+            small-chips
+            hide-details="auto"
+            dense
+          >
+          </v-autocomplete>
           <!--<v-textarea
             hide-details="auto"
             rows="3"

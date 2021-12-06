@@ -325,7 +325,7 @@ export default {
 
         const departmentSelected =
           this.activeFilters.departments.length === 0 ||
-          this.activeFilters.departments.find(code => x.postal_code.startsWith(code))
+          this.activeFilters.departments.find(code => x.postal_code?.startsWith(code))
 
         const agricultureTypeSelected =
           this.activeFilters.agricultureTypes.length === 0 ||
