@@ -195,7 +195,7 @@ SECURE_SSL_REDIRECT = os.getenv('PEPS_FORCE_HTTPS') == 'True'
 
 LOGIN_URL = '/login'
 MAGICAUTH_FROM_EMAIL = 'agriculteur@agricultureduvivant.org'
-MAGICAUTH_EMAIL_SUBJECT = 'Votre lien de connexion Pour une Agriculture du Vivant'
+MAGICAUTH_EMAIL_SUBJECT = 'Votre lien de connexion Rex Agri'
 MAGICAUTH_LOGGED_IN_REDIRECT_URL_NAME = 'app'
 MAGICAUTH_EMAIL_FIELD = 'email'
 MAGICAUTH_EMAIL_HTML_TEMPLATE = 'email.html'
