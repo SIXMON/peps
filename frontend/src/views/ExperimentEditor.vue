@@ -481,7 +481,7 @@
 
         <!-- PADV_PROJECT -->
         <div class="field">
-          <div class="field-title title">Avez-vous mis en place cette expérience dans le cadre d'un projet PADV (CISV, Pachamama,...) ou dans le cadre individuel ? </div>
+          <div class="field-title title">Si cette expérience a été menée dans le cadre d'un projet accompagné par Pour une Agriculture du Vivant, veuillez le sélectionner : </div>
           <v-select
             :items="padv_projects"
             outlined
