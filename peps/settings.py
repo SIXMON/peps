@@ -202,7 +202,7 @@ MAGICAUTH_EMAIL_HTML_TEMPLATE = 'email.html'
 MAGICAUTH_EMAIL_TEXT_TEMPLATE = 'email.txt'
 MAGICAUTH_LOGIN_VIEW_TEMPLATE = 'login-magicauth.html'
 MAGICAUTH_EMAIL_SENT_VIEW_TEMPLATE = 'email-sent.html'
-MAGICAUTH_EMAIL_UNKNOWN_MESSAGE = 'Nous n\'avons pas trouvé un utilisateur avec cet email. <a href="/contact">Contactez-nous</a> pour faire partie des testeurs Pour une Agriculture du Vivant!'
+MAGICAUTH_EMAIL_UNKNOWN_MESSAGE = 'Nous n\'avons pas trouvé d\'utilisateur avec cette adresse email. Êtes-vous certain d\'avoir crée votre compte avec celle-ci ? Pour tout problème concernant votre compte utilisateur <a href="/contact">contactez-nous</a>'
 
 MAGICAUTH_TOKEN_DURATION_SECONDS = 60 * 60 * 3
 
