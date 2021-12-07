@@ -609,7 +609,6 @@ export default {
         images: [],
         videos: [],
         state: "Brouillon",
-        padv_projects: []
       },
       toolbarOnTop: false,
       initialToolbarTop: 0,
