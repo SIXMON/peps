@@ -1,0 +1,8 @@
+Bonjour,
+
+{{name}} (email : {{email}}) vous a envoyé un message sur Rex Agri.
+
+Voici le contenu : {{body}}.
+
+Bonne journée,
+L'équipe de Pour une Agriculture du Vivant.

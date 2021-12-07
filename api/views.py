@@ -77,6 +77,38 @@ class SendTaskView(APIView):
         except Exception as e:
             return JsonResponse({'error': 'Server error'}, status=500)
 
+class SendContactMessage(APIView):
+    """
+    This view will send an email to the following address: agriculteur@agricultureduvivant.org,
+    so that the user can contact PADV.
+    """
+    def post(self, request):
+        email = request.data.get('email')
+        message = request.data.get('message')
+        name = request.data.get('name')
+
+        if not email or not message or not name:
+            return JsonResponse({'error': 'Missing information'}, status=400)
+
+        context = {
+            'name': name,
+            'email': email,
+            'body': message
+        }
+        text_template = 'email-contact.txt'
+        html_template = 'email-contact.html'
+        text_message = loader.render_to_string(text_template, context)
+        html_message = loader.render_to_string(html_template, context)
+        email = EmailMultiAlternatives(
+            f'Message de {name}',
+            text_message,
+            settings.DEFAULT_FROM_EMAIL,
+            ['agriculteur@agricultureduvivant.org'],
+            headers={}
+        )
+        email.attach_alternative(html_message, 'text/html')
+        email.send()
+        return JsonResponse({}, status=200)
 
 class FarmersView(ListAPIView):
     serializer_class = FarmerFastSerializer

@@ -7,19 +7,27 @@
       title="Oups ! Une erreur est survenue"
       @done="closeErrorMessage()"
     />
+    <OverlayMessage
+      :visible="showSuccessMessage"
+      ctaText="D'accord"
+      title="Message envoyé !"
+      @done="closeSuccessMessage()"
+    />
     <Title :title="title" :breadcrumbs="breadcrumbs" />
     <v-container class="constrained">
       <div class="title">Si vous souhaitez en savoir plus</div>
       <div class="body-2">Laissez nous vos coordonnées, nous vous recontacterons sous peu.</div>
 
       <div style="max-width: 500px; margin: 15px 0 15px 0;">
-        <v-text-field prepend-icon="mdi-account" v-model="name" label="Nom et prenom"></v-text-field>
-        <v-text-field prepend-icon="mdi-email" v-model="email" label="Adresse email"></v-text-field>
-        <v-text-field
-          prepend-icon="mdi-cellphone-android"
-          v-model="phoneNumber"
-          label="Numéro téléphone"
-        ></v-text-field>
+        <div style="display: flex;">
+          <v-text-field prepend-inner-icon="mdi-account" style="margin-right: 10px" v-model="name" label="Nom"></v-text-field>
+          <v-text-field prepend-inner-icon="mdi-email" v-model="email" label="Adresse e-mail"></v-text-field>
+        </div>
+        <v-textarea
+          prepend-inner-icon="mdi-message"
+          v-model="message"
+          label="Message"
+        ></v-textarea>
       </div>
       <v-btn
         class="text-none"
@@ -28,18 +36,6 @@
         color="primary"
         dark
       >Contactez-moi !</v-btn>
-
-      <v-divider />
-      <div class="title">Contactez-nous directement</div>
-      <div class="body-2">Nous répondrons dès que nous serons disponibles.</div>
-      <v-btn
-        class="text-none"
-        style="margin-top: 15px; margin-bottom: 15px;"
-        color="primary"
-        href="mailto:agriculteur@agricultureduvivant.org"
-        target="_blank"
-        dark
-      >J'envoie un email</v-btn>
     </v-container>
   </div>
 </template>
@@ -64,7 +60,7 @@ export default {
       title: "Nous contacter",
       name: '',
       email: '',
-      phoneNumber: '',
+      message: '',
       breadcrumbs: [
         {
           text: "Accueil",
@@ -92,19 +88,28 @@ export default {
         Constants.LoadingStatus.ERROR
       )
     },
+    showSuccessMessage() {
+      return (
+        this.$store.state.contactLoadingStatus ===
+        Constants.LoadingStatus.SUCCESS
+      )
+    },
     loggedUser() {
       return this.$store.state.loggedUser
     }
   },
   methods: {
     sendContactData() {
-      this.$store.dispatch("sendContactData", {
+      this.$store.dispatch("sendContactMessage", {
         name: this.name,
         email: this.email,
-        phoneNumber: this.phoneNumber
+        message: this.message
       })
     },
     closeErrorMessage() {
+      this.$store.dispatch("resetContactLoadingStatus")
+    },
+    closeSuccessMessage() {
       this.$store.dispatch("resetContactLoadingStatus")
     },
     getInitialName() {
@@ -120,19 +125,11 @@ export default {
       if (this.$store.state.lastContactInfo && this.$store.state.lastContactInfo.email)
         return this.$store.state.lastContactInfo.email
       return null
-    },
-    getInitialPhoneNumber() {
-      if (this.loggedUser && this.loggedUser.farmer_id)
-        return this.$store.getters.farmerWithId(this.loggedUser.farmer_id).phone_number
-      if (this.$store.state.lastContactInfo && this.$store.state.lastContactInfo.phoneNumber)
-        return this.$store.state.lastContactInfo.phoneNumber
-      return null
     }
   },
   mounted() {
     this.name = this.getInitialName()
     this.email = this.getInitialEmail()
-    this.phoneNumber = this.getInitialPhoneNumber()
   }
 }
 </script>
