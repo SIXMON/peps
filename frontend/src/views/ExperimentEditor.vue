@@ -491,6 +491,19 @@
           </v-select>
         </div>
 
+        <!-- IR_SCORE -->
+        <div class="field">
+          <div class="field-title title">Si vous avez réalisé un diagnostic de votre ferme avec l'Indice de Régénération, veuillez indiquer le score obtenu : </div>
+          <v-text-field
+            type="number"
+            outlined
+            dense
+            max="100"
+            min="0"
+            suffix="/ 100"
+            v-model="dummyExperiment.ir_score" />
+        </div>
+
         <!-- LINKS -->
         <div class="field">
           <div class="field-title title">Liens</div>
@@ -608,6 +621,7 @@ export default {
         links: [],
         images: [],
         videos: [],
+        ir_score: {type: Number, default: null},
         state: "Brouillon",
       },
       toolbarOnTop: false,
