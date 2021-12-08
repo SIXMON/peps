@@ -162,7 +162,7 @@ class ExperimentAdmin(admin.ModelAdmin, DynamicArrayMixin):
                 'links',
                 'workshop',
                 'padv_projects',
-                'ir_done'
+                'ir_score'
             )
         }),
         ('Cultures', {
