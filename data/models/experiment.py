@@ -87,7 +87,7 @@ class Experiment(models.Model):
     objectives = models.TextField(null=True, blank=True)
     equipment = models.TextField(null=True, blank=True)
     results = models.TextField(null=True, blank=True, choices=RESULTS)
-    results_details = models.TextField()
+    results_details = models.TextField(default='')
     links = ArrayField(models.TextField(), default=list, blank=True, null=True)
     description = models.TextField(null=True, blank=True)
     investment = models.TextField(null=True, blank=True)
