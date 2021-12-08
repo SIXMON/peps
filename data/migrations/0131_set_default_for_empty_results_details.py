@@ -10,5 +10,8 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RunSQL(r"UPDATE data_experiment SET results_details = '' WHERE results_details = NULL")
+        migrations.RunSQL(
+            r"UPDATE data_experiment SET results_details = '' WHERE results_details IS NULL",
+            r"UPDATE data_experiment SET results_details = NULL WHERE results_details = ''"
+        )
     ]
