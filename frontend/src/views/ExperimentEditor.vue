@@ -454,7 +454,10 @@
 
         <!-- RESULTS DETAILS -->
         <div class="field">
-          <div class="field-title title">Commentaires des résultats au regard des objectifs ciblés </div>
+          <div class="field-title title">
+            Commentaires des résultats au regard des objectifs visés
+            <span class="mandatory">- obligatoire</span>
+          </div>
           <div
             class="field-helper"
           >Avec du recul, veuillez commenter les résultats de l'expérience au regard de vos objectifs. <br />
@@ -471,6 +474,7 @@
           <v-textarea
             hide-details="auto"
             rows="4"
+            :rules="[validators.notEmpty]"
             @input="hasChanged = true"
             auto-grow
             outlined
@@ -501,7 +505,7 @@
             max="100"
             min="0"
             suffix="/ 100"
-            v-model="dummyExperiment.ir_score" />
+            @input="updateIrScore" />
         </div>
 
         <!-- LINKS -->
@@ -621,7 +625,6 @@ export default {
         links: [],
         images: [],
         videos: [],
-        ir_score: {type: Number, default: null},
         state: "Brouillon",
       },
       toolbarOnTop: false,
@@ -1017,6 +1020,9 @@ export default {
     onScroll() {
       this.toolbarOnTop = window.scrollY > this.initialToolbarTop
     },
+    updateIrScore(value) {
+      this.dummyExperiment.ir_score = parseInt(value) || null;
+    }
   },
   beforeMount() {
     this.resetDummyExperiment()
