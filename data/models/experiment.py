@@ -93,7 +93,7 @@ class Experiment(models.Model):
     investment = models.TextField(null=True, blank=True)
     workshop = models.TextField(null=True, blank=True, choices=PRODUCTIONS)
     padv_projects = models.TextField(null=True, blank=True, choices=PADV_PROJECTS)
-    ir_score = models.IntegerField(null=True, validators=[MaxValueValidator(100), MinValueValidator(0)])
+    ir_score = models.IntegerField(null=True, blank=True,validators=[MaxValueValidator(100), MinValueValidator(0)])
 
     surface = models.TextField(null=True, blank=True)
     surface_type = ChoiceArrayField(models.TextField(choices=SURFACE_TYPE), default=list, blank=True, null=True)
