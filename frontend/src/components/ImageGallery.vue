@@ -17,7 +17,7 @@
           <v-card flat style="cursor: pointer;">
             <v-img
               v-on:click="imageCarouselVisible = true; carouselIndex = index;"
-              :src="image.image.replace('https://peps.agriculture-du-vivant.fr/media/', 'https://cellar-c2.services.clever-cloud.com/peps-cellar/media/')"
+              :src="image.image.replace('https://rex-agri.agroecologie.org/media/', 'https://cellar-c2.services.clever-cloud.com/peps-cellar/media/')"
               aspect-ratio="1.2"
               class="grey lighten-2"
             >

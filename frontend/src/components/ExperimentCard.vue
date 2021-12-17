@@ -15,7 +15,7 @@
           height="100%"
           width="80px"
           style="background: #DDD;"
-          :src="experiment.images && experiment.images.length > 0 ? experiment.images[0].image.replace('https://peps.agriculture-du-vivant.fr/media/', 'https://cellar-c2.services.clever-cloud.com/peps-cellar/media/') : ''"
+          :src="experiment.images && experiment.images.length > 0 ? experiment.images[0].image.replace('https://rex-agri.agroecologie.org/media/', 'https://cellar-c2.services.clever-cloud.com/peps-cellar/media/') : ''"
         />
         <div class="flex-container">
           <v-card-title
