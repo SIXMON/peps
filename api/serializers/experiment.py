@@ -82,7 +82,7 @@ class ExperimentFastSerializer(serializers.Serializer):
     surface_type = serializers.ListField()
     workshop = serializers.CharField()
     padv_projects = serializers.CharField()
-    ir_done = serializers.BooleanField()
+    ir_score = serializers.IntegerField()
 
     cultures = serializers.ListField()
     creation_date = serializers.DateTimeField()
@@ -120,7 +120,7 @@ class ExperimentSerializer(serializers.ModelSerializer):
             'surface_type',
             'workshop',
             'padv_projects',
-            'ir_done',
+            'ir_score',
             'images',
             'videos',
             'cultures',

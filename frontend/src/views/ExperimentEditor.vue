@@ -454,7 +454,10 @@
 
         <!-- RESULTS DETAILS -->
         <div class="field">
-          <div class="field-title title">Commentaires des résultats au regard des objectifs ciblés </div>
+          <div class="field-title title">
+            Commentaires des résultats au regard des objectifs visés
+            <span class="mandatory">- obligatoire</span>
+          </div>
           <div
             class="field-helper"
           >Avec du recul, veuillez commenter les résultats de l'expérience au regard de vos objectifs. <br />
@@ -471,6 +474,7 @@
           <v-textarea
             hide-details="auto"
             rows="4"
+            :rules="[validators.notEmpty]"
             @input="hasChanged = true"
             auto-grow
             outlined
@@ -489,6 +493,19 @@
             v-model="dummyExperiment.padv_projects"
           >
           </v-select>
+        </div>
+
+        <!-- IR_SCORE -->
+        <div class="field">
+          <div class="field-title title">Si vous avez réalisé un diagnostic de votre ferme avec l'Indice de Régénération, veuillez indiquer le score obtenu : </div>
+          <v-text-field
+            type="number"
+            outlined
+            dense
+            max="100"
+            min="0"
+            suffix="/ 100"
+            @input="updateIrScore" />
         </div>
 
         <!-- LINKS -->
@@ -609,7 +626,6 @@ export default {
         images: [],
         videos: [],
         state: "Brouillon",
-        padv_projects: []
       },
       toolbarOnTop: false,
       initialToolbarTop: 0,
@@ -1004,6 +1020,9 @@ export default {
     onScroll() {
       this.toolbarOnTop = window.scrollY > this.initialToolbarTop
     },
+    updateIrScore(value) {
+      this.dummyExperiment.ir_score = parseInt(value) || null;
+    }
   },
   beforeMount() {
     this.resetDummyExperiment()

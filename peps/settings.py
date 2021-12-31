@@ -19,7 +19,7 @@ DEBUG = os.getenv('PEPS_DEBUG') == 'True'
 # No need making this one secret: https://forum.sentry.io/t/dsn-private-public/6297/3
 if not DEBUG:
     sentry_sdk.init(
-        dsn="https://8304ecd60f614091ab5bcdea016c650c@sentry.io/1810854",
+        dsn="https://498dc3c71ef646d6a16610b1631118b3@o1089760.ingest.sentry.io/6105197",
         integrations=[DjangoIntegration()]
     )
 

@@ -257,12 +257,12 @@ export default new Vuex.Store({
         context.commit('SET_THEMES_LOADING_STATUS', Constants.LoadingStatus.ERROR)
       })
     },
-    sendContactData(context, { name, email, phoneNumber }) { // From contact page
-      context.commit('SET_LAST_CONTACT_INFO', { name, email, phoneNumber })
-      let reason = 'A partagé ses coordonnées pour être contacté'
-      let payload = { email, name: name + ' [PARTAGE CONTACT]', phone_number: phoneNumber, reason: reason }
+    sendContactMessage(context, { name, email, message }) { // From contact page
+      context.commit('SET_LAST_CONTACT_INFO', { name, email })
+      let reason = 'A envoyé un message de contact'
+      let payload = { email, name: name + ' [PARTAGE CONTACT]', message: message, reason: reason }
       context.commit('SET_CONTACT_LOADING', Constants.LoadingStatus.LOADING)
-      Vue.http.post('/api/v1/sendTask', payload, { headers }).then(() => {
+      Vue.http.post('/api/v1/sendContactMessage', payload, { headers }).then(() => {
         context.commit('SET_CONTACT_LOADING', Constants.LoadingStatus.SUCCESS)
       }).catch(() => {
         context.commit('SET_CONTACT_LOADING', Constants.LoadingStatus.ERROR)

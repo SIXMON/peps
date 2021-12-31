@@ -7,6 +7,7 @@ from django.utils.html import mark_safe
 from django.conf import settings
 from django.urls import reverse
 from django_better_admin_arrayfield.models.fields import ArrayField
+from django.core.validators import MaxValueValidator, MinValueValidator
 from data.models import Farmer
 from data.utils import optimize_image
 from data.forms import ChoiceArrayField
@@ -86,13 +87,13 @@ class Experiment(models.Model):
     objectives = models.TextField(null=True, blank=True)
     equipment = models.TextField(null=True, blank=True)
     results = models.TextField(null=True, blank=True, choices=RESULTS)
-    results_details = models.TextField(null=True, blank=True)
+    results_details = models.TextField(default='')
     links = ArrayField(models.TextField(), default=list, blank=True, null=True)
     description = models.TextField(null=True, blank=True)
     investment = models.TextField(null=True, blank=True)
     workshop = models.TextField(null=True, blank=True, choices=PRODUCTIONS)
     padv_projects = models.TextField(null=True, blank=True, choices=PADV_PROJECTS)
-    ir_done = models.BooleanField(null=True, blank=True)
+    ir_score = models.IntegerField(null=True, blank=True,validators=[MaxValueValidator(100), MinValueValidator(0)])
 
     surface = models.TextField(null=True, blank=True)
     surface_type = ChoiceArrayField(models.TextField(choices=SURFACE_TYPE), default=list, blank=True, null=True)

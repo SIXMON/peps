@@ -1,7 +1,7 @@
 from django.conf.urls import url
 from django.urls import path
 from rest_framework.urlpatterns import format_suffix_patterns
-from api.views import GeojsonView, SendTaskView
+from api.views import GeojsonView, SendTaskView, SendContactMessage
 from api.views import FarmersView, LoggedUserView, ExperimentView, FarmerView
 from api.views import ExperimentCreateView, ListCreateMessageView
 from api.views import MarkAsReadMessageView, StatsView, ExperimentBriefsListView
@@ -9,6 +9,7 @@ from api.views import FarmersRetrieveView, FarmerBriefsListView, ThemeListView
 
 urlpatterns = {
     url(r'^sendTask/?$', SendTaskView.as_view(), name='send_task'),
+    url(r'^sendContactMessage/?$', SendContactMessage.as_view(), name="send_message"),
     url(r'^farmers/?$', FarmersView.as_view(), name='get_farmers'),
     url(r'^farmerBriefs/?$', FarmerBriefsListView.as_view(), name='get_farmer_briefs'),
     path('farmers/<int:sequence_number>', FarmersRetrieveView.as_view(), name='get_farmer'),
