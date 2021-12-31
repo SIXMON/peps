@@ -7,11 +7,14 @@
     <div style="position: absolute; width:100%;">
       <v-app-bar app absolute white>
         <v-toolbar-title>
-          <router-link
-            :to="{ name: 'Landing' }"
-          ><img src="/static/logo-padv.svg" id="logo" alt="logo pour une agriculture du vivant"></router-link>
+          <a
+            href="https://agroecologie.org/"
+          ><img src="/static/logo-padv.svg" id="logo" alt="logo pour une agriculture du vivant"></a>
+
+
         </v-toolbar-title>
         <v-spacer></v-spacer>
+
         <v-badge
           bottom
           left
@@ -27,6 +30,8 @@
             <v-icon>mdi-cancel</v-icon>
           </v-btn>
         </v-badge>
+
+
 
         <v-btn color="primary" outlined @click="onShareXPClick">
           <v-icon color="white" class="d-flex d-sm-none">mdi-beaker-plus-outline</v-icon>
