@@ -96,11 +96,11 @@ export default {
   metaInfo() {
     return {
       title:
-        "Pour une Agriculture du Vivant, les expériences d'agriculteurs",
+        "Plateforme de l’agroécologie - Retours d’Expériences d’Agriculteurs",
       meta: [
         {
           description:
-            "Grâce aux essais d’agriculteurs, trouvez des réponses à vos questions sur de nombreux thèmes (réduction des charges, autonomie, maladies…)",
+            "REX-Agri : apprenez grâce aux retours d’expérience sur les techniques régénératrices. Partagez les vôtres. Entrez en contact avec des agriculteurs partout en France.",
         },
       ],
     }

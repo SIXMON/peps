@@ -13,7 +13,16 @@
 
 
         </v-toolbar-title>
-        <v-spacer></v-spacer>
+
+        <template>
+          <v-tabs align-with-title>
+            <v-tab> <a href="https://agroecologie.org/indice-de-regeneration">Mesurez votre IR</a></v-tab>
+            <v-tab><a href="https://agroecologie.org/reseau">Le réseau</a></v-tab>
+            <v-tab><a href="https://agroecologie.org/pole-connaissances">Pôle de connaissances</a></v-tab>
+            <v-tab><a href="https://agroecologie.org/adhesion#target">Rejoindre le mouvement</a></v-tab>
+          </v-tabs>
+         </template>
+
 
         <v-badge
           bottom
@@ -139,6 +148,9 @@ export default {
     .v-sheet.v-app-bar.v-toolbar:not(.v-sheet--outlined) {
      box-shadow: none !important; 
 }
+  .v-sheet .theme--light .v-toolbar .v-toolbar--absolute .v-app-bar {
+    height: 70px !important;
+    }
   }
 
   #logo {
@@ -149,5 +161,67 @@ export default {
     width: 50px;
     margin-top: 8px;
   }
+
+
+  .v-toolbar__content {
+    margin: 0 20px !important;
+    .v-toolbar__title {
+      width: 67px !important;
+    }
+    .v-tab {
+        margin-right: 20px !important;
+        &:hover {
+          background-color: transparent !important;
+        }
+      a {
+        text-decoration: none !important;
+        color: #4b565e !important;
+        font-weight: bold !important;
+        text-transform: initial !important;
+        font-family: 'DM Sans',sans-serif !important;
+        letter-spacing: 0ch !important;
+        font-size: 15px !important;
+        &:hover {
+          color: #ea5403 !important;
+          &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          bottom: 0;
+          width: 86%;
+          height: 4px;
+          border-radius: 20px;
+          background-color: #ea5403;
+        }
+        }
+
+      }
+    }
+  }
+
+
+.theme--light.v-tabs > .v-tabs-bar .v-tab:not(.v-tab--active), .theme--light.v-tabs > .v-tabs-bar .v-tab:not(.v-tab--active) > .v-icon, .theme--light.v-tabs > .v-tabs-bar .v-tab:not(.v-tab--active) > .v-btn, .theme--light.v-tabs > .v-tabs-bar .v-tab--disabled {
+  color: transparent !important;
+}
+
+.v-tabs-slider-wrapper {
+   display: none !important;
+   height: 4px !important;
+ .v-tabs-slider {
+    border-radius: 20px !important ;
+ }
+}
+
+.theme--light.v-tabs .v-tab--active:hover::before, .theme--light.v-tabs .v-tab--active::before {
+  opacity: 0 !important;
+}
+
+@media screen and (max-width:1125px) {
+  .v-tabs {
+    display: none;
+  }
+}
+
+
 
 </style> 
