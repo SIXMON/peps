@@ -7,9 +7,9 @@
     <div style="position: absolute; width:100%;">
       <v-app-bar app absolute white>
         <v-toolbar-title>
-          <a
-            href="https://agroecologie.org/"
-          ><img src="/static/logo-padv.svg" id="logo" alt="logo pour une agriculture du vivant"></a>
+          <router-link
+            :to="{ name: 'Landing' }"
+          ><img src="/static/logo-padv.svg" id="logo" alt="logo pour une agriculture du vivant"></router-link>
 
 
         </v-toolbar-title>
