@@ -310,32 +310,16 @@ export default {
         keys: [
           {
             name: "name",
-            weight: 4
+            weight: 1
           },
           {
             name: "short_name",
-            weight: 5
-          },
-          {
-            name: "cultures",
-            weight: 2
-          },
-          {
-            name: "workshops",
-            weight: 3
+            weight: 1
           },
           {
             name: "description",
-            weight: 4
-          },
-          {
-            name: "objectives",
             weight: 1
           },
-          {
-            name: "tags",
-            weight: 1
-          }
         ]
       })
     },
