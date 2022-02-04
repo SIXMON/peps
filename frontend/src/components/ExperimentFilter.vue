@@ -198,6 +198,21 @@
             "
           ></v-select>
         </v-col>
+
+        <!-- Sorting -->
+        <v-col cols="12" sm="12" :class="{ filter: true, 'd-none': !showFilterArea }">
+          <div class="filter-title">Tri</div>
+          <v-select
+            hide-details
+            outlined
+            class="filter-select"
+            :items="sorting"
+            v-model="activeFilters.sorting"
+            @change="
+              (x) => sendFilterChangeEvent('sorting', x)
+            "
+          ></v-select>
+        </v-col>
       </v-row>
     </v-container>
 
@@ -252,6 +267,7 @@ export default {
         cultures: [],
         workshops: [],
         livestock: null,
+        sorting: true,
       },
       searchTerm: "",
       searchDebounceTimer: null,
@@ -263,6 +279,16 @@ export default {
         }, {
           text: "Exclure les exploitations avec de l'élevage", 
           value: false
+        }
+      ],
+      sorting: [
+        {
+          text: "Du plus ancien au plus récent",
+          value: true,
+        },
+        {
+          text: "Du plus récent au plus ancien",
+          value: false,
         }
       ]
     }
@@ -356,7 +382,7 @@ export default {
           workshopSelected &&
           (livestockUnSelected ^ livestockSelected)
         )
-      })
+      }).sort((a, b) => this.activeFilters.sorting ? new Date(a.creation_date) - new Date(b.creation_date) : new Date(b.creation_date) - new Date(a.creation_date))
     },
 
     activeDepartmentNumbers() {
