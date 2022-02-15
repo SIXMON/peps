@@ -652,6 +652,14 @@ export default {
           text: "Agrohoublon",
           value: "Agrohoublon",
         },
+        {
+          text: "Agrognon",
+          value: "Agrognon",
+        },
+        {
+          text: "Thèse Une seule santé blé tendre",
+          value: "Thèse Une seule santé blé tendre",
+        }
       ],
       cultures: [
         {

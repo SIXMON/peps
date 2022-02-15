@@ -52,6 +52,8 @@ PADV_PROJECTS = (
     ("Cultures d'Industries sur Sols Vivants (CISV)","Cultures d'Industries sur Sols Vivants (CISV)"),
     ("Sol et autonomie en élevage laitier","Sol et autonomie en élevage laitier"),
     ("Agrohoublon","Agrohoublon"),
+    ("Agrognon", "Agrognon"),
+    ("Thèse Une seule santé blé tendre", "Thèse Une seule santé blé tendre")
 )
 
 STATES = (
