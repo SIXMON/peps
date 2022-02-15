@@ -15,6 +15,10 @@
             class="subtitle-2"
             style="padding: 16px 16px 0px 0;"
           >Découvrez les essais et les pratiques innovantes mises en place par des agriculteurs près de chez vous. <br> Partagez les vôtres et faites avancer la transition.</v-card-text>
+          <v-card-text
+            class="subtitle-2"
+            style="padding: 16px 16px 0px 0;"
+          >Tous les retours d'expérience présents sur REX Agri ont été sélectionnées et respectent la <a target="_blank" href="https://cellar-c2.services.clever-cloud.com/peps-cellar/Charte_REX_Agri.pdf">charte de référencement</a> pour assurer la pertinence de leur contenu.</v-card-text>
         </v-col>
       </v-row>
 
