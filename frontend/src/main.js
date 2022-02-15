@@ -13,10 +13,6 @@ import VueMeta from 'vue-meta';
 import { Icon } from 'leaflet';
 import './registerServiceWorker'
 
-
-import * as Sentry from "@sentry/vue";
-import { BrowserTracing } from "@sentry/tracing";
-
 delete Icon.Default.prototype._getIconUrl;
 Icon.Default.mergeOptions({
   iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
@@ -40,21 +36,6 @@ Vue.use(VueBrowserUpdate, {
 Vue.http.interceptors.push((request) => {
   request.headers['X-CSRFToken'] = window.CSRF_TOKEN
 })
-
-Sentry.init({
-  Vue,
-  dsn: "https://2f06863071504faf9868e6f4e99ea9db@o1143545.ingest.sentry.io/6204265",
-  integrations: [
-    new BrowserTracing({
-      routingInstrumentation: Sentry.vueRouterInstrumentation(router),
-      tracingOrigins: ["localhost", "rex-agri.agroecologie.org", /^\//],
-    }),
-  ],
-  // Set tracesSampleRate to 1.0 to capture 100%
-  // of transactions for performance monitoring.
-  // We recommend adjusting this value in production
-  tracesSampleRate: 1.0,
-});
 
 Vue.filter('truncate', function (text, length, clamp) {
   clamp = clamp || '...';
