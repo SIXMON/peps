@@ -19,8 +19,10 @@ DEBUG = os.getenv('PEPS_DEBUG') == 'True'
 # No need making this one secret: https://forum.sentry.io/t/dsn-private-public/6297/3
 if not DEBUG:
     sentry_sdk.init(
-        dsn="https://498dc3c71ef646d6a16610b1631118b3@o1089760.ingest.sentry.io/6105197",
-        integrations=[DjangoIntegration()]
+        dsn="https://2f06863071504faf9868e6f4e99ea9db@o1143545.ingest.sentry.io/6204265",
+        integrations=[DjangoIntegration()],
+        traces_sample_rate=1.0,
+        send_default_pii=True
     )
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
