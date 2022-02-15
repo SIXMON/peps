@@ -962,6 +962,8 @@ export default {
           payload: this.dummyExperiment,
           farmer: this.loggedFarmer,
         })
+        clearInterval(this.saveInterval);
+        localStorage.removeItem("draft-experiment");
       }
     },
     closeOverlay() {
@@ -1040,7 +1042,16 @@ export default {
       this.$el.querySelector("#button-toolbar").offsetTop || 0
   },
   created() {
-    window.addEventListener("scroll", this.onScroll)
+    window.addEventListener("scroll", this.onScroll);
+    if(!this.experiment) {
+      this.saveInterval = setInterval(() => {
+        localStorage.setItem("draft-experiment", JSON.stringify(this.dummyExperiment));
+      }, 1000 * 15);
+      if(localStorage.getItem("draft-experiment")) {
+        console.log(JSON.parse(localStorage.getItem("draft-experiment")))
+        this.dummyExperiment = JSON.parse(localStorage.getItem("draft-experiment"));
+      } 
+    }
   },
   beforeDestroy() {
     window.removeEventListener("scroll", this.onScroll)
