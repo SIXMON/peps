@@ -505,7 +505,7 @@
             max="100"
             min="0"
             suffix="/ 100"
-            @input="updateIrScore" />
+            v-model="dummyExperiment.ir_score" />
         </div>
 
         <!-- LINKS -->
