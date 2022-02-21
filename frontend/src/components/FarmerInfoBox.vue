@@ -95,10 +95,10 @@
     </div>
 
     <!-- OUTPUT -->
-    <div v-if="farmer.output" class="body-2 info-item">
+    <!-- <div v-if="farmer.output" class="body-2 info-item">
       <v-icon small left>mdi-silo</v-icon>
       <div>Potentiel de rendement en blé : {{farmer.output}} quintaux / ha</div>
-    </div>
+    </div> -->
   </div>
 </template>
 
