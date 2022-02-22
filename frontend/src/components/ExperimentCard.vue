@@ -15,7 +15,6 @@
           height="100%"
           width="80px"
           style="background: #DDD;"
-          @error="handleErrorImage()"
           :src="experiment.images && experiment.images.length > 0 ? experiment.images[0].image.replace('https://rex-agri.agroecologie.org/media/', 'https://cellar-c2.services.clever-cloud.com/peps-cellar/media/') : ''"
         />
         <div class="flex-container">
@@ -72,12 +71,6 @@ export default {
         }
       })
     },
-    handleErrorImage() {
-      console.warn(this.experiment)
-      if(this.experiment.images.length) {
-        this.$el.style = this.$el.style + `background-image: url("${this.experiment.images[0].image}")`
-      }
-    }
   },
   mounted() {
     if (this.$el) {
